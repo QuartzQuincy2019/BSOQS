@@ -261,6 +261,107 @@ var blogs = [
     {
         type: "blog",
         id: "",
+        date: "2025-04-12",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+        ],
+        title: "某班徽拉丁语解析",
+        topics: ["拉丁语"],
+        contents: [
+            "bq[[verba volant, scripta manent.]]bq",
+            "h2[1.极致直译：话飞，写的停留。]h2",
+            "h2[2.翻译：从口中说出的字会立即消散，只有亲手写下来的字才会永久留存。（Spoken words fly away, written words remain.）]h2",
+            "h2[3.寓意：不要光说不做，要成为一个行动上的巨人。]h2",
+            "h2[4.词汇变形解析：]h2",
+            "[(i) verba n.II.N.Nom.Pl./第二变格法中性名词主格复数：字]",
+            "[(ii) volant v.I.Ind.Act.Pre.3rdPl./第一变位法动词直陈式主动语态现在时第三人称复数：（他们）飞走]",
+            "[(iii) scripta v.III.[PPP]N.Nom.Pl./第三变位法动词过去被动分词中性形式主格复数：被写下的]",
+            "[(iv) manent v.II.Ind.Act.Pre.3rdPl./第二变位法动词直陈式主动语态现在时第三人称复数：（他们）停留、存留]",
+            "h2[5.语法解析：]h2",
+            "h3[一、过去被动分词（PPP）修饰名词：]h3",
+            "[verba scripta（被写下的字，written words）]",
+            "[puella amata（被爱过的女孩，a girl that had been loved）]",
+            "h3[二、主语+谓语]h3",
+            "[verba volant（字飞走，words fly away）]",
+            "[verba manent（字留下来，words remain）]",
+            "[nos currimus（我们跑，we run）]",
+            "[eum pereebat（他消失了，he disappeared）]"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2025-02-10",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+        ],
+        title: "（古典）拉丁语发音要领",
+        topics: ["拉丁语", "发音"],
+        contents: [
+            "[拉丁语字母表（23个，没有J U W）：]",
+            "[ABCDEFGHIKLMNOPQRSTVXYZ][abcdefghiklmnopqrstuxyz]",
+            "[注：含k的拉丁语词汇极少，其发音与c完全一致]",
+            "[拉丁语的字母一般有固定的发音，固定的字母组合也有固定的发音。]",
+            "[元音：s[Ae Ee Ii Oo Vu Yy]s（啊，欸，噫，哦，呜，鱼）]",
+            "[s[Ii]s在i+元音时，会变成半元音s[/j/]s。如i[iam /jam/，Iūnō /ju:no:/，iactātus /jakta:tus/，huius /hujus/。]i]",
+            "bq[[字母“J”在公元9世纪后出现，起初是为了区分词首或辅音位置的“I”。因此如果见到带有字母“j”的拉丁语词汇，其发音为/j/，如“Julius”尤里乌斯，“Janus”雅努斯，“Juno”尤诺（不是朱诺），“Juppiter”尤匹特（不是朱庇特），“Janusapolis”雅努萨珀利斯（）]]bq",
+            "[双元音：ae 'eye', au 'ou(t)', ei 'ai(d)', oe 'oi(l)' ,eu /eu/, ui '(q)ui(ck)']",
+            "[辅音：Rr为大舌颤音 ；Cc /k/ ；Gg /g/]",
+            "[重音：单双音节重音在前。多音节的，如果倒数第二个音节是重读闭音节、或者包含长元音或者双元音，那么重音在倒数第二个音节，否则在倒数第三个音节。例如]",
+            "bq[[Caesar: s['Cae]s sar 凯撒br[]",
+            "dominus：s['do]s mi nus br[]",
+            "rēgīna：rē s['gī]s nabr[]",
+            "Centaurus: Cen s['tau]s rusbr[]",
+            "ambulāmus: am bu s['lā]s mus]]bq",
+            "[还有其他规则，比如-ius/-ium单词的属格和呼格单数重读倒数第二个音节，比如Vergili: Ver 'gī li等，不多赘述。]"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2024-09-16",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VDelta702, role: ROLES.CoAuthor },
+            { user: USERS.VDelta46, role: ROLES.Instructor }
+        ],
+        title: "记甲辰八月十四子时天象",
+        topics: ["观星", "秋季大三角", "木星"],
+        contents: [
+            "bq[[s[记甲辰八月十四子时天象]s][皎皎玉盘攀南天，瑞星逐月羽垒穿，][七斗擎座望帝酒，东升明岁耀人间。]",
+            "[（皎洁满月攀上南方夜空，土星穿过羽林军、垒壁阵追逐明月，【南天】北斗七星伏于地平线上托举太微垣与酒杯相望【北天】，木星东升即将照耀人间。【东天】）]]bq",
+            "[------------------观星记录---------------]",
+            "[观测时间：2024年9月16日（八月十四） 21:00-22:20【东八区】]",
+            "[地点：山东省烟台市开发区北部、西北部]",
+            "[光污染：较严重][天气：晴→少云][方式：裸眼][今夜MVP/最佳看点：满月、s[土星、织女一（织女星）、河鼓二（牛郎星）、天津四]s]",
+            "[可见星体（按可见度降序）：]",
+            "ol[|【南天】满月|【南天·满月附近】土星、北落师门|【天顶】夏季大三角（河鼓二、天津四，织女一）（天鹰座、天鹅座、天琴座）|【东北天、东天】五车二（御夫座）、秋季四边形（星宿一、星宿二、壁宿一，壁宿二）（飞马座、仙女座）和飞马座诸星、天船三（英仙座）|【北天】勾陈一（北极星）（小熊座）、仙后座W形（王良四、王良一、策、阁道三、阁道二）、天钩五（仙王座）、北极二（小熊座）、北斗一（大熊座）、北斗五（大熊座）、北斗六（大熊座）|【西北天】天棓四（天龙座）、天棓三（天龙座）|【西天】侯（蛇夫座）]ol"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2024-08-09",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
+        ],
+        title: "GGGGS停更通知",
+        topics: ["原神"],
+        contents: [
+            "[感谢大家半年来对GGGGS项目开发的陪伴与支持！]",
+            "[半年来，我们共同见证了GGGGS的成长。]",
+            "[不知不觉，2024年已经过半了。半年前的2月9日，除夕，下午，GGGGS仓库中诞生了第一个发布——v1.0.7，那是难忘的开始的时刻。此后GGGGS保持稳步更新，从优化算法到严密逻辑，从增加功能到美化界面，从角色到“混池”再到武器……GGGGS在180天之内全都做到了。]",
+            "[站在GGGGS发布半年的时间节点上，回望GGGGS坎坷的开发历程，的确心酸劳苦，但是乐在其中。我们在开发过程中涨了不少经验，吸取了不少教训，也学到了不少新知。这难忘的经历对我们来说是独一无二的最宝贵的财富。]",
+            "[其实，GGGGS从4月5日更新到v5.0以后——仅仅两个月——我们的使命就已经完成了——GGGGS的全部功能已经齐全。后4个月的更新，主要在于游戏数据跟进和小功能优化。到今天，GGGGS的开发目标已经全部达成，走到了计划的重点。]",
+            "[GGGGS走到今天，满载着大家的关注与支持，是时候跟大家说一声再见了。GGGGS当前的版本是v5.4.0。从此，我们不再开发新的次级版本。也就是说，v5.4是GGGGS的最后一个版本，以后不会有v5.5、v6.0。以后GGGGS除了小型功能优化更新之外，只是跟进游戏数据。]",
+            "[GGGGS的时代在今天圆满落下帷幕。再次感谢大家的陪伴与支持！]"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
         date: "1970-01-01",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -280,4 +381,22 @@ var blogs = [
             "c[Decoding Succeeded!]c"
         ]
     }
+    /*
+    {
+        type: "blog",
+        id: "",
+        date: "1970-01-01",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VDelta702, role: ROLES.CoAuthor },
+            { user: USERS.Qolerde, role: ROLES.Contributor },
+            { user: USERS.VDelta16, role: ROLES.CoFirstAuthor },
+            { user: USERS.VDelta46, role: ROLES.Instructor },
+            { user: USERS.VLambda24, role: ROLES.CorrespondingAuthor }
+        ],
+        title: "",
+        topics: [],
+        contents: []
+    },
+    */
 ];

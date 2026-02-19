@@ -3,7 +3,7 @@
     background-color: var(--background-color);
     border-radius: var(--default-border-radius);
     box-shadow: 0 0 12px var(--card-shadow-1);
-    padding: 1.6em;
+    padding: 1.8em;
     margin: 2.5em 1.5em;
 }
 

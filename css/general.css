@@ -4,7 +4,7 @@
     --default-body-font-family: 'Tinos Nerd Font Propo';
     --default-code-font-family: '0xProto Nerd Font Mono';
     --default-font-size: 20px;
-    --h1-font-size: 36px;
+    --h1-font-size: 32px;
 }
 
 @media screen and (max-width: 900px) {
@@ -70,7 +70,7 @@ body {
 
 * {
     transition-property: all;
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
 }
 
 body * {
@@ -105,6 +105,17 @@ blockquote {
     border-left: 4px solid var(--weak-text-color);
     margin: 0.5em;
     padding-left: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    blockquote {
+        border-left: 3px solid var(--weak-text-color);
+        padding-left: 0.5em;
+    }
+
+    quote {
+        margin: 0.3em;
+    }
 }
 
 blockquote * {
@@ -168,7 +179,7 @@ h1.headTitle.is-sticky {
     padding: 0.2em 0 0.2em 0;
     border-bottom: 3px solid var(--text-color);
     box-shadow: 0 2px 5px var(--text-color);
-    font-size: var(--h1-font-size);
+    font-size: calc(var(--h1-font-size)*0.9);
 }
 
 @media screen and (max-width: 900px) {
