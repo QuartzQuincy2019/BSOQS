@@ -46,13 +46,13 @@ function generateOverview(blog) {
     let mjd = dateToMJD(blog.date);
     p1.innerHTML = blog.date + " | " + mjd;
     let p2 = document.createElement("div");
-    p2.innerHTML += "By&nbsp;";
+    p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
         let p2i = document.createElement("img");
         p2i.classList.add("overViewAvatar");
         p2i.src = "./data/users/avatars/" + authorInfo.user.codeName + ".png";
         let p2a = document.createElement("span");
-        p2a.innerHTML = "&nbsp;" + authorInfo.user.signName + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        p2a.innerHTML = authorInfo.user.signName;
         p2.append(p2i, p2a)
     });
     let p3 = generateTopicArea(blog);

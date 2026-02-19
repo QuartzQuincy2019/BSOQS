@@ -2,9 +2,17 @@
 .card {
     background-color: var(--background-color);
     border-radius: var(--default-border-radius);
-    box-shadow: 0 0 10px var(--card-shadow-1);
-    padding: 1.2em;
-    margin: 2.5em 0.6em;
+    box-shadow: 0 0 12px var(--card-shadow-1);
+    padding: 1.6em;
+    margin: 2.5em 1.5em;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    box-shadow: 0 0 4px var(--card-shadow-1);
+    padding: 0.7em;
+    margin: 1em 0.2em;
+  }
 }
 
 .header_block {
@@ -68,5 +76,8 @@ img.overViewAvatar {
     height: var(--default-font-size);
     display: inline-block;
     vertical-align: middle;
-    border: 2px solid var(--text-color);
+    margin-left: 1em;
+    margin-right: 0.1em;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
 }

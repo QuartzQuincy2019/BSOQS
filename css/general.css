@@ -4,7 +4,14 @@
     --default-body-font-family: 'Tinos Nerd Font Propo';
     --default-code-font-family: '0xProto Nerd Font Mono';
     --default-font-size: 20px;
-    --h1-font-size: 32px;
+    --h1-font-size: 36px;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --default-font-size: 16px;
+        --h1-font-size: 26px;
+    }
 }
 
 /* FONT-FACE */
@@ -155,11 +162,11 @@ h1.headTitle:hover {
     cursor: pointer;
 }
 
-h1.headTitle.folded:hover::before{
+h1.headTitle.folded:hover::before {
     content: "\eaf3 ";
 }
 
-h1.headTitle.unfolded:hover::before{
+h1.headTitle.unfolded:hover::before {
     content: "\eaf4 ";
 }
 
