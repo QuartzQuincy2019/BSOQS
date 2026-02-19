@@ -165,6 +165,7 @@ h1.headTitle.unfolded:hover::before{
 
 h1.headTitle.latest::after {
     content: " \f0394";
+    font-weight: 100;
     font-size: 1em;
 }
 

@@ -30,10 +30,75 @@ var blogs = [
     {
         type: "blog",
         id: "",
+        date: "2026-01-31",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoFirstAuthor }
+        ],
+        title: "拉丁语的分词系统",
+        topics: ["拉丁语"],
+        contents: [
+            "h1[一、分词系统]h1",
+            "[分词，是动词的非限定形式（也叫非谓语形式）之一。在拉丁语中，动词有4个分词。]",
+            "h2[1. 分词类别]h2",
+            "ol[|现在（主动）分词 Present Participle|将来（主动）分词 Future Participle|完成（被动）分词 Perfect Participle|将来（被动）分词 Gerundive]ol",
+            "[四种分词的结尾各不相同。]",
+            "ol[|现在（主动）分词 -ns|将来（主动）分词 -ūrus|完成（被动）分词 -tus -sus|将来（被动）分词 -ndus]ol [一般来讲，分词是一种兼具动词、形容词、名词和副词属性的一种动词的形式。而拉丁语的分词可以作为形容词（而且可以有比较级和最高级），也可以直接作为名词来使用（名物化）。而现在主动分词和完成被动分词，经常用作定语。]",
+            "h1[1. 现在主动分词 - DOING]h1",
+            "[现在分词的表意如同英语中的现在分词（-ing），表示动作正在进行。同时也能作形容词，也能作处于该动作状态的名词。]",
+            "bq[[amāns loving, lover][vocāns calling, caller][legentēs reading, readers]]bq",
+            "s[现在分词的变格系统]s",
+            "[它符合“形容词第三变格-一尾变格”。需要注意的是，当现在分词用作形容词时，其夺格单数结尾常为-ī。用作其他形式的，包括名词，夺格单数结尾常为-e。]",
+            "h1[2. 将来主动分词 - ABOUT TO DO]h1",
+            "[用于表达一个动作可能或将要发生。]",
+            "bq[[rēctūrus about to rule][audītūrus about to hear]]bq [若与系动词esse连用，esse+PFA构成第一迂回变位结构。这也是将来主动分词的主要用法。] bq[[Urbs est cāsūra.][The city is about to fall.][Mānsūrus eram.][I was going to say.]]bq",
+            "h2[迂回变位]h2",
+            "[广义而言，所有的动词分词与系动词esse连用都称作“迂回变位”。然而，现在分词与系动词连用的情况（类似于英语中be doing）在拉丁语中非常罕见，而完成分词与系动词连用又属于普通动词变位的一部分（类似于英语中be done）。所以，迂回变位的范围就局限到了剩下的两类分词身上：将来（主动）分词和Gerundive（将来被动分词）。]",
+            "h3[第一迂回变位]h3",
+            "[第一迂回变位（First Periphrastic Conjugation）指的是系动词esse与将来分词连用的结构。它表示“未来发生”或“目的性”的动作。]",
+            "bq[[captūrus sum. 我将要拿。][captūrī sumus. 我们将要拿。][audītūrus es. 你将要听。][audītūrī estis. 你们将要听。][monitūrus est. 他将要建议。][monitūrī sunt. 他们将要建议。]]bq",
+            "[实际上，脱离迂回变位结构的将来分词直接修饰名词较为少见，然而，后期的作家和诗人使用将来分词修饰实质性名词，常用来表达目的、准备、可能性、确定性和条件的结果。] bq[[ēgreditur castrīs Rōmānus vāllum invāsūrus.][一个罗马人走出军营，准备/意图进攻（敌人）的壁垒。［目的/意图］]]bq",
+            "h1[3. 完成被动分词 - DONE]h1]",
+            "[一个用法，有时等价于英语中的done作形容词。]",
+            "bq[[tēctus 被掩护的，被遮盖的][acceptus 被接受的]]bq [经常，它的含义可以发生引申。] bq[[acceptus 可接受的]]bq [另一个用法，也就是英语中done的普遍用法：构成被动语态变位。] bq[[vocātus est.][He is called.]]bq",
+            "h1[4. 将来被动分词(Gerundive) - MUST BE DONE]h1",
+            "[这是一个不同于英语的全新分词类型。将来被动分词，或更常称之为「Gerundive」，用于表示动作的被动必要性，表示需求、义务、强制。][Gerundive有时可以用作形容词，表示“必须被……的”（must be done）。][然而，它更常见的用法是Gerundive与esse连用，构成第二迂回变位(Second Periphrastic Conjugation)结构。第二迂回结构的构成与第一迂回变位结构一致。][除了以上用法之外，在与具有以下性质的动作搭配时，Gerundive表示目的：拥有、给予、传递、接受、经历。] bq[[aedem Castoris habuit tuendam.][He had the temple of Castor to take care of. ]]bq [\\[habuit是habere的直陈式完成时第三人称单数主动态形式\\]][不通顺直译：他有一座需要被保护的卡斯托尔的神庙。][通顺译法：他负责保护卡斯托尔的神庙。]",
+            "h2[中性Gerundive的无人称(Impersonal)使用]h2",
+            "[这是第二迂回变位中的一种特殊和高级用法。与一般情况不同，中性Gerundive的无人称使用要求第二迂回结构中的esse统一使用第三人称单数形式（est, fuit, erit, erat...），或者直接弃用；同时Gerundive使用中性形式。这种用法对动词是否及物没有要求。][对于固定搭配与格宾语或夺格宾语的动词，可以与对应格的名词连用，以使第二迂回结构带上宾语成分，令表意更细致。若要强调动作的逻辑主语，则需将主语变为与格。]",
+            "bq[[Pugnāndum est.]]bq",
+            "[直译为“存在战斗的必要性”，即“必须战斗”。pugnāndum被当作主语。若要表达“我们必须战斗”，则应加入与格。]",
+            "bq[[Nobis pugnāndum est.]]bq",
+            "[直译为“对于我们来说，存在战斗的必要性”，即“我们必须战斗”。]",
+            "bq[[Lēgibus pārendum est.][The laws must be obeyed.]]bq [parēre意为“遵守”，后接与格宾语。]",
+            "bq[[ūtendum exercitātiōnibus modicīs.][We must use moderate exercise.]]bq [ūti意为“使用”，后接夺格宾语。][对于及物动词，可以带上宾格宾语，也能使第二迂回结构带上宾语成分。][以上。简要介绍了拉丁语的4种分词的常见用法。]",
+            "h1[二、绝对夺格（又称独立夺格）]h1",
+            "[当伴随状语的逻辑主语与主句的主语不一致时，伴随状语可以使用“绝对夺格”结构，表达更高级。绝对夺格类似于英语中的“独立主格 (Nominative Absolute)”结构，绝对夺格也需要至少一个分词和主语对象。]",
+            "s[%{emphasis}分词/形容词/名词夺格+名词/代词夺格]s [下面进行举例。]",
+            "h2[1. 分词夺格表主语状态]h2",
+            "[最常见，最动态。这种结构几乎与英语的独立主格结构完全等同。][若使用现在分词，可以表示独立夺格状态伴随着主句动作一起发生。也可表示原因。]",
+            "bq[[Urbe incendente, cives fugierunt.][城市燃烧时，市民们逃脱了。]]bq [urb（【第三变格法】城市）取夺格urbe，incendere（【第三变位法】燃烧，点燃）取现在分词夺格incendente。伴随状语的逻辑主语是“城市”，主句主语是“市民们”。][若使用过去分词，则独立夺格的状态发生在主句动作之前。]",
+            "bq[[Urbe incensa, cives fugierunt.][城市烧毁后，市民们逃脱了。]]bq",
+            "[urb取夺格urbe，incendere取过去分词夺格incensa。][与英语中独立主格进行联系：]",
+            "bq[h3[1. 使用现在分词：]h3",
+            "[Dominā tacita sedente, lūna faciem eius illuminābat.][She sitting quietly, the moonlight shone on her face.][她静静地坐着，月光照亮了她的脸。]",
+            "h3[2. 使用过去分词：]h3",
+            "[Sole ortō, heros iter suum perrexit.][The sun risen, the hero continued his journey.][太阳升起之后，英雄继续了他的征途。]]bq",
+            "h2[2. 名词夺格表主语状态]h2",
+            "bq[[Cicerōne cōnsule, Catilīnae coniūrātiō patefacta est.][西塞罗担任执政官期间，喀提林的阴谋被揭露了。]]bq",
+            "[Cicero（【第三变格法】【男名】西塞罗）取夺格Cicerōne，consul（【第三变格法】执政官）取夺格consule。][主句：Catilīna（【第一变格法】【男名】喀提林）取属格Catilīnae。coniūrātiō，“阴谋”，取主格单数。patefacta est，“被揭露”，陈述语气完成时第三人称单数被动态。][动词patefacio, patefacere, patefecī, patefactum，“揭露”，属于第三I词干变位法动词。由于派生于动词facio, facere, fecī, factum，而后者的现在时体系被动形式变位是不规则的，其现在时体系被动形式变位也不规则。]",
+            "h2[3. 形容词夺格表主语状态]h2",
+            "bq[[Patre vivō, omnia bona erant.][父亲健在时，一切都是好的。]]bq",
+            "[pater（【第三变格法】父亲）取夺格patre。vivus（adj.活着的）取阳性夺格单数vivō。][主句：omnia（所有的东西，一切）取主格omnia，bonus（adj.好的）取中性主格复数bona，sum（是）取陈述语气未完成时第三人称复数主动态。All things were good.",
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
         date: "2026-01-16",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
+            { user: USERS.VDelta46, role: ROLES.CoAuthor }
         ],
         title: "关于哥伦比娅•希珀塞莱尼娅",
         topics: ["原神", "哥伦比娅", "空月之歌"],
@@ -72,9 +137,9 @@ var blogs = [
             "[乐段2]",
             "bq[[O cara filia lunae.][哦，月亮的爱女]]bq[叹词-adj.阴性呼格单数-n.阴性呼格单数-n.阴性属格单数]",
             "bq[[Neve plumam pulvis foedet tuam.][不要让尘土玷污你的羽毛]]bq[连词-n.阴性宾格单数-n.阳性主格单数-v.(foedere,第三变位法)现在时虚拟式第三人称单数主动态-adj.阴性宾格单数][祈愿句，使用虚拟式。]",
-            "bq[[Nec iam complexum dabat alma.][（尽管）慈爱的（她）已不再［给予］拥抱]]bq[连词-副词-n.阳性宾格单数-adj.阴性主格单数（此句缺乏或省略一个动词）]",
-            "bq[[Capias bona somnias[{alert}s]s a luna.][（也只）愿你（能）从月亮那里得到美梦]]bq[v.(capere,第三变位法i词干)现在时虚拟式第二人称单数主动态-adj.中性宾格复数-n.中性宾格复数-介词-n.阴性夺格单数][祈愿句，采用虚拟式。]",
-            "bq[[此句s[{emphasis}somnias]s有语法错误。][若不做改动，则为v.(somniāre)现在时陈述式第二人称单数主动态，与上一个动词capias虚拟式不匹配，且句子v[{alert}缺乏宾语]v（愿你有-美好的-你做梦-从月亮），无法翻译。][若改为somnia，则为n.中性宾格复数，bona修饰somnia，somnia作capias的宾语，整个句子（愿你有-美好的-梦-从月亮）具有含义“愿你从月亮那里得到美梦”。]]bq",
+            "bq[[Nec iam complexum (dabat) alma.][（尽管）慈爱的（她）已不再［给予］拥抱]]bq[连词-副词-n.阳性宾格单数-adj.阴性主格单数（此句缺乏或省略一个动词）]",
+            "bq[[Capias bona somnias[%{alert}s]s a luna.][（也只）愿你（能）从月亮那里得到美梦]]bq[v.(capere,第三变位法i词干)现在时虚拟式第二人称单数主动态-adj.中性宾格复数-n.中性宾格复数-介词-n.阴性夺格单数][祈愿句，采用虚拟式。]",
+            "bq[[此句s[%{emphasis}somnias]s有语法错误。][若不做改动，则为v.(somniāre)现在时陈述式第二人称单数主动态，与上一个动词capias虚拟式不匹配，且句子v[%{alert}缺乏宾语]v（愿你有-美好的-你做梦-从月亮），无法翻译。][若改为somnia，则为n.中性宾格复数，bona修饰somnia，somnia作capias的宾语，整个句子（愿你有-美好的-梦-从月亮）具有含义“愿你从月亮那里得到美梦”。]]bq",
             "[Quincy的续写]",
             "bq[[i[1 in floribus ambulat,]i][i[2 pulchra claraque est.]i]",
             "[i[3 timeo ne accusetur ea,]i][i[4 vereor ne lacrimet illa.]i]",
@@ -84,6 +149,20 @@ var blogs = [
             "[这一位角色，绝对是设计者投入大量心血的。从衣着到名字到音乐都很有推敲之处，给人多感官方面的审美冲击。][是不是连月卡图案也换掉了？]",
             "h2[关于拉丁语古典发音的r]h2",
             "[这个r和西班牙语的r、俄语的p是一样的，都是齿龈颤音（俗称大舌音）。说实话我4年前练的大舌音，用力部位和舌位出现了问题，导致今天在拉丁语的词尾的r，比如amor, amabantur, 以及词中的单r，如dormi，cetera发音漏气。我跟其他人发的大舌音比较，我发的始终漏气（夹杂h在里面，总觉得在发t）。纠正舌位之后就不漏气了。]"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2026-01-03",
+        authors: [
+            { user: USERS.BLOG_OWNER }
+        ],
+        title: "Epilogue",
+        topics: [],
+        contents: [
+            "[All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancienit Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.]",
+            "[Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of a community with a shared future for mankind and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
         ]
     },
     {
@@ -153,6 +232,35 @@ var blogs = [
     {
         type: "blog",
         id: "",
+        date: "2025-10-16",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+        ],
+        title: "初学日语补助动词",
+        topics: ["日语"],
+        contents: [
+            "[补助动词，黏着在本动词「て」形式之后，将本动词表述的含义细腻化。补助动词的使用是一种非常地道的表达。][对于大多数日语初学者来说，第一个接触到的补助动词是「ている」。]",
+            "h1[一、表示状态细节：]h1",
+            "ul[|[⏩「ている」类似于英语动词的现在分词（doing），表示状态持续。它的敬语是「ておる」。] bq[[🆔飛行機が飛んでいます。（飞机在飞）]]bq[也用于瞬间动词之后，表示结果状态，类比英语动词的过去分词作形容词（done）的用法。]|[⏩「てある」强调人为事先操作后的状态。类比英语动词的过去分词在被动语态完成时的用法。] bq[[🆔ホテルはもう予約してあります 。（酒店已经预约好了。）][🆔もう準備してありますから、安心してください。（已经准备好了，请放心。）]]bq |[⏩「てくる」「ていく」][表示动作或状态在时间上、空间上的来往。][「てくる」……来/到/近/过来，……以来。][「ていく」……去/走/开/离/过去，……下去。] bq[[🆔様々なアイデアが浮かんできた。（各种各样的想法浮现出来了。）][🆔歩いていると、焼き肉のにおいがしてきた。（正走着路，烧肉的味道扑面而来。）][🆔人口がだんだん減っていきます。（人口逐渐减少下去。）][🆔飛行機が飛んでいきました。（飞机飞走了。）]]bq]ul",
+            "h1[二、表示动作情感色彩、目的和语气]h1",
+            "ul[|⏩「てみる」表示尝试。试试看。|⏩「てみせる」表示这个动作“做给谁看”，展示给谁（看）。|⏩「てしまう」表示动作已经做到彻底、尽头；含遗憾、后悔情绪下的动作；不小心做了不该做的动作；不禁做了动作。它的缩略形式是「ちゃう」|⏩「ておく」表示事先准备好；预先做好。也表放置或放任不管。|⏩「てやる」对同辈或对下级，对物给予。|東京の弟に、今年もふるさとのお土産を送ってやった。（今年也给东京的弟弟送去了故乡的特产）]ul",
+            "h1[三、由授受动词派生(N2)]h1",
+            "ul[|[⏩「てあげる」「てやる」「て差し上げる」表示我给别人/外物做。]|[⏩「てもらう」「ていただく/て頂く」表示被动承受他人或外部动作的结果。句子的主语是“我”。] bq[[🆔李さんはコーヒーを買ってもらいました。（小李\\[给我\\]买了咖啡。）]]bq |[⏩「てくれる」「てくださる」表示他人为我做某事，带有感激和亲切的语气色彩。句子的主语是施动者。] bq[[🆔誕生日に友だちは漫画をくれました。（生日当天，朋友们给我漫画书。）]]bq [【不尊敬地】q[🆔先生は私に本を買ってv[%{alert}くれました]v。（老师给我买了本书。）]q][【尊敬地】q[🆔先生は私に本を買ってv[%{emphasis}くださいました]v。（老师给我买了本书。）]q]]ul",
+            "[附：关于授受动词和它们的补助动词形式：]",
+            "[⏩有关“给”的“靠近我”与“远离我”]",
+            "t[^|我给妈妈一朵花→あげる|老师给我一本书→くれる||妈妈给老师一本书→あげる|老师给妈妈一本书→くれる||我给老师一本书→あげる|我给别人一本书→あげる||别人给我一本书→くれる|我从别人那里得到一本书→もらう||为我做事我很感激→くれる|别人给予我恩惠→くれる|$]t",
+            "h3[总结]h3",
+            "ul[|⏩给出并远离「あげる」「差し上げる」，主语为施动者|⏩从别处得到「もらう」「いただく」，主语为承受者|⏩别人给来并使我享有「くれる」「くださる」，主语为施动者]ul",
+            "h1[思考：]h1",
+            "[日语中的复合动词，我们说这个场儿，一般以「动词A连用形」+「动词B」出现的。比如]",
+            "ul[|勝ち取る（赢取）|受け入れる（接受）|飛び込む（飞入）|知り合う（相识）|やり直す（重做）]ul",
+            "[我管他“动动复合”。我认为这是最教条的一类。“动动复合”，它像是两个动词的前后合并作为一个复合动作出现，多少体现了一些动作上时间先后的特征。][另外有一类，我叫他“て动复合”。这便是我们今天讨论的“补助动词”和它的本动词。补助动词的用法是「本动词て形+补助动词」（连用形+て+补助动词）。这种复合，尤其是对于补助动词的部分，我认为是对本动词陈述的语气或动作上的补充，起到一个辅助性作用，不像“动动复合”那样不可或缺。][「て」是接续助词，它负责接续动作，拓展之后有了方式、原因、并列和轻微逆接的用法。"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
         date: "1970-01-01",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -165,8 +273,9 @@ var blogs = [
         title: "测试帖子",
         topics: [],
         contents: [
-            "[s[hello, world!]s]^||{c2r2}s[\\\\\\|escape\\|/\\\\]s|&#xe215;|&#xe30d;&#xe30e;&#xe30f|{c2}CB|||{c2}Varkā|\\{c4\\}|c10|||{r2}increase|1004|c[c++]c*3|s560|{r2}s[r2]s|i[Italic]i|||brim|&#xe342;|emphasis|c[F:i[Amīyā]i in]c||$",
+            "[s[hello, world!]s] t[^|{c2r2}s[/\\\\\\|escape\\|/\\\\]s|&#xe215;|&#xe30d;&#xe30e;&#xe30f|{c2}CB||{c2}Varkā|\\{c4\\}|c10||{r2}increase|?|c[c++]c*3|s560|{r2}s[r2]s|i[Italic]i||\\^empty|&#xe342;|emphasis|c[F:i[Amīyā]i in]c|$]t",
             "bq[[“The only true wisdom is in knowing you know nothing.”]<footer>— Socrates</footer>]bq",
+            "ol[|embed|c[kk]cg|t\\[ads\\]t|ul[|number|U780|f]ul|vb]ol",
             "[456q[I have a dream.]q456]",
             "c[Decoding Succeeded!]c"
         ]
