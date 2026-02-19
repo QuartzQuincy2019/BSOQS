@@ -413,3 +413,91 @@ function parseMixed(input) {
   // 不自动关闭任何未闭合的标签，保留原样
   return html;
 }
+
+
+/**
+ * 监听 sticky 元素的状态变化（进入/离开粘性定位）
+ * @param {HTMLElement} element - 需要监听的元素（必须拥有 position: sticky）
+ * @param {Function} onSticky - 进入 sticky 状态时的回调函数，接收元素作为参数
+ * @param {Function} onUnsticky - 离开 sticky 状态时的回调函数，接收元素作为参数（可选）
+ * @returns {Function} 停止监听的函数
+ */
+function listenSticky(element, onSticky, onUnsticky) {
+  // 1. 验证元素是否具有 sticky 定位
+  const computedStyle = getComputedStyle(element);
+  if (computedStyle.position !== 'sticky') {
+    throw new Error('元素必须设置 position: sticky');
+  }
+
+  // 2. 解析阈值（以 top 为例，可根据需要扩展）
+  let thresholdValue = 0;
+  let thresholdUnit = 'px';
+  const topValue = computedStyle.top;
+  if (topValue && topValue !== 'auto') {
+    const match = topValue.match(/^([+-]?\d*\.?\d+)(px|%)?$/);
+    if (match) {
+      thresholdValue = parseFloat(match[1]);
+      thresholdUnit = match[2] || 'px';
+    }
+  }
+  // 简单处理：仅支持 px 单位，百分比阈值按 0 处理（可增强）
+  if (thresholdUnit !== 'px') {
+    console.warn('仅支持 px 阈值的精确判断，将使用 0 作为阈值');
+    thresholdValue = 0;
+  }
+
+  // 3. 找到最近的滚动容器（overflow 为 auto/scroll 的祖先或视口）
+  let container = element.parentElement;
+  while (container) {
+    const overflow = getComputedStyle(container).overflowY;
+    if (overflow === 'auto' || overflow === 'scroll') break;
+    container = container.parentElement;
+  }
+  const isRoot = !container || container === document.documentElement;
+  const scrollTarget = isRoot ? window : container;
+
+  // 4. 状态缓存
+  let isSticky = false;
+
+  // 5. 核心判断函数
+  function check() {
+    const rect = element.getBoundingClientRect();
+    const parentRect = element.parentElement.getBoundingClientRect();
+
+    // 根据容器调整坐标参考系
+    let currentTop = rect.top;
+    let parentBottom = parentRect.bottom;
+    let threshold = thresholdValue;
+
+    if (!isRoot) {
+      const containerRect = container.getBoundingClientRect();
+      currentTop = rect.top - containerRect.top;
+      parentBottom = parentRect.bottom - containerRect.top;
+    }
+
+    // sticky 激活条件（基于 top 阈值）：
+    // a) 元素上边缘 ≤ 阈值（已到达或超过粘性触发点）
+    // b) 父元素底部 > 阈值（父元素尚未完全滚出，否则 sticky 失效）
+    const active = currentTop <= threshold && parentBottom > threshold;
+
+    if (active !== isSticky) {
+      isSticky = active;
+      if (active && onSticky) {
+        onSticky(element);
+      } else if (!active && onUnsticky) {
+        onUnsticky(element);
+      }
+    }
+  }
+
+  // 6. 监听滚动和窗口大小变化
+  scrollTarget.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  check(); // 立即执行一次初始检查
+
+  // 7. 返回取消监听的方法
+  return function stopListening() {
+    scrollTarget.removeEventListener('scroll', check);
+    window.removeEventListener('resize', check);
+  };
+}

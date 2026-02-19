@@ -153,8 +153,30 @@ a {
 }
 
 h1.headTitle {
+    display: block;
+    position: sticky;
+    background-color: var(--background-color);
+    top: 0;
+    padding: 0;
     margin-top: 0;
     font-size: var(--h1-font-size);
+    transition-duration: 100ms;
+}
+
+h1.headTitle.is-sticky {
+    text-align: center;
+    padding: 0.2em 0 0.2em 0;
+    border-bottom: 3px solid var(--text-color);
+    box-shadow: 0 2px 5px var(--text-color);
+    font-size: calc(var(--default-font-size)*1.2);
+}
+
+@media screen and (max-width: 900px) {
+    h1.headTitle.is-sticky {
+        border-bottom: 2px solid var(--text-color);
+        box-shadow: 0 1px 3px var(--text-color);
+        font-size: calc(var(--default-font-size)*0.6);
+    }
 }
 
 h1.headTitle:hover {

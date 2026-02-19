@@ -129,3 +129,11 @@ for (var i = 0; i < blogs.length; i++) {
 
 
 unfoldPost(getLatestBlog().id);
+
+
+document.querySelectorAll('.headTitle').forEach(el => {
+  listenSticky(el, 
+    (el) => el.classList.add('is-sticky'),
+    (el) => el.classList.remove('is-sticky')
+  );
+});
