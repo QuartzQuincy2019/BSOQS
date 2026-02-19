@@ -1,0 +1,15 @@
+/* dark.css */
+:root{
+    --background-color: #000000;
+    --emphasis-bg-color-1: #404040;
+    --emphasis-bg-color-2: #6b6b6b;
+    --emphasis-bg-color-reversed-1: #ffeaf2;
+    --selection-bg-color-1: #8dc4ff;
+    --selection-bg-color-reversed-1: #7903ee;
+    --text-color: #ffffff;
+    --weak-text-color: #959595;
+    --text-color-reversed-1: #000000;
+    --link-color: #70f4bd;
+    --card-shadow-1: #ffffff;
+    --topic-color: #a9ff67;
+}

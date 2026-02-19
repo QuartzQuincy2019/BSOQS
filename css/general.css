@@ -1,0 +1,235 @@
+/* general.css */
+:root {
+    --default-border-radius: 16px;
+    --default-body-font-family: 'Tinos Nerd Font';
+    --default-code-font-family: '0xProto Nerd Font Mono';
+    --default-font-size: 20px;
+    --h1-font-size: 32px;
+}
+
+/* FONT-FACE */
+
+@font-face {
+    font-family: 'Tinos Nerd Font Propo';
+    src: url("../fonts/TinosNerdFontPropo-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '0xProto Nerd Font Mono';
+    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '0xProto Nerd Font Mono';
+    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '0xProto Nerd Font Mono';
+    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Amiri;
+    src: url("../fonts/Amiri/Amiri-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+/* RTL */
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* SPECIAL FONT */
+
+.arabic {
+    font-family: Amiri, serif;
+}
+
+/* TEXT LAYOUT */
+body {
+    background-color: var(--background-color);
+}
+
+* {
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+body * {
+    font-family: var(--default-body-font-family);
+    color: var(--text-color);
+    font-size: var(--default-font-size);
+}
+
+*::selection {
+    background-color: var(--selection-bg-color-1);
+    color: var(--text-color-reversed-1);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p,
+em,
+i,
+strong,
+a {
+    margin: 0 0 0.5em 0;
+}
+
+blockquote {
+    border-left: 4px solid var(--weak-text-color);
+    margin: 0.5em;
+    padding-left: 1em;
+}
+
+blockquote * {
+    color: var(--weak-text-color);
+    font-style: italic;
+}
+
+quote {
+    display: inline;
+    margin: 0.5em;
+    font-style: italic;
+    color: var(--weak-text-color);
+}
+
+code {
+    font-family: var(--default-code-font-family);
+    box-sizing: content-box;
+    margin: 0 0.2em;
+    padding: 0.1em 0.2em;
+    display: inline-block;
+    background-color: var(--emphasis-bg-color-1);
+    border-radius: 6px;
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+code em,
+code i {
+    font-family: var(--default-code-font-family);
+}
+
+code::selection,
+code em::selection,
+code i::selection {
+    background-color: var(--selection-bg-color-reversed-1);
+    color: var(--text-color);
+}
+
+code:hover {
+    background-color: var(--emphasis-bg-color-2);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+h1.headTitle {
+    margin-top: 0;
+    font-size: var(--h1-font-size);
+}
+
+h1.headTitle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1.headTitle.folded:hover::before{
+    content: "\eaf3 ";
+}
+
+h1.headTitle.unfolded:hover::before{
+    content: "\eaf4 ";
+}
+
+h1.headTitle.latest::after {
+    content: " \f0394";
+    font-size: 1em;
+}
+
+p.topicArea {
+    margin: 0.5em 0 0 0;
+}
+
+span.topic {
+    color: var(--topic-color);
+    margin-right: 1em;
+    transition-property: all;
+}
+
+span.topic:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span.topic::before {
+    content: "\f4df";
+    color: var(--topic-color);
+}
+
+span.topic:hover::before {
+    content: "\e273";
+}
+
+a[href="https://github.com/QuartzQuincy2019"]::before {
+    content: "\f408  ";
+}
+
+/* TABLE LAYOUT */
+table {
+    margin: 0.5em;
+}
+
+table,
+table th,
+table td {
+    border: 1px solid var(--text-color);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th,
+table td {
+    padding: 0.5em;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--emphasis-bg-color-2);
+}
+
+/* UNIVERSAL */
+
+.alert {
+    color: #ff0000;
+    text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
+}
+
+.emphasis {
+    color: #0000ff;
+    text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
+}

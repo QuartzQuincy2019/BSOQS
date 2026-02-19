@@ -1,0 +1,15 @@
+/* bright.css */
+:root {
+    --background-color: #ffffff;
+    --emphasis-bg-color-1: #f1f1f1;
+    --emphasis-bg-color-2: #dcdcdc;
+    --emphasis-bg-color-reversed-1: #db0058;
+    --selection-bg-color-1: #007bff;
+    --selection-bg-color-reversed-1: #ffe251;
+    --text-color: #000000;
+    --weak-text-color: #8f8f8f;
+    --text-color-reversed-1: #ffffff;
+    --link-color: #0049c6;
+    --card-shadow-1: #9f9f9f;
+    --topic-color: #ff8000;
+}

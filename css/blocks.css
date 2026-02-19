@@ -1,0 +1,72 @@
+/* blocks.css */
+.card {
+    background-color: var(--background-color);
+    border-radius: var(--default-border-radius);
+    box-shadow: 0 0 10px var(--card-shadow-1);
+    padding: 1em;
+    margin: 2em;
+}
+
+.header_block {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.6em;
+}
+
+.card_head {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    min-width: 0;
+    background-color: var(--background-color);
+    border-radius: var(--default-border-radius);
+    box-shadow: 0 0 5px var(--card-shadow-1);
+    padding: 0.3em;
+    margin: 0;
+}
+
+.card_head_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0.15em;
+    word-break: break-word;
+    font-weight: bold;
+}
+
+.card_head_info .post_user {
+    font-size: 1.1em;
+}
+
+.card_head_info .post_date {
+    font-size: 0.9em;
+    color: var(--weak-text-color);
+}
+
+.card_head_info .post_user:hover::before {
+    content: "\f448 ";
+}
+
+.card_head_info .post_role {
+    font-size: 0.75em;
+    color: var(--weak-text-color);
+}
+
+img.avatar {
+    width: 3.4em;
+    height: 3.4em;
+    border-radius: 12px;
+    border: 2px solid var(--weak-text-color);
+    margin-right: 0.2em;
+    object-fit: cover;
+}
+
+img.overViewAvatar {
+    width: var(--default-font-size);
+    height: var(--default-font-size);
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid var(--text-color);
+}
