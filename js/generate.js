@@ -16,7 +16,16 @@ function generateCardHead(date, user, signname, role = "") {
     var postDate = document.createElement("div");
     postDate.classList.add("post_date");
     let mjd = dateToMJD(date);
-    postDate.title = (today_mjd - mjd) + " day(s) ago";
+    let daydiff = today_mjd - mjd;
+    let daydiffText = "";
+    if (daydiff == 0) {
+        daydiffText = "Today";
+    } else if (daydiff == 1) {
+        daydiffText = "Yesterday";
+    } else {
+        daydiffText = daydiff + " days ago";
+    }
+    postDate.title = daydiffText;
     postDate.textContent = date + " | " + mjd;
 
     var postUser = document.createElement("div");
@@ -44,7 +53,18 @@ function generateOverview(blog) {
     // -------------------------
     let p1 = document.createElement("p");
     let mjd = dateToMJD(blog.date);
-    p1.innerHTML = blog.date + " | " + mjd;
+    p1.innerHTML = "<strong>" + blog.date + "</strong>" + " | " + mjd;
+    let today = dateToMJD(new Date());
+    let daydiff = today - mjd;
+    let daydiffText = "";
+    if (daydiff == 0) {
+        daydiffText = "Today";
+    } else if (daydiff == 1) {
+        daydiffText = "Yesterday";
+    } else {
+        daydiffText = daydiff + " days ago";
+    }
+    p1.innerHTML += " (" + daydiffText + ")";
     let p2 = document.createElement("div");
     p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
@@ -132,8 +152,8 @@ unfoldPost(getLatestBlog().id);
 
 
 document.querySelectorAll('.headTitle').forEach(el => {
-  listenSticky(el, 
-    (el) => el.classList.add('is-sticky'),
-    (el) => el.classList.remove('is-sticky')
-  );
+    listenSticky(el,
+        (el) => el.classList.add('is-sticky'),
+        (el) => el.classList.remove('is-sticky')
+    );
 });
