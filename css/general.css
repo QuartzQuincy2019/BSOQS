@@ -142,10 +142,6 @@ code {
     transition-duration: 400ms;
 }
 
-code * {
-    font-family: var(--default-code-font-family);
-}
-
 code em,
 code i {
     font-family: var(--default-code-font-family);
@@ -287,6 +283,15 @@ button {
 .ara,
 .arabic *,
 .ara * {
+    font-family: sans-serif, 'Segoe UI';
+}
+
+.naskh {
     font-family: Amiri;
     font-size: calc(var(--default-font-size)*1.2);
+}
+
+code *,
+code {
+    font-family: var(--default-code-font-family) !important;
 }
