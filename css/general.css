@@ -59,8 +59,10 @@
 
 /* SPECIAL FONT */
 
-.arabic {
-    font-family: Amiri, serif;
+.arabic,
+.ara {
+    font-family: Amiri;
+    font-size: calc(var(--default-font-size)*1.4);
 }
 
 /* TEXT LAYOUT */

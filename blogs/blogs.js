@@ -161,8 +161,8 @@ var blogs = [
         title: "Epilogue",
         topics: [],
         contents: [
-            "[All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancienit Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.]",
-            "[Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of a community with a shared future for mankind and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
+            "[All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancient Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.]",
+            "[Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of \"a community with a shared future for mankind\" and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
         ]
     },
     {
@@ -325,7 +325,7 @@ var blogs = [
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
-            { user: USERS.VDelta46, role: ROLES.Instructor }
+            { user: USERS.VDelta46, role: ROLES.CoAuthor }
         ],
         title: "记甲辰八月十四子时天象",
         topics: ["观星", "秋季大三角", "木星"],
@@ -357,6 +357,34 @@ var blogs = [
             "[其实，GGGGS从4月5日更新到v5.0以后——仅仅两个月——我们的使命就已经完成了——GGGGS的全部功能已经齐全。后4个月的更新，主要在于游戏数据跟进和小功能优化。到今天，GGGGS的开发目标已经全部达成，走到了计划的重点。]",
             "[GGGGS走到今天，满载着大家的关注与支持，是时候跟大家说一声再见了。GGGGS当前的版本是v5.4.0。从此，我们不再开发新的次级版本。也就是说，v5.4是GGGGS的最后一个版本，以后不会有v5.5、v6.0。以后GGGGS除了小型功能优化更新之外，只是跟进游戏数据。]",
             "[GGGGS的时代在今天圆满落下帷幕。再次感谢大家的陪伴与支持！]"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2024-02-17",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+        ],
+        title: "关于Tighnari的读音",
+        topics: ["阿拉伯语", "原神"],
+        contents: [
+            "[我不是op]",
+            "[《原神》的界面语言中并没有阿拉伯语。但将界面调成英语后，提纳里的英文名显示为“Tighnari”。]",
+            "[DIN3165转写应为c[Ṭiġnarī]c，ALA-LC转写应为c[Ṭighnarī]c。国外英语玩家大多读成：tie-narry，这当然是错误的。]",
+            "[根据考据，提纳里实际为阿拉伯名。]",
+            "[根据母语人士，tighnari由v[%{ara}ط]v（ṭ，音标为/tˤ/，即咽化/t/）、v[%{ara}غ]v（ġ，音标为/ɣ/，即浊软腭擦音）、v[%{ara}ن]v（n）、v[%{ara}ر]v（r，/r/，大舌颤音）、v[%{ara}ي]v（y）构成。]",
+            "[完整名字为v[%{ara}الطغنري]v，即v[%{ara}الْطِغْنَرِيْ]v。]",
+            "[读作：atig-na-ri（阿提厄纳里/阿提格纳里）]",
+            "[其中al为定冠词，v[%{ara}ط]v（ṭ）属于太阳字母，定冠词al会被同化为aṭ。定冠词一般不算名字，因此提纳里的准确读法应为：提厄纳里/提格纳里。]",
+            "[同样的思路，艾尔海森的名字应为“海森”。“艾尔”（al）为定冠词。完整名字是v[%{ara}الهيثم]v(c[Al-Hayṯam(DIN 3165)/Al-Haytham(ALA-LC)]c)，即v[%{ara}الْهَيْثَمْ]v。其准确读法应为“海瑟姆”“海什木”，或“阿勒 海瑟姆”。有人译为“阿尔哈桑”。]",
+            "[依旧是同样的思路，莱依拉的名字是v[%{ara}الليلة]v，转写为c[Al-Laylah]c，意为“夜晚”“今晚”，是准确的译名。]",
+            "h3[注释]h3",
+            "[s[咽化]s：咽化是辅音或元音的次要调音，调音同时喉或会厌收紧。]",
+            "[s[浊软腭擦音/ɣ/]s：是/x/对应的浊音。]",
+            "[s[齿龈颤音/r/]s：多称“大舌颤音”，即rrrrrr。见于俄语中的字母“p”，如“乌rrrrr拉”。]",
+            "[s[清软颚擦音/x/]s：即现代标准汉语拼音he的“h”。]"
         ]
     },
     {
