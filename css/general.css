@@ -57,12 +57,10 @@
     text-align: right;
 }
 
-/* SPECIAL FONT */
+/* LAYOUT DESGINATION */
 
-.arabic,
-.ara {
-    font-family: Amiri;
-    font-size: calc(var(--default-font-size)*1.4);
+.inlineblock {
+    display: inline-block;
 }
 
 /* TEXT LAYOUT */
@@ -142,6 +140,10 @@ code {
     border-radius: 6px;
     transition-property: all;
     transition-duration: 400ms;
+}
+
+code * {
+    font-family: var(--default-code-font-family);
 }
 
 code em,
@@ -275,4 +277,16 @@ button {
 .emphasis {
     color: #0000ff;
     text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
+}
+
+
+
+/* SPECIAL FONT */
+
+.arabic,
+.ara,
+.arabic *,
+.ara * {
+    font-family: Amiri;
+    font-size: calc(var(--default-font-size)*1.2);
 }

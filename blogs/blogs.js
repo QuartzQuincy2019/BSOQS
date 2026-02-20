@@ -10,6 +10,58 @@
 
 
 var blogs = [
+    /*
+    {
+        type: "blog",
+        id: "",
+        date: "1970-01-01",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VDelta702, role: ROLES.CoAuthor },
+            { user: USERS.Qolerde, role: ROLES.Contributor },
+            { user: USERS.VDelta16, role: ROLES.CoFirstAuthor },
+            { user: USERS.VDelta46, role: ROLES.Instructor },
+            { user: USERS.VLambda24, role: ROLES.CorrespondingAuthor }
+        ],
+        title: "",
+        topics: [],
+        contents: []
+    },
+    */
+    {
+        type: "blog",
+        id: "",
+        date: "2026-02-20",
+        authors: [
+            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
+            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+        ],
+        title: "三母简式动词的6种范式",
+        topics: ["阿拉伯语"],
+        contents: [
+            "h1[常识]h1",
+            "ol[|阿拉伯文字是表音文字，每个文字代表一个辅音，没有元音字母。|阿拉伯语从右至左读写。|阿拉伯语是屈折语，有大量的内部屈折。]ol",
+            "h1[范式]h1",
+            "[这是一个很奇妙的概念。阿拉伯字母是辅音字母，只书写辅音，那么元音如何读出来？答案藏在词汇的变形中。]",
+            "[这不得不引入词根的概念。我们说阿拉伯语的词汇是由词根大量派生出来的。比如v[%{ara}ك - ت - ب]vc[k-t-b]c表示“写”。在这3个辅音前后插入元音，可以派生出大量有关于“写”的词汇。]",
+            "ul[|c[s[k]sas[t]sas[b]sa]c表示动词“写”（过去式第三人称阳性单数）|c[s[k]sās[t]sis[b]s]c表示名词“作家”（书写者）|c[mas[kt]sas[b]sah]c表示“图书馆”（场所化）|c[yus[k]sās[t]sis[b]su]c表示动词“与……通信”（交互含义）]ul",
+            "再比如v[%{ara}د - ر - س]vc[d-r-s]c表示“学习、研究、研磨”，它也可以派生。",
+            "ul[|c[s[d]sas[r]sas[s]sa]c表示动词“学习，研究”（过去式第三人称阳性单数）|c[s[d]sās[r]sis[s]s]c表示名词“学生”（学习者）|c[mas[dr]sas[s]sah]c表示“学校”（场所化）|c[yus[d]sās[r]sis[s]su]c表示动词“与……互相学习”（交互含义）]ul",
+            "再比如v[%{ara}ق - ر - أ]vc[q-r-']c表示“读、诵读”，它也可以派生。",
+            "ul[|c[s[q]sas[r]sas[']sa]c表示动词“读”（过去式第三人称阳性单数）|c[s[q]sās[r]sis[']s]c表示名词“读者”（读者）|c[mas[qr]sas[']sah]c表示“阅览室”（场所化）|c[yus[q]sās[r]sis[']su]c表示动词“与……一起读”（交互含义）]ul",
+            "再比如v[%{ara}ش - ر - ب]vc[sh-r-b]c表示“喝，饮水”，它也可以派生。",
+            "ul[|c[s[sh]sas[r]sv[%{emphasis}i]vs[b]sa]c表示动词“喝”（过去式第三人称阳性单数）|c[s[sh]sās[r]sis[b]s]c表示名词“饮酒者”（饮者）|c[mas[shr]sas[b]sah]c表示“水站，饮水处”（场所化）|c[yus[sh]sās[r]sis[b]su]c表示动词“与……一起喝”（交互含义）]ul",
+            "[你可以发现，每个词根都可以套用一个相对固定的s[元音模板]s，进行固定含义的派生。这个“元音模板”就叫做v[%{emphasis}范式]v。比如c[k-t-b]c“写”，这是它的3个“根母”，套用范式c[?a?a?a]c（用根母按序替换3个c[?]c）后，就变成了c[kataba]c，动词“写”。]",
+            "[范式的概念还可以进一步扩充到动词、名词的变形中。一般用v[%{ara}ف - ع - ل]vc[f-ꜥ-l]c表示（或者说，“作占位符”）一个范式的三个“根母”，如果一个范式像这样表示c[فَعَلَ]c，那么它代表c[?a?a?a]c范式。]",
+            "h1[范式应用举例：三母简式动词的部分范式]h1",
+            "[这6种范式相当于拉丁语的4种动词变位法，相当于日语的三种动词，是并列的关系，s[属于不同类型的动词，拥有不同的变位规则]s。读表可知，这6种范式的变位差异体现在过去式和现在式第2个字母后元音的差异。]",
+            "t[%{ara inlineblock}^#|过去式|现在式|注释||faꜥ?la|yafꜥ?lu|第三人称阳性单数||[فَعَلَ]|[يَفْعَلُ]|a-a||[فَعَلَ]|[يَفْعِلُ]|a-i||[فَعَلَ]|[يَفْعُلُ]|a-u||[فَعِلَ]|[يَفْعَلُ]|i-a||[فَعِلَ]|[يَفْعِلُ]|i-i||[فَعُلَ]|[يَفْعُلُ]|u-u|$]t",
+            "t[%{ara inlineblock}^#|过去式|现在式|注释||faꜥ?lat|tafꜥ?lu|第三人称阴性单数||[فَعَلَتْ]|[تَفْعَلُ]|a-a||[فَعَلَتْ]|[تَفْعِلُ]|a-i||[فَعَلَتْ]|[تَفْعُلُ]|a-u||[فَعِلَتْ]|[تَفْعَلُ]|i-a||[فَعِلَتْ]|[تَفْعِلُ]|i-i||[فَعُلَتْ]|[تَفْعُلُ]|u-u|$]t",
+            "t[%{ara inlineblock}^#|过去式|现在式|注释||faꜥ?lā|yafꜥ?lāni|第三人称阳性双数||[فَعَلَا]|[يَفْعَلَانِ]|a-a||[فَعَلَا]|[يَفْعِلَانِ]|a-i||[فَعَلَا]|[يَفْعُلَانِ]|a-u||[فَعِلَا]|[يَفْعَلَانِ]|i-a||[فَعِلَا]|[يَفْعِلَانِ]|i-i||[فَعُلَا]|[يَفْعُلَانِ]|u-u|$]t",
+            "t[%{ara inlineblock}^#|过去式|现在式|注释||faꜥ?latā|tafꜥ?lāni|第三人称阴性双数||[فَعَلَتَا]|[تَفْعَلَانِ]|a-a||[فَعَلَتَا]|[تَفْعِلَانِ]|a-i||[فَعَلَتَا]|[تَفْعُلَانِ]|a-u||[فَعِلَتَا]|[تَفْعَلَانِ]|i-a||[فَعِلَتَا]|[تَفْعِلَانِ]|i-i||[فَعُلَتَا]|[تَفْعُلَانِ]|u-u|$]t",
+            "[你应该注意到，词根c[k-t-b]c在派生为动词时用了c[?a?a?a]c范式；而词根c[sh-r-b]c用了c[?a?v[%{emphasis}i]v?a]c范式。这是因为前者是表格中第3行的动词，而后者是第4行的。它们变为过去式动词时，第二个字母的元音一个是c[a]c，一个是c[i]c。]"
+        ]
+    },
     {
         type: "blog",
         id: "",
@@ -371,14 +423,13 @@ var blogs = [
         topics: ["阿拉伯语", "原神"],
         contents: [
             "[我不是op]",
-            "[《原神》的界面语言中并没有阿拉伯语。但将界面调成英语后，提纳里的英文名显示为“Tighnari”。]",
-            "[DIN3165转写应为c[Ṭiġnarī]c，ALA-LC转写应为c[Ṭighnarī]c。国外英语玩家大多读成：tie-narry，这当然是错误的。]",
+            "[《原神》的界面语言中并没有阿拉伯语。但将界面调成英语后，提纳里的英文名显示为“Tighnari”。正确转写应是c[Ṭiġnarī(DIN 3165)]c或c[Ṭighnarī(ALA-LC)]c。国外英语玩家大多读成：tie-narry，这当然是错误的。]",
             "[根据考据，提纳里实际为阿拉伯名。]",
             "[根据母语人士，tighnari由v[%{ara}ط]v（ṭ，音标为/tˤ/，即咽化/t/）、v[%{ara}غ]v（ġ，音标为/ɣ/，即浊软腭擦音）、v[%{ara}ن]v（n）、v[%{ara}ر]v（r，/r/，大舌颤音）、v[%{ara}ي]v（y）构成。]",
             "[完整名字为v[%{ara}الطغنري]v，即v[%{ara}الْطِغْنَرِيْ]v。]",
             "[读作：atig-na-ri（阿提厄纳里/阿提格纳里）]",
             "[其中al为定冠词，v[%{ara}ط]v（ṭ）属于太阳字母，定冠词al会被同化为aṭ。定冠词一般不算名字，因此提纳里的准确读法应为：提厄纳里/提格纳里。]",
-            "[同样的思路，艾尔海森的名字应为“海森”。“艾尔”（al）为定冠词。完整名字是v[%{ara}الهيثم]v(c[Al-Hayṯam(DIN 3165)/Al-Haytham(ALA-LC)]c)，即v[%{ara}الْهَيْثَمْ]v。其准确读法应为“海瑟姆”“海什木”，或“阿勒 海瑟姆”。有人译为“阿尔哈桑”。]",
+            "[同样的思路，艾尔海森的名字应为“海森”。“艾尔”（al）为定冠词。完整名字是v[%{ara}الهيثم]v，即c[Al-Hayṯam(DIN 3165)]c或c[Al-Haytham(ALA-LC)]c，即v[%{ara}الْهَيْثَمْ]v。其准确读法应为“海瑟姆”“海什木”，或“阿勒 海瑟姆”。有人译为“阿尔哈桑”。]",
             "[依旧是同样的思路，莱依拉的名字是v[%{ara}الليلة]v，转写为c[Al-Laylah]c，意为“夜晚”“今晚”，是准确的译名。]",
             "h3[注释]h3",
             "[s[咽化]s：咽化是辅音或元音的次要调音，调音同时喉或会厌收紧。]",
@@ -409,22 +460,4 @@ var blogs = [
             "c[Decoding Succeeded!]c"
         ]
     }
-    /*
-    {
-        type: "blog",
-        id: "",
-        date: "1970-01-01",
-        authors: [
-            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VDelta702, role: ROLES.CoAuthor },
-            { user: USERS.Qolerde, role: ROLES.Contributor },
-            { user: USERS.VDelta16, role: ROLES.CoFirstAuthor },
-            { user: USERS.VDelta46, role: ROLES.Instructor },
-            { user: USERS.VLambda24, role: ROLES.CorrespondingAuthor }
-        ],
-        title: "",
-        topics: [],
-        contents: []
-    },
-    */
 ];
