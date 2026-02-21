@@ -2,7 +2,7 @@
 :root {
     --default-border-radius: 16px;
     --default-body-font-family: 'Tinos Nerd Font Propo';
-    --default-code-font-family: '0xProto Nerd Font Mono';
+    --default-code-font-family: '0xProto Nerd Font Mono', 'Agave Nerd Font';
     --default-font-size: 20px;
     --h1-font-size: 32px;
 }

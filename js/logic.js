@@ -125,13 +125,16 @@ function parseAttribute(attrStr) {
 // 标识符到属性名的映射（可随意扩展）
 const flagMap = {
   '%': 'class',
-  'ć': 'class',
-  'ś': 'src',
-  'á': 'alt',
-  'ĥ': 'href',
-  'ŧ': 'title',
-  'ź': 'value'
-  // 可添加更多，如 'u': 'data-user', 'd': 'data-xxx'
+  'ƈ': 'class',
+  'ƨ': 'src',
+  'ȧ': 'alt',
+  'ƹ': 'href',
+  'ź': 'value',
+  'ƭ': 'title',
+  'ŧ': 'type',
+  'ƥ': 'placeholder',
+  'ẇ': 'width',
+  'ḣ': 'height'
 };
 
 // 标签固有参数映射（无标识的 {} 对应哪个属性）
@@ -139,10 +142,14 @@ const flagMap = {
 const intrinsicAttrs = {
   'a': 'href',
   'img': 'src',
-  'span': 'class',    // 示例：span 的固有参数映射为 class
+  'span': 'class',
+  'input': 'type',
   // 可继续添加其他标签
   // 注意：td/th 不在此列，它们特殊处理为合并属性
 };
+
+// 自闭合标签列表（输出时不会生成闭合标签）
+const selfClosingTags = ['img', 'input', 'br', 'hr', 'meta', 'link']; // 可扩展
 
 // 解析连续的大括号组，返回属性和新位置
 function parseAttributes(input, pos, tagType) {
@@ -236,6 +243,7 @@ function parseMixed(input) {
     { pattern: ']D', len: 2 },
     { pattern: ']A', len: 2 },
     { pattern: ']I', len: 2 },
+    { pattern: ']in', len: 3 },
     { pattern: ']', len: 1 },
     // 文本开启标记（长到短）
     { pattern: 'bq[', len: 3 },
@@ -253,6 +261,7 @@ function parseMixed(input) {
     { pattern: 'D[', len: 2 },
     { pattern: 'A[', len: 2 },
     { pattern: 'I[', len: 2 },
+    { pattern: 'in[', len: 3 },
     { pattern: '[', len: 1 },
     // 表格单字符
     { pattern: '^', len: 1 },
@@ -280,7 +289,8 @@ function parseMixed(input) {
     '[': 'p',
     'D[': 'div',
     'A[': 'a',
-    'I[': 'img'
+    'I[': 'img',
+    'in[': 'input'
   };
 
   // 关闭标记对应的标签名
@@ -300,6 +310,7 @@ function parseMixed(input) {
     ']D': 'div',
     ']A': 'a',
     ']I': 'img',
+    ']in': 'input',
     ']': 'p'
   };
 
@@ -329,7 +340,6 @@ function parseMixed(input) {
         if (pat === 'ul[' || pat === 'ol[') {
           let type = pat === 'ul[' ? 'ul' : 'ol';
           let { attrs, newPos } = parseAttributes(input, i + pat.length, 'ul');
-          // 构建属性字符串
           let attrStr = '';
           for (let key in attrs) {
             if (attrs.hasOwnProperty(key)) {
@@ -405,7 +415,7 @@ function parseMixed(input) {
             if (attrs.hasOwnProperty(key)) attrStr += ` ${key}='${attrs[key]}'`;
           }
           html += `<tr${attrStr}>`;
-          useTh = true;   // 该行使用 <th>
+          useTh = true;
           inCell = false;
           i = newPos;
           matched = true;
@@ -425,7 +435,6 @@ function parseMixed(input) {
           for (let key in attrs) {
             if (attrs.hasOwnProperty(key)) {
               if (key === 'span') {
-                // span 是合并属性字符串，直接追加
                 attrStr += attrs[key];
               } else {
                 attrStr += ` ${key}='${attrs[key]}'`;
@@ -476,7 +485,11 @@ function parseMixed(input) {
 
         // ----- 文本关闭标记 -----
         if (closeMap.hasOwnProperty(pat)) {
-          html += `</${closeMap[pat]}>`;
+          let tag = closeMap[pat];
+          if (!selfClosingTags.includes(tag)) {
+            // 非自闭合标签才输出闭合标签
+            html += `</${tag}>`;
+          }
           i += pat.length;
           matched = true;
           break;
@@ -485,16 +498,19 @@ function parseMixed(input) {
         // ----- 文本开启标记 -----
         if (openTagType.hasOwnProperty(pat)) {
           let tag = openTagType[pat];
-          let tagType = tag; // 用于属性解析
+          let tagType = tag;
           let { attrs, newPos } = parseAttributes(input, i + pat.length, tagType);
-          // 构建属性字符串
           let attrStr = '';
           for (let key in attrs) {
             if (attrs.hasOwnProperty(key)) {
               attrStr += ` ${key}='${attrs[key]}'`;
             }
           }
-          html += `<${tag}${attrStr}>`;
+          if (selfClosingTags.includes(tag)) {
+            html += `<${tag}${attrStr} />`;
+          } else {
+            html += `<${tag}${attrStr}>`;
+          }
           i = newPos;
           matched = true;
           break;
@@ -611,4 +627,3 @@ function parseMixed(input) {
   // 不自动关闭任何未闭合的标签，保留原样
   return html;
 }
-
