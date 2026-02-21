@@ -148,7 +148,7 @@ var blogs = [
         title: "My First Post",
         topics: [],
         contents: [
-            "I[{./data/icon/QS.png}á{QS Icon}%{inlineblock}]I",
+            "I[{./data/icon/QS.png}ȧ{QS Icon}ƈ{inlineblock}]I",
             "[ This is a blog space for sharing thoughts, ideas, and experiences.Feel free to explore and contribute!] ",
             "[This blog was created on c[i[February 18 2026]i]c.]",
             "[To seek information, please visit A[{https://github.com/QuartzQuincy2019}@QuartzQuincy2019]A",
