@@ -31,6 +31,20 @@
 }
 
 @font-face {
+    font-family: 'Agave Nerd Font';
+    src: url("../fonts/AgaveNerdFont/AgaveNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agave Nerd Font';
+    src: url("../fonts/AgaveNerdFont/AgaveNerdFont-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: '0xProto Nerd Font Mono';
     src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Italic.ttf") format("truetype");
     font-weight: normal;
@@ -275,6 +289,11 @@ button {
     text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
 }
 
+.weak,
+.weak * {
+    color: var(--weak-text-color);
+}
+
 
 
 /* SPECIAL FONT */
@@ -289,6 +308,11 @@ button {
 .naskh {
     font-family: Amiri;
     font-size: calc(var(--default-font-size)*1.2);
+}
+
+.agave,
+.agave * {
+    font-family: 'Agave Nerd Font';
 }
 
 code *,

@@ -14,7 +14,7 @@ function generateCardHead(date, user, signname, role = "") {
     cardHeadInfo.classList.add("card_head_info");
 
     var postDate = document.createElement("div");
-    postDate.classList.add("post_date");
+    postDate.classList.add("post_date", "agave");
     let mjd = dateToMJD(date);
     let daydiff = today_mjd - mjd;
     let daydiffText = "";
@@ -52,8 +52,9 @@ function generateOverview(blog) {
 
     // -------------------------
     let p1 = document.createElement("p");
+    p1.classList.add("agave");
     let mjd = dateToMJD(blog.date);
-    p1.innerHTML = "<strong>" + blog.date + "</strong>" + " | " + mjd;
+    p1.innerHTML = "<strong>" + blog.date + "</strong> | " + mjd;
     let today = dateToMJD(new Date());
     let daydiff = today - mjd;
     let daydiffText = "";
@@ -64,7 +65,7 @@ function generateOverview(blog) {
     } else {
         daydiffText = daydiff + " days ago";
     }
-    p1.innerHTML += " (" + daydiffText + ")";
+    p1.innerHTML += "<span class='weak'>&nbsp;(" + daydiffText + ")</span>";
     let p2 = document.createElement("div");
     p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
