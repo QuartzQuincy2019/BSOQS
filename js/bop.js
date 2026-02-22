@@ -6,9 +6,9 @@ function getBlog(blogId) {
 }
 function getLatestBlog() {
     var sorted = blogs.toSorted((a, b) => {
-        let aDate = new Date(a.date);
-        let bDate = new Date(b.date);
-        aDate - bDate > 0;
+        let aDate = dateStringToMJD(a.date);
+        let bDate = dateStringToMJD(b.date);
+        return bDate - aDate;
     });
     return sorted[0];
 }
@@ -23,7 +23,9 @@ function isLatestBlog(blogId) {
 }
 
 blogs.forEach(blog => {
-    blog.id = blog.date + blog.title;
+    if (!blog.id) {
+        blog.id = blog.date + blog.title;
+    }
 });
 
 var displayStatus = {}

@@ -77,11 +77,16 @@ var blogs = [
             "[c[|?]c（c[|?]c是不可分割的整体，类名和合并属性需在c[?]c之后添加，如c[|?%{priv}{c2}]c）代表空单元格。即c[&lt;td&gt;&lt;/td&gt;]c（或c[&lt;th&gt;&lt;/th&gt;]c）]",
             "h1[四、参数规则]h1",
             "[所有决定一个标签的字符之后可以紧跟数个c[\\{\\}]c组合。]",
-            "[c[\\%\\{\\}]c和c[\\ƈ\\{\\}]c表示类名，即c[class]c属性。其他的参数，如c[\\ƭ\\{\\}]c，表示c[title]c属性。]",
-            "[不跟单字符的c[\\{\\}]c表示固有参数，每个标签只有一个指定的固有参数。比如c[A\\[\\]A]c的固有参数是c[href]c，也可以用c[\\ƹ\\{\\}]c表示。c[in\\[\\]in]c的固有参数是c[type]c，也可以用c[\\ŧ\\{\\}]c表示。c[v\\[\\]v]c的固有参数是c[class]c。]",
-            "[其他的参数：c[\\ƥ\\{\\}]c表示c[placeholder]c，c[\\ẇ\\{\\}]c表示c[width]c，c[\\ḣ\\{\\}]c表示c[height]c。]",
-            "[@example: c[v\\[\\{red alert\\}alert\\]v]c 返回 c[&lt;span class='red alert'&gt;alert&lt;/span&gt;]c",
+            "[c[\\%\\{\\}]c和c[\\ƈ\\{\\}]c表示类名，即c[class]c属性。]",
             "[@example: c[t\\[%\\{t1\\}]c 返回 c[&lt;table class='t1'&gt;]c]",
+            "[不跟单字符的c[\\{\\}]c表示s[固有参数]s，每个标签v[{emphasis}只有一个指定的]v固有参数。]",
+            "[比如c[A\\[\\]A]c的固有参数是c[href]c。c[in\\[\\]in]c的固有参数是c[type]c。c[v\\[\\]v]c的固有参数是c[class]c。c[I\\[\\]I]c的固有参数是c[src]c。c[v\\[\\]v]c的固有参数是c[class]c。]",
+            "[在特定的标签下，不标单字母标识符的c[\\{\\}]c被自动识别为它的固有属性。前提是这个固有属性已被定义。当然，v[{emphasis}也可以手动添加单字母标识符]v。]",
+            "[@example: c[v\\[\\{red alert\\}ƭ\\{John\\}WARNING\\]v]c 返回 c[&lt;span v[{emphasis}class='red alert']v title='John'&gt;WARNING&lt;/span&gt;]c",
+            "[@example: c[v\\[v[{emphasis}\\ƈ]v\\{red alert\\}ƭ\\{John\\}WARNING\\]v]c 返回 c[&lt;span v[{emphasis}class='red alert']v title='John'&gt;WARNING&lt;/span&gt;]c",
+            "[@example: c[v\\[v[{emphasis}\\%]v\\{red alert\\}ƭ\\{John\\}WARNING\\]v]c 返回 c[&lt;span v[{emphasis}class='red alert']v title='John'&gt;WARNING&lt;/span&gt;]c",
+            "[所有参数：]",
+            "ul[|c[\\ƈ\\{\\}]c或c[\\%\\{\\}]c表示c[class]c|c[\\ƭ\\{\\}]c表示c[title]c|c[\\ŧ\\{\\}]c表示c[type]c|c[\\ƹ\\{\\}]c表示c[href]c|c[\\ƨ\\{\\}]c表示c[src]c|c[\\ƥ\\{\\}]c表示c[placeholder]c|c[\\ẇ\\{\\}]c表示c[width]c|c[\\ḣ\\{\\}]c表示c[height]c|c[\\ḭ\\{\\}]c表示c[id]c（理论上用不到）|c[\\ḓ\\{\\}]c表示c[min]c|c[\\ṷ\\{\\}]c表示c[max]c]ul",
             "[对于单元格，c[\\|]c后的c[\\{\\}]c表示合并属性。这两个c[\\{\\}]c没有先后之分，仅靠c[\\%]c或c[\\ƈ]c识别。]",
             "[@example: c[\\^\\^%{new}|{R2}%{alert}this|%{blue}{c2}MMM|$]c 返回 c[&lt;tr class='new'&gt;&lt;th rowspan='2' class='alert'&gt;this&lt;/th&gt;&lt;th class='blue' colspan='2'&gt;MMM&lt;/th&gt;&lt;/tr&gt;]c]"
         ]
@@ -154,6 +159,29 @@ var blogs = [
             "[To seek information, please visit A[{https://github.com/QuartzQuincy2019}@QuartzQuincy2019]A",
             "[Press key c[C]c or click the button to change the theme.]",
             "<button value='Change Theme' onclick='changeTheme();'>Change Theme</button>"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2026-02-09",
+        authors: [
+            { user: USERS.VDelta46, role: ROLES.FirstAuthor },
+            { user: USERS.VDelta702, role: ROLES.Contributor }
+        ],
+        title: "《致书生·独击洪钟》",
+        topics: ["高考", "山东高考", "2026高考", "丙午马年", "春节", "北河", "北河二", "木星"],
+        contents: [
+            "h1[一]h1",
+            "[独击洪钟，声震八方，搅我云月，翻我海苍。br[]九霄孤云，气浩节荡，峡岸草木，枯槁罹殇。br[]指破星穹，挥却阴翳，槌击绝岳，拨引天罡。br[]褴褛其衣，败蠹其裳，一介书生，一粒梦郎：]",
+            "h1[二]h1",
+            "[乘夫扁舟，碧溪垂纶；驭夫六龙，日边揽胜；br[]驰夫骐骥，收拾山河；登夫帝辇，巡游诸邦。br[]赍气征胡，怀志戍疆；心正思雅，文清墨香。br[]撰文千百，属言十万，针砭时弊，阔论政堂；br[]潜心伏案，原物究理，延拓算冶，精治农桑。]",
+            "h1[三]h1",
+            "[恍惚一梦，梦醒一恸，寒郊洪钟，岿然不动。br[]幸哉其志，飞霄鸿鹄，渡我旧劫，引我新生。br[]爆竹隆隆，灯彩华华，桃符新联，节意正浓。br[]郊野无馔，苦地无饴，冷衾冰瓦，激寒烈冻。br[]遥遥其火，晕晕其明，凭栏妄语，独守洪钟。]",
+            "h1[四]h1",
+            "[天佑其时，岁越河戍v[{weak}①]v，地保其令，春雪徐融v[{weak}②]v。br[]复击其钟，召我同窗，共着袍泽，齐赴洪荒。br[]梅华既孳，嘉树有芽，翠柳新蘖，迎春将发。br[]午元兴征，净履洁衣，欢吟畅饮，马到成功！]",
+            "[ƈ{weak}①河戍：中国古代传统星官“北河”的别称。根据山东半岛2026年2月16日晚11时天象，木星位于双子座北河二、北河三附近。]",
+            "[ƈ{weak}②2026年春节在立春以后，较平时晚，而山东半岛北部冬季多雪，故曰“春雪”。]"
         ]
     },
     {

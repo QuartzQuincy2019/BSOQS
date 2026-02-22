@@ -93,6 +93,13 @@ function generateTopicArea(blog) {
     return topicArea;
 }
 
+function topicInCatagory(topic){
+    for (const catagory of CATAGORIZED_TOPICS) {
+        if(catagory.inclusion.includes(topic)) return catagory;
+    }
+    return false;
+}
+
 function generatePostBody(blog) {
     var bodyArea = document.createElement("div");
     bodyArea.id = blog.id + "_body";

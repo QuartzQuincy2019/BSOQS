@@ -134,7 +134,10 @@ const flagMap = {
   'ŧ': 'type',
   'ƥ': 'placeholder',
   'ẇ': 'width',
-  'ḣ': 'height'
+  'ḣ': 'height',
+  'ḭ': 'id',
+  'ḓ': 'min',
+  'ṷ': 'max'
 };
 
 // 标签固有参数映射（无标识的 {} 对应哪个属性）

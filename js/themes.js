@@ -15,6 +15,8 @@ function changeTheme() {
 }
 
 window.addEventListener("keydown", (e) => {
-    e.preventDefault();
-    if (e.key == "c") changeTheme();
+    if (e.key == "c") {
+        e.preventDefault();
+        changeTheme();
+    }
 })
