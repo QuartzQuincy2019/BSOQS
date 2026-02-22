@@ -1,0 +1,101 @@
+/* candy.css */
+
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes gradient-move-alternate {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes gradient-move-total {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    12.5%{
+        background-position: 29.3% 29.3%;
+    }
+
+    25% {
+        background-position: 0% 50%;
+    }
+
+    37.5%{
+        background-position: 29.3% 79.3%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    62.5%{
+        background-position: 79.3% 79.3%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    87.5%{
+        background-position: 79.3% 29.3%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+.nebucoffee{
+    color: #ffffff;
+    background: linear-gradient(135deg, 
+    #639a06,
+    #05a613, 
+    #068458, 
+    #25ad96, 
+    #40aec4,
+    #7594f0,
+    #8a75f0,
+    #cb75f0,
+    #f075c7,
+    #ff55b5,
+    #e92ba9,
+    #bc0950,
+    #a40444
+    );
+    background-size: 200% 200%;
+    animation: gradient-move-total 20s ease-in-out infinite;
+}
+
+
+.mooncoffee {
+    color: #ffffff;
+    background:linear-gradient(
+        135deg,
+        #3c11d6,
+        #033375,
+        #0768bd,
+        #006b7e,
+        #008f8a,
+        #2e9a00,
+        #73a000);
+    background-size: 500% 500%;
+    animation: gradient-move-total 12s ease-in-out infinite;
+}

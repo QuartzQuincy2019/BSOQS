@@ -54,18 +54,33 @@ function generateOverview(blog) {
     let p1 = document.createElement("p");
     p1.classList.add("agave");
     let mjd = dateToMJD(blog.date);
-    p1.innerHTML = "<strong>" + blog.date + "</strong> | " + mjd;
+    let bdText, ageText = "";
+    if (blog.date.slice(-5) == '10-03') {
+        bdText = " class='nebucoffee'";
+        ageText = " (" + (Number(blog.date.slice(0,4)) - 2007) + ")";
+    };
+    p1.innerHTML = "<strong" + bdText + ">" + blog.date + ageText + "</strong> | " + mjd;
     let today = dateToMJD(new Date());
     let daydiff = today - mjd;
     let daydiffText = "";
+    let classText = "";
     if (daydiff == 0) {
         daydiffText = "Today";
+        classText = "nebucoffee";
     } else if (daydiff == 1) {
         daydiffText = "Yesterday";
+        classText = "nebucoffee";
     } else {
         daydiffText = daydiff + " days ago";
+        if (daydiff <= 7) {
+            classText = "nebucoffee";
+        } else if (daydiff <= 30) {
+            classText = "mooncoffee";
+        } else {
+            classText = "weak";
+        }
     }
-    p1.innerHTML += "<span class='weak'>&nbsp;(" + daydiffText + ")</span>";
+    p1.innerHTML += "&nbsp;<span class='" + classText + "'>(" + daydiffText + ")</span>";
     let p2 = document.createElement("div");
     p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
@@ -93,9 +108,9 @@ function generateTopicArea(blog) {
     return topicArea;
 }
 
-function topicInCatagory(topic){
+function topicInCatagory(topic) {
     for (const catagory of CATAGORIZED_TOPICS) {
-        if(catagory.inclusion.includes(topic)) return catagory;
+        if (catagory.inclusion.includes(topic)) return catagory;
     }
     return false;
 }

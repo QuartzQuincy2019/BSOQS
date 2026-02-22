@@ -157,8 +157,32 @@ var blogs = [
             "[ This is a blog space for sharing thoughts, ideas, and experiences.Feel free to explore and contribute!] ",
             "[This blog was created on c[i[February 18 2026]i]c.]",
             "[To seek information, please visit A[{https://github.com/QuartzQuincy2019}@QuartzQuincy2019]A",
+            "[My Recommended Repositories:]",
+            "A[{https://quartzquincy2019.github.io/OTFWC/OTFWC.html}OTFWC]A(permanent);br[]",
+            "A[{https://quartzquincy2019.github.io/SVBOD/index.html}SVBOD]A(permanent);br[]",
+            "A[{https://quartzquincy2019.github.io/TEBOS/index.html}TEBOS]A(permanent);br[]",
+            "A[{https://quartzquincy2019.github.io/SPWTT/Home.html}SPWTT]A;br[]",
+            "A[{https://quartzquincy2019.github.io/AGHGC/AGHGC.html}AGHGC]A;br[]",
             "[Press key c[C]c or click the button to change the theme.]",
             "<button value='Change Theme' onclick='changeTheme();'>Change Theme</button>"
+        ]
+    },
+    {
+        type: "blog",
+        id: "",
+        date: "2026-02-16",
+        authors: [
+            { user: USERS.BLOG_OWNER }
+        ],
+        title: "MJD日期对照表",
+        topics: ["MJD"],
+        contents: [
+            "[0-129999整万年代]",
+            "t[^^|MJD|日期||c[0]c|c[1858-11-17]c||c[10000]c|c[1886-04-04]c||c[20000]c|c[1913-08-21]c||c[30000]c|c[1941-01-06]c||c[40000]c|c[1968-05-24]c||c[50000]c|c[1995-10-10]c||c[s[60000]s]c|c[s[2023-02-25]s]c]||c[70000]c|c[2050-07-13]c||c[80000]c|c[2077-11-28]c||c[90000]c|c[2105-04-16]c||c[100000]c|c[2132-09-01]c||c[110000]c|c[2160-01-18]c||c[120000]c|c[2187-06-05]c||c[130000]c|c[2214-10-22]c]t",
+            "[50000-69999 整千年代]",
+            "t[^^|MJD|日期|MJD|日期||c[50000]c|c[1995-10-10]c|c[60000]c|c[2023-02-25]c||c[51000]c|c[1998-07-06]c|c[s[61000]s]c|c[s[2025-11-21]s]c||c[52000]c|c[2001-04-01]c|c[62000]c|c[2028-08-17]c||c[53000]c|c[2003-12-27]c|c[63000]c|c[2031-05-14]c||c[54000]c|c[2006-09-22]c|c[64000]c|c[2034-02-07]c||c[55000]c|c[2009-06-18]c|c[65000]c|c[2036-11-03]c||c[56000]c|c[2012-03-14]c|c[66000]c|c[2039-07-31]c||c[57000]c|c[2014-12-09]c|c[67000]c|c[2042-04-26]c||c[58000]c|c[2017-09-04]c|c[68000]c|c[2045-01-20]c||c[59000]c|c[2020-05-31]c|c[69000]c|c[2047-10-17]c]t",
+            "[其他]",
+            "t[^^|日期|MJD||c[1949-10-01]c|c[33190]c||c[2014-09-01]c|c[56901]c||c[2019-09-01]c|c[58727]c||c[2023-09-01]c|c[60188]c||c[2026-06-07]c|c[61198]c]t"
         ]
     },
     {
@@ -546,7 +570,7 @@ var blogs = [
     {
         type: "blog",
         id: "",
-        date: "1970-01-01",
+        date: "2023-02-25",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },

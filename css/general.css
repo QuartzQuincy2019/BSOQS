@@ -247,7 +247,13 @@ span.topic:hover::before {
     content: "\e273";
 }
 
-a[href="https://github.com/QuartzQuincy2019"]::before {
+a[href="https://github.com/QuartzQuincy2019"]::before,
+a[href="https://quartzquincy2019.github.io/SPWTT/Home.html"]::before,
+a[href="https://quartzquincy2019.github.io/OTFWC/OTFWC.html"]::before,
+a[href="https://quartzquincy2019.github.io/SVBOD/index.html"]::before,
+a[href="https://quartzquincy2019.github.io/TEBOS/index.html"]::before,
+a[href="https://quartzquincy2019.github.io/AGHGC/IGE.html"]::before,
+a[href="https://quartzquincy2019.github.io/AGHGC/AGHGC.html"]::before {
     content: "\f408  ";
 }
 
