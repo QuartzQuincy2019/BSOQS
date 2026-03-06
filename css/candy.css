@@ -84,6 +84,10 @@
     animation: gradient-move-total 20s ease-in-out infinite;
 }
 
+.nebucoffee *{
+    color: #ffffff;
+}
+
 
 .mooncoffee {
     color: #ffffff;
@@ -98,4 +102,8 @@
         #73a000);
     background-size: 500% 500%;
     animation: gradient-move-total 12s ease-in-out infinite;
+}
+
+.mooncoffee *{
+    color: #ffffff;
 }

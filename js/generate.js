@@ -57,7 +57,7 @@ function generateOverview(blog) {
     let bdText, ageText = "";
     if (blog.date.slice(-5) == '10-03') {
         bdText = " class='nebucoffee'";
-        ageText = " (" + (Number(blog.date.slice(0,4)) - 2007) + ")";
+        ageText = " (" + (Number(blog.date.slice(0, 4)) - 2007) + ")";
     };
     p1.innerHTML = "<strong" + bdText + ">" + blog.date + ageText + "</strong> | " + mjd;
     let today = dateToMJD(new Date());
@@ -128,11 +128,10 @@ function generatePostBody(blog) {
     bodyArea.appendChild(generateTopicArea(blog));
     bodyArea.appendChild(document.createElement("hr"));
     var totalInnerHTML = "";
-    for (var k = 0; k < blog.contents.length; k++) {
-        let text = parseMixed(blog.contents[k]);
-        totalInnerHTML += text;
-    }
+    var totalText = blog.contents.join(" ");
+    totalInnerHTML += parseMixed(totalText);
     bodyArea.innerHTML += totalInnerHTML;
+    bodyArea.innerHTML.replaceAll(/(\<tbody\>)|(\<\/tbody\>)/gm, "");
     return bodyArea;
 }
 

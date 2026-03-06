@@ -144,6 +144,14 @@ quote {
     color: var(--weak-text-color);
 }
 
+h1 {
+    font-size: 1.45em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
 code {
     font-family: var(--default-code-font-family);
     box-sizing: content-box;
@@ -190,6 +198,7 @@ h1.headTitle {
 
 h1.headTitle.is-sticky {
     text-align: center;
+    margin: 0;
     padding: 0.2em 0 0.2em 0;
     border-bottom: 3px solid var(--text-color);
     box-shadow: 0 2px 5px var(--text-color);
@@ -279,6 +288,10 @@ tfoot {
     font-weight: bold;
 }
 
+.zebtable tr:nth-of-type(2n) {
+    background-color: var(--emphasis-bg-color-1);
+}
+
 button {
     background-color: var(--emphasis-bg-color-2);
 }
@@ -286,13 +299,13 @@ button {
 /* UNIVERSAL */
 
 .alert {
-    color: #ff0000;
-    text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
+    color: var(--independent-alert-color);
+    text-shadow: 1px 1px 2px #9f9f9f;
 }
 
 .emphasis {
-    color: #0000ff;
-    text-shadow: 1px 1px 2px #ffffff, -1px -1px 2px #ffffff;
+    color: var(--independent-emphasis-color);
+    text-shadow: 1px 1px 2px #ffffff;
 }
 
 .weak,
