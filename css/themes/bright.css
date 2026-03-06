@@ -15,3 +15,10 @@
     --independent-emphasis-color: #0000ff;
     --independent-alert-color: #ff0000;
 }
+
+.cross {
+    background-color: #ffffff;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#e7e7e7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #e7e7e7 1px, #ffffff 1px) -0.5px 0;
+    background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+}

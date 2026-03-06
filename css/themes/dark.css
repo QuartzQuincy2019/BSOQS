@@ -1,6 +1,6 @@
 /* dark.css */
-:root{
-    --background-color: #272727;
+:root {
+    --background-color: #232323;
     --emphasis-bg-color-1: #4e4e4e;
     --emphasis-bg-color-2: #797979;
     --emphasis-bg-color-reversed-1: #ffeaf2;
@@ -14,4 +14,11 @@
     --topic-color: #a9ff67;
     --independent-emphasis-color: #00d5ff;
     --independent-alert-color: #ff7575;
+}
+
+.cross {
+    background-color: #232323;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #232323 20%, #232323 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #232323 20%, #232323 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#4b4b4b 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #4b4b4b 1px, #232323 1px) -0.5px 0;
+    background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
 }
