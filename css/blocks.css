@@ -15,7 +15,12 @@
   }
 }
 
+.overview{
+    margin-top: 0.5em;
+}
+
 .header_block {
+    margin-top: 0.5em;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));

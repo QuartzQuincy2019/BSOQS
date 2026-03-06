@@ -1,92 +1,128 @@
 // 3 logic.js
 
 /**
- * 监听 sticky 元素的状态变化（进入/离开粘性定位）
- * @param {HTMLElement} element - 需要监听的元素（必须拥有 position: sticky）
- * @param {Function} onSticky - 进入 sticky 状态时的回调函数，接收元素作为参数
- * @param {Function} onUnsticky - 离开 sticky 状态时的回调函数，接收元素作为参数（可选）
+ * 根据视口顶部位置，为当前可见卡片区域的标题添加激活类（支持动态增删卡片，带迟滞防抖）
+ * @param {string} cardSelector - 卡片容器的选择器（例如 '.card'）
+ * @param {string} titleSelector - 卡片内标题的选择器（默认为 '.headTitle'）
+ * @param {string} activeClass - 要添加/移除的类名（默认为 'is-sticky'）
+ * @param {number} hysteresis - 迟滞量（像素），用于防止边界抖动，默认2px
+ * @param {HTMLElement|string} [watchContainer] - 要监听的容器元素或其选择器（默认为 document.body）
  * @returns {Function} 停止监听的函数
  */
-function listenSticky(element, onSticky, onUnsticky) {
-  // 1. 验证元素是否具有 sticky 定位
-  const computedStyle = getComputedStyle(element);
-  if (computedStyle.position !== 'sticky') {
-    throw new Error('元素必须设置 position: sticky');
-  }
+function observeCardTitles(cardSelector, titleSelector = '.headTitle', activeClass = 'is-sticky', hysteresis = 2, watchContainer = document.body) {
+  const container = typeof watchContainer === 'string'
+    ? document.querySelector(watchContainer)
+    : watchContainer;
+  if (!container) throw new Error('无效的监听容器');
 
-  // 2. 解析阈值（以 top 为例，可根据需要扩展）
-  let thresholdValue = 0;
-  let thresholdUnit = 'px';
-  const topValue = computedStyle.top;
-  if (topValue && topValue !== 'auto') {
-    const match = topValue.match(/^([+-]?\d*\.?\d+)(px|%)?$/);
-    if (match) {
-      thresholdValue = parseFloat(match[1]);
-      thresholdUnit = match[2] || 'px';
+  // 缓存：按DOM顺序的卡片数组 + 卡片到标题的映射
+  let cards = [];
+  const cardTitleMap = new Map();
+  let activeCard = null; // 当前激活的卡片
+
+  // 刷新卡片缓存（在DOM变化时调用）
+  function refreshCards() {
+    const currentCards = Array.from(document.querySelectorAll(cardSelector));
+    cards = currentCards; // 保持DOM顺序
+
+    cardTitleMap.clear();
+    currentCards.forEach(card => {
+      const title = card.querySelector(titleSelector);
+      if (title) cardTitleMap.set(card, title);
+    });
+
+    // 如果之前激活的卡片被移除，清理其类
+    if (activeCard && !cardTitleMap.has(activeCard)) {
+      activeCard = null; // 无需清理类，因为元素已不在DOM
     }
   }
-  // 简单处理：仅支持 px 单位，百分比阈值按 0 处理（可增强）
-  if (thresholdUnit !== 'px') {
-    console.warn('仅支持 px 阈值的精确判断，将使用 0 作为阈值');
-    thresholdValue = 0;
-  }
 
-  // 3. 找到最近的滚动容器（overflow 为 auto/scroll 的祖先或视口）
-  let container = element.parentElement;
-  while (container) {
-    const overflow = getComputedStyle(container).overflowY;
-    if (overflow === 'auto' || overflow === 'scroll') break;
-    container = container.parentElement;
-  }
-  const isRoot = !container || container === document.documentElement;
-  const scrollTarget = isRoot ? window : container;
+  refreshCards();
 
-  // 4. 状态缓存
-  let isSticky = false;
-
-  // 5. 核心判断函数
-  function check() {
-    const rect = element.getBoundingClientRect();
-    const parentRect = element.parentElement.getBoundingClientRect();
-
-    // 根据容器调整坐标参考系
-    let currentTop = rect.top;
-    let parentBottom = parentRect.bottom;
-    let threshold = thresholdValue;
-
-    if (!isRoot) {
-      const containerRect = container.getBoundingClientRect();
-      currentTop = rect.top - containerRect.top;
-      parentBottom = parentRect.bottom - containerRect.top;
+  // 滚动处理（使用 requestAnimationFrame 节流）
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActiveCard();
+        ticking = false;
+      });
+      ticking = true;
     }
+  }
 
-    // sticky 激活条件（基于 top 阈值）：
-    // a) 元素上边缘 ≤ 阈值（已到达或超过粘性触发点）
-    // b) 父元素底部 > 阈值（父元素尚未完全滚出，否则 sticky 失效）
-    const active = currentTop <= threshold && parentBottom > threshold;
+  // 核心更新函数
+  function updateActiveCard() {
+    const viewportTop = 0; // 视口顶部坐标
 
-    if (active !== isSticky) {
-      isSticky = active;
-      if (active && onSticky) {
-        onSticky(element);
-      } else if (!active && onUnsticky) {
-        onUnsticky(element);
+    // 1. 如果存在当前激活卡片，先检查它是否仍在“缓冲区域”内
+    if (activeCard) {
+      const rect = activeCard.getBoundingClientRect();
+      // 定义缓冲区域：上下各扩展 hysteresis 像素
+      const expandedTop = rect.top - hysteresis;
+      const expandedBottom = rect.bottom + hysteresis;
+      if (viewportTop >= expandedTop && viewportTop < expandedBottom) {
+        // 仍在缓冲区内，保持激活，不进行切换
+        return;
       }
     }
+
+    // 2. 否则，需要寻找新的激活卡片（按DOM顺序，取第一个符合条件的）
+    let newActive = null;
+    for (let card of cards) {
+      const rect = card.getBoundingClientRect();
+      if (rect.top <= viewportTop && rect.bottom > viewportTop) {
+        newActive = card;
+        break;
+      }
+    }
+
+    // 3. 如果激活卡片发生变化，更新类
+    if (newActive !== activeCard) {
+      if (activeCard) {
+        const oldTitle = cardTitleMap.get(activeCard);
+        if (oldTitle) oldTitle.classList.remove(activeClass);
+      }
+      if (newActive) {
+        const newTitle = cardTitleMap.get(newActive);
+        if (newTitle) newTitle.classList.add(activeClass);
+      }
+      activeCard = newActive;
+    }
   }
 
-  // 6. 监听滚动和窗口大小变化
-  scrollTarget.addEventListener('scroll', check, { passive: true });
-  window.addEventListener('resize', check);
-  check(); // 立即执行一次初始检查
+  // MutationObserver 监听 DOM 变化（动态添加/删除卡片）
+  const observer = new MutationObserver(() => {
+    refreshCards();
+    updateActiveCard(); // 刷新后立即更新状态
+  });
+  observer.observe(container, { childList: true, subtree: true });
 
-  // 7. 返回取消监听的方法
-  return function stopListening() {
-    scrollTarget.removeEventListener('scroll', check);
-    window.removeEventListener('resize', check);
+  // 监听滚动和窗口大小变化
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+
+  // 初始执行
+  updateActiveCard();
+
+  // 返回停止监听函数
+  return function stop() {
+    observer.disconnect();
+    window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('resize', onScroll);
+    // 清理当前激活的类
+    if (activeCard) {
+      const title = cardTitleMap.get(activeCard);
+      if (title) title.classList.remove(activeClass);
+    }
   };
 }
 
+// 开始监听，卡片出现后自动生效
+const stop = observeCardTitles('.card', '.headTitle', 'is-sticky', 10, '#BlogSpace');
+
+// 当不再需要时（例如页面卸载），调用 stop()
+// stop();
 
 // 辅助函数：查找下一个未被转义的指定字符
 function findUnescapedChar(str, start, target) {

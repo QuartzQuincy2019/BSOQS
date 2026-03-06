@@ -84,7 +84,7 @@ body {
 
 * {
     transition-property: all;
-    transition-duration: 1000ms;
+    transition-duration: 500ms;
 }
 
 body * {
@@ -193,7 +193,13 @@ h1.headTitle {
     padding: 0;
     margin-top: 0;
     font-size: var(--h1-font-size);
-    transition-duration: 100ms;
+    transition-duration: 500ms;
+}
+
+h1.headTitle>a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: inherit;
 }
 
 h1.headTitle.is-sticky {

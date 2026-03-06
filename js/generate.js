@@ -49,6 +49,7 @@ function generateCardHead(date, user, signname, role = "") {
 function generateOverview(blog) {
     var overviewArea = document.createElement("div");
     overviewArea.id = blog.id + "_overview";
+    overviewArea.classList.add("overview");
 
     // -------------------------
     let p1 = document.createElement("p");
@@ -140,10 +141,14 @@ function generateHeadTitle(blog) {
     var headTitle = document.createElement("h1");
     headTitle.classList.add("headTitle");
     headTitle.id = blog.id + "_h1";
+    var titleAnchor = document.createElement("a");
+    titleAnchor.href = "#" + headTitle.id;
+    titleAnchor.name = headTitle.id;
+    headTitle.appendChild(titleAnchor);
     if (isLatestBlog(blog.id)) {
         headTitle.classList.add("latest");
     }
-    headTitle.textContent = blog.title;
+    titleAnchor.textContent = blog.title;
     headTitle.onclick = () => {
         togglePost(thisId);
     }
@@ -171,11 +176,3 @@ for (var i = 0; i < blogs.length; i++) {
 
 
 unfoldPost(getLatestBlog().id);
-
-
-document.querySelectorAll('.headTitle').forEach(el => {
-    listenSticky(el,
-        (el) => el.classList.add('is-sticky'),
-        (el) => el.classList.remove('is-sticky')
-    );
-});

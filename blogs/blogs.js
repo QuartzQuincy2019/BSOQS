@@ -30,7 +30,7 @@ var blogs = [
     */
     {
         type: "blog",
-        id: "",
+        id: "2bv98wg4gn9wnspqf074nf",
         date: "2026-03-06",
         authors: [
             { user: USERS.BLOG_OWNER }
@@ -224,7 +224,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "bvnbc872ndkvmfn2hfs131",
         date: "2026-02-23",
         authors: [
             { user: USERS.BLOG_OWNER }
@@ -300,7 +300,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "bb29vhm71042nkqif2bv0sm",
         date: "2026-02-23",
         authors: [
             { user: USERS.BLOG_OWNER }
@@ -318,7 +318,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "1w0iif92nlsn263gmw9wk0v457isc",
         date: "2026-02-20",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -370,7 +370,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "92bvomz932v8vu2dpq0f020gqc4vhy",
         date: "2026-02-18",
         authors: [
             { user: USERS.BLOG_OWNER }
@@ -394,7 +394,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "u613fhub8g34bvcwihdwi2griun82",
         date: "2026-02-09",
         authors: [
             { user: USERS.VDelta46, role: ROLES.FirstAuthor },
@@ -419,7 +419,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "bv284u8iw24wh29gusid27gvgq",
         date: "2026-01-31",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -483,7 +483,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "vnu9v28vr2489n8gf29c2y4gmb9h7r",
         date: "2026-01-16",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -543,7 +543,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "bvw24vc9g29u24gj924y7msuigi2",
         date: "2026-01-03",
         authors: [
             { user: USERS.BLOG_OWNER }
@@ -557,7 +557,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "zz86dv4g2io4h8giowi9gwu294gi",
         date: "2025-10-31",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -621,7 +621,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "q387g7g9vh7w4g5wuias8ervg23ggg",
         date: "2025-10-16",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -650,7 +650,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "gq3875v7wervwig2gi2u494goni21",
         date: "2025-04-12",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -681,7 +681,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "87agerv824hgo9912gf9on28gf2qll",
         date: "2025-02-10",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -710,7 +710,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "t678wrg8b2guioivwur138etrg24",
         date: "2024-09-16",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
@@ -732,7 +732,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "vzuv8d24gqneg79hbwihrgss",
         date: "2024-08-09",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
@@ -751,7 +751,7 @@ var blogs = [
     },
     {
         type: "blog",
-        id: "",
+        id: "86132tfh2ir4ghyiuhwrgwi2r829",
         date: "2024-02-17",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
