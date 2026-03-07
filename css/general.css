@@ -190,7 +190,7 @@ h1.headTitle {
     position: sticky;
     background-color: var(--background-color);
     top: 0;
-    padding: 0;
+    padding: 0.2em 0 0.2em 0;
     margin-top: 0;
     font-size: var(--h1-font-size);
     transition-duration: 500ms;
@@ -204,16 +204,18 @@ h1.headTitle>a {
 
 h1.headTitle.is-sticky {
     text-align: center;
-    margin: 0;
-    padding: 0.2em 0 0.2em 0;
-    border-bottom: 3px solid var(--text-color);
+    margin-top: 0;
+    padding: 0.3em 0 0.2em 0;
+    /*padding-top设置为0.3em的时候，抖动最轻*/
+    border-bottom: 4px solid var(--text-color);
     box-shadow: 0 2px 5px var(--text-color);
     font-size: calc(var(--h1-font-size)*0.9);
 }
 
 @media screen and (max-width: 900px) {
     h1.headTitle.is-sticky {
-        border-bottom: 2px solid var(--text-color);
+        padding: 0.3em 0 0.3em 0;
+        border-bottom: 3px solid var(--text-color);
         box-shadow: 0 1px 3px var(--text-color);
         font-size: calc(var(--h1-font-size)*0.8);
     }
@@ -360,6 +362,14 @@ button {
     font-size: var(--default-font-size);
     color: var(--weak-text-color);
     min-height: 6em;
+}
+@media screen and (max-width: 900px) {
+    #PageInfo {
+        min-height: auto;
+    }
+    #PageInfoTitles{
+        display: none;
+    }
 }
 
 /* UNIVERSAL */

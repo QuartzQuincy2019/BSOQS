@@ -20,10 +20,20 @@ function generatePageButton(pageNumber) {
     let button = document.createElement("button");
     button.textContent = pageNumber;
     button.id = "pageButton_" + pageNumber;
-    button.onclick = () => {
+    let listenerIn = button.addEventListener("mouseenter", (e) => {
+        generatePageInfo(pageNumber);
+    });
+    let listenerOut = button.addEventListener("mouseleave", (e) => {
+        generatePageInfo(currentPage);
+    });
+    let listenerClick = button.addEventListener("click", (e) => {
         currentPage = pageNumber;
         renderPage(currentPage);
-    }
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'instant'
+        });
+    });
     return button;
 }
 
@@ -48,18 +58,6 @@ const currentPageButtonObserver = new MutationObserver(() => {
         } else {
             button.classList.remove("currentPageButton");
         }
-        let listenerIn = button.addEventListener("mouseenter", (e) => {
-            generatePageInfo(pageNumber);
-        });
-        let listenerOut = button.addEventListener("mouseleave", (e) => {
-            generatePageInfo(currentPage);
-        });
-        let listenerClick = button.addEventListener("click", (e) => {
-            window.scrollTo({
-                top: document.documentElement.scrollHeight,
-                behavior: 'instant'
-            });
-        });
     }
 });
 currentPageButtonObserver.observe(document.getElementById("pageButtonArea"), { childList: true });
@@ -127,11 +125,13 @@ function getPagePostTitles(pageNumber) {
 
 function generatePageInfo(pageNumber) {
     var E_PageInfo = document.getElementById("PageInfo");
+    E_PageInfo.innerHTML = "";
     var totalPages = Math.ceil(blogs.length / POSTS_IN_ONE_PAGE);
     var info1 = document.createElement("p");
-    E_PageInfo.innerHTML = "";
+    info1.id = "PageInfoTimeSpan";
     info1.innerHTML = "Page " + pageNumber + " / " + totalPages + " | " + getPageTimeSpan(pageNumber);
     var info2 = document.createElement("p");
+    info2.id = "PageInfoTitles";
     info2.innerHTML = getPagePostTitles(pageNumber).join(", &nbsp;&nbsp;&nbsp;");
     E_PageInfo.append(info1, info2);
 }
