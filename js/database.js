@@ -34,3 +34,6 @@ const ROLES = {
   Contributor: "Contributor",
   Instructor: "Instructor"
 }
+
+const POSTS_IN_ONE_PAGE = 10;// 每页显示的博客数量
+

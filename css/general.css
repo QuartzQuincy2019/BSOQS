@@ -302,6 +302,66 @@ button {
     background-color: var(--emphasis-bg-color-2);
 }
 
+#pageButtonArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+#pageButtonArea button {
+    font-size: var(--h1-font-size);
+    padding: 0.4em 0.7em;
+    margin: 0.3em;
+    background-color: var(--button-bg-color);
+    border-radius: 7px;
+    border: none;
+}
+
+#pageButtonArea button:hover {
+    background-color: var(--emphasis-bg-color-2);
+    cursor: pointer;
+}
+
+#pageButtonArea button.currentPageButton {
+    background-color: var(--button-bg-color-selected);
+    cursor: default;
+}
+
+#pageButtonArea button.left-border {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 5px double var(--text-color);
+}
+
+#pageButtonArea button.right-border {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 5px double var(--text-color);
+}
+
+#pageButtonArea button.left-end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 5px solid var(--border-end-color);
+}
+
+#pageButtonArea button.right-end {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 5px solid var(--border-end-color);
+}
+
+#PageInfo {
+    text-align: center;
+    margin: 0.5em;
+    font-size: var(--default-font-size);
+    color: var(--weak-text-color);
+    min-height: 6em;
+}
+
 /* UNIVERSAL */
 
 .alert {

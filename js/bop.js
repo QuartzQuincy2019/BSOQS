@@ -13,6 +13,19 @@ function getLatestBlog() {
     return sorted[0];
 }
 
+/**
+ * 将博客组排序成成按照日期降序排序的形式
+ * @param {*} blogGroup 
+ * @returns 
+ */
+function sortBlogsByDate(blogGroup) {
+    return blogGroup.sort((a, b) => {
+        let aDate = dateStringToMJD(a.date);
+        let bDate = dateStringToMJD(b.date);
+        return bDate - aDate;
+    });
+}
+
 function isLatestBlog(blogId) {
     var latestId = getLatestBlog().id;
     if (blogId === latestId) {

@@ -1,6 +1,8 @@
 /* bright.css */
 :root {
     --background-color: #ffffff;
+    --button-bg-color: #e7e7e7;
+    --button-bg-color-selected: #ffde79;
     --emphasis-bg-color-1: #f1f1f1;
     --emphasis-bg-color-2: #dcdcdc;
     --emphasis-bg-color-reversed-1: #db0058;
@@ -14,6 +16,7 @@
     --topic-color: #ff8000;
     --independent-emphasis-color: #0000ff;
     --independent-alert-color: #ff0000;
+    --border-end-color: #001997;
 }
 
 .cross {

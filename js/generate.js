@@ -1,5 +1,7 @@
 // 4 generate.js
 const destination = document.getElementById("BlogSpace");
+var currentPage = 1;
+
 function generateCardHead(date, user, signname, role = "") {
     var today_mjd = dateToMJD(new Date());
     var cardHead = document.createElement("div");
@@ -164,15 +166,3 @@ function generateFoldedPost(blog) {
     card.appendChild(generateOverview(blog));
     destination.appendChild(card);
 }
-
-for (var i = 0; i < blogs.length; i++) {
-    generateFoldedPost(blogs[i]);
-}
-for (var i = 0; i < blogs.length; i++) {
-    var h1 = document.getElementById(blogs[i].id + "_h1");
-    h1.classList.add("folded");
-}
-
-
-
-unfoldPost(getLatestBlog().id);
