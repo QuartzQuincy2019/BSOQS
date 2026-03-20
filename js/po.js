@@ -43,6 +43,9 @@ function renderPage(page) {
     pageBlogs = divideBlogs(POSTS_IN_ONE_PAGE);
     pageBlogs[page - 1].forEach(blog => {
         generateFoldedPost(blog);
+        if (displayStatus[blog.id]) {//如果该博客的展开状态为true，则展开该博客
+            unfoldPost(blog.id);
+        }
     });
 }
 

@@ -35,5 +35,5 @@ const ROLES = {
   Instructor: "Instructor"
 }
 
-const POSTS_IN_ONE_PAGE = 10;// 每页显示的博客数量
+const POSTS_IN_ONE_PAGE = 5;// 每页显示的博客数量
 
