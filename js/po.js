@@ -1,6 +1,7 @@
 // 5 po.js
 // 换页相关
 
+const ADJACENT_RAGE = 3; //邻近页数范围为ADJACENT_RAGE
 // 决定当前页面显示哪些博客
 function divideBlogs(postsInOnePage) {
     //blogs已经按照时间顺序排好序了
@@ -70,7 +71,6 @@ const pageButtonRenderObserver = new MutationObserver(() => {
 pageButtonRenderObserver.observe(document.getElementById("BlogSpace"), { childList: true });
 
 
-const ADJACENT_RAGE = 2; //邻近页数范围为ADJACENT_RAGE
 
 //根据当前页数显示按钮
 function regeneratePageButtons() {
@@ -141,3 +141,22 @@ function generatePageInfo(pageNumber) {
 
 
 renderPage(currentPage);
+
+
+/**
+ * 
+ * @param {Set} _topics 
+ * @returns 
+ */
+function filterBlogWithTopics(_topics) {
+    let allBlogs = blogs;
+    let filtered = [];
+    filtered = allBlogs.filter(blog => {
+        if (new Set(_topics).isSubsetOf(new Set(blog.topics))) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return filtered;
+}

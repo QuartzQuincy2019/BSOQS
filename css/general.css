@@ -363,16 +363,34 @@ button {
     color: var(--weak-text-color);
     min-height: 6em;
 }
+
 @media screen and (max-width: 900px) {
     #PageInfo {
         min-height: auto;
     }
-    #PageInfoTitles{
+
+    #PageInfoTitles {
         display: none;
     }
 }
 
 /* UNIVERSAL */
+
+.body_hr1 {
+    margin: 0.05em 0 1.2em 0;
+    border: none;
+    border-top: 4px solid var(--text-color);
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.body_hr2 {
+    margin: 1em 0 0 0;
+    border: none;
+    border-top: 2px solid var(--text-color);
+    transition-property: all;
+    transition-duration: 500ms;
+}
 
 .alert {
     color: var(--independent-alert-color);

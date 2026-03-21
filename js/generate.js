@@ -54,27 +54,27 @@ function generateOverview(blog) {
     overviewArea.classList.add("overview");
 
     // -------------------------
-    let p1 = document.createElement("p");
-    p1.classList.add("agave");
-    let mjd = dateToMJD(blog.date);
-    let bdText, ageText = "";
-    if (blog.date.slice(-5) == '10-03') {
-        bdText = " class='nebucoffee'";
-        ageText = " (" + (Number(blog.date.slice(0, 4)) - 2007) + ")";
-    };
-    p1.innerHTML = "<strong" + bdText + ">" + blog.date + ageText + "</strong> | " + mjd;
-    let today = dateToMJD(new Date());
-    let daydiff = today - mjd;
-    let daydiffText = "";
-    let classText = "";
-    if (daydiff == 0) {
-        daydiffText = "Today";
-        classText = "nebucoffee";
-    } else if (daydiff == 1) {
-        daydiffText = "Yesterday";
-        classText = "nebucoffee";
-    } else {
-        daydiffText = daydiff + " days ago";
+    function generateEditionDateInfo(_date, showDecoratedDiff, startText = "") {
+        let p1 = document.createElement("p");
+        p1.classList.add("agave");
+        let mjd = dateToMJD(_date);
+        let bdText, ageText = "";
+        if (_date.slice(-5) == '10-03') {
+            bdText = " class='nebucoffee'";
+            ageText = " (" + (Number(_date.slice(0, 4)) - 2007) + ")";
+        };
+        p1.innerHTML = startText + "<strong" + bdText + ">" + _date + ageText + "</strong> | " + mjd;
+        let today = dateToMJD(new Date());
+        let daydiff = today - mjd;
+        let daydiffText = "";
+        let classText = "";
+        if (daydiff == 0) {
+            daydiffText = "Today";
+        } else if (daydiff == 1) {
+            daydiffText = "Yesterday";
+        } else {
+            daydiffText = daydiff + " days ago";
+        }
         if (daydiff <= 7) {
             classText = "nebucoffee";
         } else if (daydiff <= 30) {
@@ -82,8 +82,21 @@ function generateOverview(blog) {
         } else {
             classText = "weak";
         }
+
+        if (showDecoratedDiff) {
+            p1.innerHTML += "&nbsp;<span class='" + classText + "'>(" + daydiffText + ")</span>";
+        } else {
+            p1.innerHTML += "&nbsp;<span class='weak'>(" + daydiffText + ")</span>";
+        }
+        return p1;
     }
-    p1.innerHTML += "&nbsp;<span class='" + classText + "'>(" + daydiffText + ")</span>";
+    let p1 = generateEditionDateInfo(blog.date, true, "Published: ");
+    overviewArea.appendChild(p1);
+    if (blog.edited != "") {
+        var pEdited = generateEditionDateInfo(blog.edited, false, "Last Edited: ");
+        overviewArea.appendChild(pEdited);
+    }
+    //
     let p2 = document.createElement("div");
     p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
@@ -95,7 +108,7 @@ function generateOverview(blog) {
         p2.append(p2i, p2a)
     });
     let p3 = generateTopicArea(blog);
-    overviewArea.append(p1, p2, p3);
+    overviewArea.append(p2, p3);
     return overviewArea;
 }
 
@@ -129,7 +142,11 @@ function generatePostBody(blog) {
     }
     bodyArea.appendChild(headerBlock);
     bodyArea.appendChild(generateTopicArea(blog));
-    bodyArea.appendChild(document.createElement("hr"));
+    var bodyHr1 = document.createElement("hr");
+    bodyHr1.classList.add("body_hr1");
+    var bodyHr2 = document.createElement("hr");
+    bodyHr2.classList.add("body_hr2");
+    bodyArea.append(bodyHr2, bodyHr1);
     var totalInnerHTML = "";
     var totalText = blog.contents.join(" ");
     totalInnerHTML += parseMixed(totalText);

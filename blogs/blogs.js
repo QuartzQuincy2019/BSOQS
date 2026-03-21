@@ -32,6 +32,7 @@ var blogs = [
         type: "blog",
         id: "379gvt290429h1vb19zpoa",
         date: "2026-03-20",
+        edited: "2026-03-21",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -121,8 +122,8 @@ var blogs = [
             "[连+形主格+名宾格+现在主动分词阳性主格复数+形宾格+名宾格+虚拟主动三复+代夺格+名夺格]",
             "[s[讲解]s",
             "ol[|s[ut]s 连词，“以便，为了”，接虚拟式，构成目的状语从句。",
-            "|s[impiī]s 形容词，“不敬的，无礼的，不虔诚的”，阳性主格复数，修饰c[lūnas ūsurpantēs]c。前缀c[im-]c表示否定，c[piī]c，“虔敬的，虔诚的”，阳性主格复数。",
-            "|s[lūnas ūsurpantēs]s 动宾短语作名词，“窃月者们”，作c[Ut…]c目的状语从句的主语。c[lūnas]c，“月亮”，阴性宾格复数。c[ūsurpantēs]c，“窃取，夺取”，现在主动分词阳性主格复数，分词表人，即“窃取……的人”。",
+            "|s[impiī]s 形容词，“不敬的，无礼的，不虔诚的”，阳性主格复数，修饰c[lūnās ūsurpantēs]c。前缀c[im-]c表示否定，c[piī]c，“虔敬的，虔诚的”，阳性主格复数。",
+            "|s[lūnās ūsurpantēs]s 动宾短语作名词，“窃月者们”，作c[Ut…]c目的状语从句的主语。c[lūnās]c，“月亮”，阴性宾格复数。c[ūsurpantēs]c，“窃取，夺取”，现在主动分词阳性主格复数，分词表人，即“窃取……的人”。",
             "|s[nūllās sēdēs]s 形容词+名词结构，“绝无容身之处”。c[nūllās]c，“完全没有的，绝无的”。c[sēdēs]c，“场所”。均为阴性宾格复数。",
             "|s[habeant]s 动词，“拥有”，虚拟语气现在时第三人称复数主动态，作c[Ut...]c目的状语从句的谓语。",
             "|s[hōc modō]s 名词短语作方式状语，“如这般，像这样”。均为阳性夺格单数。]ol]",
@@ -137,6 +138,7 @@ var blogs = [
         type: "blog",
         id: "2bv98wg4gn9wnspqf074nf",
         date: "2026-03-06",
+        edited: "2026-03-20",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -332,6 +334,7 @@ var blogs = [
         type: "blog",
         id: "bvnbc872ndkvmfn2hfs131",
         date: "2026-02-23",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -408,6 +411,7 @@ var blogs = [
         type: "blog",
         id: "bb29vhm71042nkqif2bv0sm",
         date: "2026-02-23",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -426,6 +430,7 @@ var blogs = [
         type: "blog",
         id: "1w0iif92nlsn263gmw9wk0v457isc",
         date: "2026-02-20",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -478,6 +483,7 @@ var blogs = [
         type: "blog",
         id: "92bvomz932v8vu2dpq0f020gqc4vhy",
         date: "2026-02-18",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -502,6 +508,7 @@ var blogs = [
         type: "blog",
         id: "u613fhub8g34bvcwihdwi2griun82",
         date: "2026-02-09",
+        edited: "",
         authors: [
             { user: USERS.VDelta46, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.Contributor }
@@ -527,6 +534,7 @@ var blogs = [
         type: "blog",
         id: "bv284u8iw24wh29gusid27gvgq",
         date: "2026-01-31",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoFirstAuthor }
@@ -591,6 +599,7 @@ var blogs = [
         type: "blog",
         id: "vnu9v28vr2489n8gf29c2y4gmb9h7r",
         date: "2026-01-16",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
@@ -651,6 +660,7 @@ var blogs = [
         type: "blog",
         id: "bvw24vc9g29u24gj924y7msuigi2",
         date: "2026-01-03",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -665,6 +675,7 @@ var blogs = [
         type: "blog",
         id: "zz86dv4g2io4h8giowi9gwu294gi",
         date: "2025-10-31",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
@@ -729,6 +740,7 @@ var blogs = [
         type: "blog",
         id: "q387g7g9vh7w4g5wuias8ervg23ggg",
         date: "2025-10-16",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -758,6 +770,7 @@ var blogs = [
         type: "blog",
         id: "gq3875v7wervwig2gi2u494goni21",
         date: "2025-04-12",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -789,6 +802,7 @@ var blogs = [
         type: "blog",
         id: "87agerv824hgo9912gf9on28gf2qll",
         date: "2025-02-10",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -818,6 +832,7 @@ var blogs = [
         type: "blog",
         id: "t678wrg8b2guioivwur138etrg24",
         date: "2024-09-16",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
@@ -840,6 +855,7 @@ var blogs = [
         type: "blog",
         id: "vzuv8d24gqneg79hbwihrgss",
         date: "2024-08-09",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
         ],
@@ -859,6 +875,7 @@ var blogs = [
         type: "blog",
         id: "86132tfh2ir4ghyiuhwrgwi2r829",
         date: "2024-02-17",
+        edited: "2026-03-21",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -874,7 +891,7 @@ var blogs = [
             "[读作：atig-na-ri（阿提厄纳里/阿提格纳里）]",
             "[其中al为定冠词，v[%{ara}ط]v（ṭ）属于太阳字母，定冠词al会被同化为aṭ。定冠词一般不算名字，因此提纳里的准确读法应为：提厄纳里/提格纳里。]",
             "[同样的思路，艾尔海森的名字应为“海森”。“艾尔”（al）为定冠词。完整名字是v[%{naskh}الهيثم]v，即c[Al-Hayṯam(DIN 3165)]c或c[Al-Haytham(ALA-LC)]c，即v[%{ara}الْهَيْثَمْ]v。其准确读法应为“海瑟姆”“海什木”，或“阿勒 海瑟姆”。有人译为“阿尔哈桑”。]",
-            "[依旧是同样的思路，莱依拉的名字是v[%{ara}الليلة]v，转写为c[Al-Laylah]c，意为“夜晚”“今晚”，是准确的译名。]",
+            "[依旧是同样的思路，莱依拉的名字是v[%{naskh}الليلة]v，转写为c[Al-Laylah]c，意为“夜晚”“今晚”，是准确的译名。]",
             "h3[注释]h3",
             "[s[咽化]s：咽化是辅音或元音的次要调音，调音同时喉或会厌收紧。]",
             "[s[浊软腭擦音/ɣ/]s：是/x/对应的浊音。]",
@@ -886,6 +903,7 @@ var blogs = [
         type: "blog",
         id: "",
         date: "2023-02-25",
+        edited: "",
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
