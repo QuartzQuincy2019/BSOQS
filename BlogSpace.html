@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/general.css" />
+    <link rel="stylesheet" type="text/css" href="./css/calendar.css" />
     <link rel="stylesheet" type="text/css" href="./css/blocks.css" />
     <link rel="stylesheet" type="text/css" href="./css/candy.css" />
     <link rel="icon" href="./data/icon/QS.png" />
@@ -13,14 +14,52 @@
     <title>QK's Blog Space</title>
     <script type="text/javascript" src="./js/plugins/mjd.js">
     </script>
-    <script>
-        function hash(text) {
-            return CryptoJS.SHA256(text).toString();
-        }
-    </script>
+
+    <script src="./js/plugins/tyme.min.js"></script>
 </head>
 
 <body>
+    <div id="MarqueeArea">
+        <div id="Calendar">
+            <table id="ComprehensiveTimeTable">
+                <tr>
+                    <td>公历</td>
+                    <td id="Solar"></td>
+                    <td>农历</td>
+                    <td id="Lunar"></td>
+                    <td>星期</td>
+                    <td id="Week"></td>
+                    <td>日序</td>
+                    <td id="YearIndex"></td>
+                </tr>
+                <tr>
+                    <td>月相</td>
+                    <td id="Phase"></td>
+                    <td>生肖</td>
+                    <td id="Zodiac"></td>
+                    <td>节气</td>
+                    <td id="TermDay"></td>
+                    <td>物候</td>
+                    <td id="Phenology"></td>
+                </tr>
+                <tr>
+                    <td>星宿</td>
+                    <td id="28Star"></td>
+                    <td>八字</td>
+                    <td id="EightChar" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td>星座</td>
+                    <td id="Constellation"></td>
+                    <td>九星</td>
+                    <td id="NineStar" colspan="5"></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <p id="ClockArea"><span id="Julian"></span> <span id="Clock"></span></p>
+    </div>
     <div id="BlogSpace"></div>
     <div id="pageButtonArea"></div>
     <div id="PageInfo"></div>
@@ -36,6 +75,8 @@
     <script type="text/javascript" src="./js/generate.js">
     </script>
     <script type="text/javascript" src="./js/po.js">
+    </script>
+    <script type="text/javascript" src="./js/calentime.js">
     </script>
     <script type="text/javascript" src="./js/themes.js">
     </script>

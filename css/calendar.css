@@ -1,0 +1,34 @@
+/* calendar.css */
+#Calendar {
+    display: flex;
+    justify-content: center;
+}
+
+table#ComprehensiveTimeTable td {
+    font-size: calc(var(--default-font-size)*1.2);
+    padding: 0.6em;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    table#ComprehensiveTimeTable td {
+        font-size: 3vw;
+    }
+}
+
+table#ComprehensiveTimeTable td:nth-child(odd) {
+    font-weight: bold;
+}
+
+#ClockArea {
+    text-align: center;
+}
+
+#Julian,
+#Clock {
+    display: inline-block;
+    font-family: 'Agave Nerd Font', '0xProto Nerd Font Mono', 'Tinos Nerd Font Propo';
+    font-weight: bold;
+    margin: 0 0.4em;
+    font-size: calc(var(--h1-font-size) * 1.4);
+}
