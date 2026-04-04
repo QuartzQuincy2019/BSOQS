@@ -21,6 +21,7 @@ table#ComprehensiveTimeTable td:nth-child(odd) {
 }
 
 #ClockArea {
+    margin-top: 1em;
     text-align: center;
 }
 
@@ -30,5 +31,5 @@ table#ComprehensiveTimeTable td:nth-child(odd) {
     font-family: 'Agave Nerd Font', '0xProto Nerd Font Mono', 'Tinos Nerd Font Propo';
     font-weight: bold;
     margin: 0 0.4em;
-    font-size: calc(var(--h1-font-size) * 1.4);
+    font-size: calc(var(--h1-font-size) * 1.55);
 }
