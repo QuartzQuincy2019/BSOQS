@@ -171,3 +171,19 @@ document.body.onload = () => {
 }
 
 window.setInterval(fillClock, 1000);
+
+function scheduleMidnightTask(task) {
+  const now = new Date();
+  const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+  const delay = nextMidnight - now;  // 到下一个午夜的毫秒数
+
+  setTimeout(() => {
+    task();                         // 执行你的函数
+    scheduleMidnightTask(task);     // 递归调度下一天
+  }, delay);
+}
+
+// 每天午夜执行一次
+scheduleMidnightTask(() => {
+    fillCalendar();
+});
