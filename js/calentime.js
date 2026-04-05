@@ -85,9 +85,13 @@ var Moment = {
         return getZodiacFromEarthBranch(eb).toString();
     },
 
-    getAllThreePillarsTextToday: function () {
+    getAllThreePillarsTextToday: function (containsZodiac = false) {
         let threePillars = this.getThreePillarsToday();
-        return threePillars.getYear() + '年 ' + threePillars.getMonth() + '月 ' + threePillars.getDay() + '日';
+        if (!containsZodiac) {
+            return threePillars.getYear() + '年 ' + threePillars.getMonth() + '月 ' + threePillars.getDay() + '日';
+        } else {
+            return threePillars.getYear() + '(' + this.getYearZodiacTextToday() + ')年 ' + threePillars.getMonth() + '月 ' + threePillars.getDay() + '日';
+        }
     },
 
     // 获取今日的节气
@@ -117,6 +121,10 @@ var Moment = {
     getLunarHourNow: function () {
         return lh = this.getSolarTimeNow().getLunarHour();
     },
+
+    getSixtyCycleHourNow: function () {
+        return this.getLunarHourNow().getSixtyCycleHour();
+    }
 }
 
 var E_Calendar = document.getElementById('Calendar');
@@ -128,13 +136,17 @@ var E_ThreePillars = document.getElementById('ThreePillars');
 var E_EightChar = document.getElementById('EightChar');
 var E_YearIndex = document.getElementById('YearIndex');
 var E_NineStar = document.getElementById('NineStar');
-var E_Zodiac = document.getElementById('Zodiac');
 var E_TermDay = document.getElementById('TermDay');
 var E_Phenology = document.getElementById('Phenology');
+var E_Duty = document.getElementById('Duty');
+var E_ThreePillars = document.getElementById('ThreePillars');
+var E_Land = document.getElementById('Land');
 var E_28Star = document.getElementById('28Star');
 var E_Phase = document.getElementById('Phase');
 var E_Constellation = document.getElementById('Constellation');
 var E_OtherDateInfo = document.getElementById('OtherDateInfo');
+
+var E_DateTimeSelector = document.getElementById('DateTimeSelector');
 
 function fillClock() {
     let hour = new Date().getHours();
@@ -149,7 +161,6 @@ function fillClock() {
 
 function fillCalendar() {
     E_Solar.innerText = `${Moment.getSolarToday().toString()}`;
-    E_Zodiac.innerHTML = Moment.getYearZodiacTextToday();
     E_Lunar.innerText = `${Moment.getLunarToday().toString().slice(5)}`;
     E_Week.innerText = `${Moment.getWeekToday().toString()}`;
     document.getElementById('Julian').innerText = `${dateToMJD(new Date())}`;
@@ -158,29 +169,33 @@ function fillCalendar() {
     } else {
         E_TermDay.innerText = Moment.getTermDayToday().toString();
     }
+    E_Duty.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getDuty().toString();
+    E_ThreePillars.innerText = Moment.getAllThreePillarsTextToday(true);
+    E_Land.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getJupiterDirection().toString() + Moment.getSixtyCycleHourNow().getSixtyCycleDay().getJupiterDirection().getLand().toString();
     E_28Star.innerText = Moment.get28StarFullNameToday();
     E_Phase.innerText = Moment.getPhaseToday().toString();
     E_Constellation.innerText = Moment.getConstellationToday().toString();
     E_Phenology.innerText = Moment.getPhenologyToday().toString();
-    E_YearIndex.innerText = '第' + Moment.getSolarToday().getIndexInYear() + '日';
+    E_YearIndex.innerText = '第' + (Moment.getSolarToday().getIndexInYear() + 1) + '日';
 }
 
 document.body.onload = () => {
     fillClock();
     fillCalendar();
+    // E_DateTimeSelector.value = new Date().getFullYear() + '-' + ((new Date().getMonth() + 1) < 10 ? '0' + (new Date().getMonth() + 1) : (new Date().getMonth() + 1)) + '-' + (new Date().getDate() < 10 ? '0' + new Date().getDate() : new Date().getDate()) + 'T' + (new Date().getHours() < 10 ? '0' + new Date().getHours() : new Date().getHours()) + ':' + (new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes());
 }
 
 window.setInterval(fillClock, 1000);
 
 function scheduleMidnightTask(task) {
-  const now = new Date();
-  const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-  const delay = nextMidnight - now;  // 到下一个午夜的毫秒数
+    const now = new Date();
+    const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+    const delay = nextMidnight - now;  // 到下一个午夜的毫秒数
 
-  setTimeout(() => {
-    task();                         // 执行你的函数
-    scheduleMidnightTask(task);     // 递归调度下一天
-  }, delay);
+    setTimeout(() => {
+        task();                         // 执行你的函数
+        scheduleMidnightTask(task);     // 递归调度下一天
+    }, delay);
 }
 
 // 每天午夜执行一次

@@ -20,6 +20,8 @@
 
 <body>
     <div id="MarqueeArea">
+        <!-- <input id="DateTimeSelector" type="datetime-local" min="0001-01-01T00:00" value="2026-01-01T00:00" />
+        <button value="ToNow" onclick="toNowCalendar();">ToNow</button> -->
         <div id="Calendar">
             <table id="ComprehensiveTimeTable">
                 <tr>
@@ -33,33 +35,41 @@
                     <td id="YearIndex"></td>
                 </tr>
                 <tr>
+                    <td>三柱</td>
+                    <td id="ThreePillars" colspan="7"></td>
+                </tr>
+                <tr>
                     <td>月相</td>
                     <td id="Phase"></td>
-                    <td>生肖</td>
-                    <td id="Zodiac"></td>
                     <td>节气</td>
                     <td id="TermDay"></td>
                     <td>物候</td>
-                    <td id="Phenology"></td>
+                    <td id="Phenology" colspan="3"></td>
                 </tr>
                 <tr>
                     <td>星宿</td>
                     <td id="28Star"></td>
-                    <td>八字</td>
-                    <td id="EightChar" colspan="5"></td>
-                </tr>
-                <tr>
+                    <td>建星</td>
+                    <td id="Duty"></td>
+                    <td>九野</td>
+                    <td id="Land"></td>
                     <td>星座</td>
                     <td id="Constellation"></td>
-                    <td>九星</td>
-                    <td id="NineStar" colspan="5"></td>
                 </tr>
                 <tr>
+                    <td>八字</td>
+                    <td id="EightChar" colspan="7"></td>
+                </tr>
+                <tr>
+                    <td>九星</td>
+                    <td id="NineStar" colspan="7"></td>
                 </tr>
             </table>
         </div>
         <p id="ClockArea"><span id="Julian"></span> <span id="Clock"></span></p>
     </div>
+    <hr class="body_hr2" />
+    <hr class="body_hr1" />
     <div id="BlogSpace"></div>
     <div id="pageButtonArea"></div>
     <div id="PageInfo"></div>

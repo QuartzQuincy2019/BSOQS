@@ -660,15 +660,15 @@ var blogs = [
         type: "blog",
         id: "bvw24vc9g29u24gj924y7msuigi2",
         date: "2026-01-03",
-        edited: "",
+        edited: "2026-04-05",
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
         title: "Epilogue",
         topics: [],
         contents: [
-            "[All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancient Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.]",
-            "[Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of \"a community with a shared future for mankind\" and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
+            "[ƈ{cross}All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancient Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.br[]",
+            "Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of \"a community with a shared future for mankind\" and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
         ]
     },
     {
