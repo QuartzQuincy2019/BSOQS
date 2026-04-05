@@ -8,15 +8,20 @@
 }
 
 @media screen and (max-width: 900px) {
-  .card {
-    box-shadow: 0 0 4px var(--card-shadow-1);
-    padding: 0.7em;
-    margin: 1em 0.2em;
-  }
+    .card {
+        box-shadow: 0 0 4px var(--card-shadow-1);
+        padding: 0.7em;
+        margin: 1em 0.2em;
+    }
 }
 
-.overview{
+.overview {
     margin-top: 0.5em;
+}
+
+.overview p.agave, .overview p.agave span.DecoratedDiff{
+    font-family: 'Agave';
+    font-weight: normal;
 }
 
 .header_block {
@@ -58,11 +63,17 @@
     color: var(--weak-text-color);
 }
 
+.card_head_info .post_date.agave{
+    font-family: 'Agave';
+    font-weight: normal;
+}
+
 .card_head_info .post_user:hover::before {
     content: "\f448 ";
 }
 
 .card_head_info .post_role {
+    font-weight: normal;
     font-size: 0.75em;
     color: var(--weak-text-color);
 }

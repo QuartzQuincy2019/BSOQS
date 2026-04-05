@@ -1,8 +1,8 @@
 /* general.css */
 :root {
     --default-border-radius: 16px;
-    --default-body-font-family: 'Tinos Nerd Font Propo';
-    --default-code-font-family: '0xProto Nerd Font Mono', 'Agave Nerd Font';
+    --default-body-font-family: 'Tinos', 'Nerd Font';
+    --default-code-font-family: '0xProtoNL', 'Agave', 'Nerd Font';
     --default-font-size: 20px;
     --h1-font-size: 32px;
 }
@@ -15,49 +15,82 @@
 }
 
 /* FONT-FACE */
-
+/* Nerd Font */
 @font-face {
-    font-family: 'Tinos Nerd Font Propo';
-    src: url("../fonts/TinosNerdFontPropo-Regular.ttf") format("truetype");
+    font-family: 'Nerd Font';
+    src: url("../fonts/NerdFont/SymbolsNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Tinos */
+@font-face {
+    font-family: 'Tinos';
+    src: url("../fonts/Tinos/Tinos-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: '0xProto Nerd Font Mono';
-    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Agave Nerd Font';
-    src: url("../fonts/AgaveNerdFont/AgaveNerdFont-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Agave Nerd Font';
-    src: url("../fonts/AgaveNerdFont/AgaveNerdFont-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '0xProto Nerd Font Mono';
-    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Italic.ttf") format("truetype");
+    font-family: 'Tinos';
+    src: url("../fonts/Tinos/Tinos-Italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: '0xProto Nerd Font Mono';
-    src: url("../fonts/0xProtoMono/0xProtoNerdFontMono-Bold.ttf") format("truetype");
+    font-family: 'Tinos';
+    src: url("../fonts/Tinos/Tinos-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Tinos';
+    src: url("../fonts/Tinos/Tinos-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 0xProtoNL */
+@font-face {
+    font-family: '0xProtoNL';
+    src: url("../fonts/0xProtoNL/0xProto-Regular-NL.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '0xProtoNL';
+    src: url("../fonts/0xProtoNL/0xProto-Italic-NL.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '0xProtoNL';
+    src: url("../fonts/0xProtoNL/0xProto-Bold-NL.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Agave */
+@font-face {
+    font-family: 'Agave';
+    src: url("../fonts/Agave/Agave-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agave Nerd Font';
+    src: url("../fonts/Agave/Agave-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Amiri */
 @font-face {
     font-family: Amiri;
     src: url("../fonts/Amiri/Amiri-Regular.ttf") format("truetype");
@@ -423,9 +456,8 @@ button {
     font-size: calc(var(--default-font-size)*1.2);
 }
 
-.agave,
-.agave * {
-    font-family: 'Agave Nerd Font';
+.agave {
+    font-family: 'Agave';
 }
 
 code *,

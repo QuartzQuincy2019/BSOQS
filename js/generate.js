@@ -58,12 +58,12 @@ function generateOverview(blog) {
         let p1 = document.createElement("p");
         p1.classList.add("agave");
         let mjd = dateToMJD(_date);
-        let bdText, ageText = "";
+        let bdText = "", ageText = "";
         if (_date.slice(-5) == '10-03') {
             bdText = " class='nebucoffee'";
             ageText = " (" + (Number(_date.slice(0, 4)) - 2007) + ")";
         };
-        p1.innerHTML = startText + "<strong" + bdText + ">" + _date + ageText + "</strong> | " + mjd;
+        p1.innerHTML = startText + bdText + _date + ageText + " | " + mjd;
         let today = dateToMJD(new Date());
         let daydiff = today - mjd;
         let daydiffText = "";
@@ -84,9 +84,9 @@ function generateOverview(blog) {
         }
 
         if (showDecoratedDiff) {
-            p1.innerHTML += "&nbsp;<span class='" + classText + "'>(" + daydiffText + ")</span>";
+            p1.innerHTML += "&nbsp;<span class='DecoratedDiff " + classText + "'>(" + daydiffText + ")</span>";
         } else {
-            p1.innerHTML += "&nbsp;<span class='weak'>(" + daydiffText + ")</span>";
+            p1.innerHTML += "&nbsp;<span class='DecoratedDiff weak'>(" + daydiffText + ")</span>";
         }
         return p1;
     }

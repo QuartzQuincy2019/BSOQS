@@ -28,7 +28,7 @@ table#ComprehensiveTimeTable td:nth-child(odd) {
 #Julian,
 #Clock {
     display: inline-block;
-    font-family: 'Agave Nerd Font', '0xProto Nerd Font Mono', 'Tinos Nerd Font Propo';
+    font-family: 'Agave';
     font-weight: bold;
     margin: 0 0.4em;
     font-size: calc(var(--h1-font-size) * 1.55);
