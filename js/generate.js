@@ -56,7 +56,7 @@ function generateOverview(blog) {
     // -------------------------
     function generateEditionDateInfo(_date, showDecoratedDiff, startText = "") {
         let p1 = document.createElement("p");
-        p1.classList.add("agave");
+        p1.classList.add("agave", "EditionDateInfo");
         let mjd = dateToMJD(_date);
         let bdText = "", ageText = "";
         if (_date.slice(-5) == '10-03') {
@@ -98,6 +98,7 @@ function generateOverview(blog) {
     }
     //
     let p2 = document.createElement("div");
+    p2.classList.add("OverviewAuthorsArea");
     p2.innerHTML += "By";
     blog.authors.forEach(authorInfo => {
         let p2i = document.createElement("img");
@@ -155,10 +156,10 @@ function generatePostBody(blog) {
     return bodyArea;
 }
 
-function generateHeadTitle(blog) {
+function generateCardHeadTitle(blog) {
     let thisId = blog.id;
     var headTitle = document.createElement("h1");
-    headTitle.classList.add("headTitle");
+    headTitle.classList.add("CardHeadTitle");
     headTitle.id = blog.id + "_h1";
     var titleAnchor = document.createElement("a");
     titleAnchor.href = "#" + headTitle.id;
@@ -179,7 +180,7 @@ function generateFoldedPost(blog) {
     card.id = blog.id + "_card";
     card.classList.add("card");
     card.innerHTML = "";
-    card.appendChild(generateHeadTitle(blog));
+    card.appendChild(generateCardHeadTitle(blog));
     card.appendChild(generateOverview(blog));
     destination.appendChild(card);
 }

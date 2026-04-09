@@ -1,7 +1,7 @@
 /* general.css */
 :root {
     --default-border-radius: 16px;
-    --default-body-font-family: 'Tinos', 'Nerd Font';
+    --default-body-font-family: 'Tinos', 'Nerd Font', sans-serif;
     --default-code-font-family: '0xProtoNL', 'Agave', 'Nerd Font';
     --default-font-size: 20px;
     --h1-font-size: 32px;
@@ -218,7 +218,7 @@ a {
     text-decoration: underline;
 }
 
-h1.headTitle {
+h1.CardHeadTitle {
     display: block;
     position: sticky;
     background-color: var(--background-color);
@@ -229,13 +229,13 @@ h1.headTitle {
     transition-duration: 500ms;
 }
 
-h1.headTitle>a {
+h1.CardHeadTitle>a {
     color: inherit;
     font-size: inherit;
     text-decoration: inherit;
 }
 
-h1.headTitle.is-sticky {
+h1.CardHeadTitle.is-sticky {
     text-align: center;
     margin-top: 0;
     padding: 0.3em 0 0.2em 0;
@@ -246,7 +246,7 @@ h1.headTitle.is-sticky {
 }
 
 @media screen and (max-width: 900px) {
-    h1.headTitle.is-sticky {
+    h1.CardHeadTitle.is-sticky {
         padding: 0.3em 0 0.3em 0;
         border-bottom: 3px solid var(--text-color);
         box-shadow: 0 1px 3px var(--text-color);
@@ -254,20 +254,20 @@ h1.headTitle.is-sticky {
     }
 }
 
-h1.headTitle:hover {
+h1.CardHeadTitle:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-h1.headTitle.folded:hover::before {
+h1.CardHeadTitle.folded:hover::before {
     content: "\eaf3 ";
 }
 
-h1.headTitle.unfolded:hover::before {
+h1.CardHeadTitle.unfolded:hover::before {
     content: "\eaf4 ";
 }
 
-h1.headTitle.latest::after {
+h1.CardHeadTitle.latest::after {
     content: " \f0394";
     font-weight: 100;
     font-size: 1em;

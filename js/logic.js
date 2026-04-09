@@ -3,13 +3,13 @@
 /**
  * 根据视口顶部位置，为当前可见卡片区域的标题添加激活类（支持动态增删卡片，带迟滞防抖）
  * @param {string} cardSelector - 卡片容器的选择器（例如 '.card'）
- * @param {string} titleSelector - 卡片内标题的选择器（默认为 '.headTitle'）
+ * @param {string} titleSelector - 卡片内标题的选择器（默认为 '.CardHeadTitle'）
  * @param {string} activeClass - 要添加/移除的类名（默认为 'is-sticky'）
  * @param {number} hysteresis - 迟滞量（像素），用于防止边界抖动，默认2px
  * @param {HTMLElement|string} [watchContainer] - 要监听的容器元素或其选择器（默认为 document.body）
  * @returns {Function} 停止监听的函数
  */
-function observeCardTitles(cardSelector, titleSelector = '.headTitle', activeClass = 'is-sticky', hysteresis = 2, watchContainer = document.body) {
+function observeCardTitles(cardSelector, titleSelector = '.CardHeadTitle', activeClass = 'is-sticky', hysteresis = 2, watchContainer = document.body) {
   const container = typeof watchContainer === 'string'
     ? document.querySelector(watchContainer)
     : watchContainer;
@@ -119,7 +119,7 @@ function observeCardTitles(cardSelector, titleSelector = '.headTitle', activeCla
 }
 
 // 开始监听，卡片出现后自动生效
-const stop = observeCardTitles('.card', '.headTitle', 'is-sticky', 10, '#BlogSpace');
+const stop = observeCardTitles('.card', '.CardHeadTitle', 'is-sticky', 10, '#BlogSpace');
 
 // 当不再需要时（例如页面卸载），调用 stop()
 // stop();
