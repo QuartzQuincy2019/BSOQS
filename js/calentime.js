@@ -26,6 +26,19 @@ var Moment = {
         return this.getSixtyCycleHourNow().getEightChar();
     },
 
+    getDutyNow: function () {
+        return this.getEightCharNow().getDuty();
+    },
+
+    getTwelveStarNow: function () {
+        return this.getLunarHourNow().getTwelveStar();
+    },
+
+    // 获取今日的胎神位置
+    getFetusDayToday: function () {
+        return this.getLunarToday().getFetusDay();
+    },
+
     getFullPillarsNow: function () {
         return `${this.getEightCharNow().getYear()}年 ${this.getEightCharNow().getMonth()}月 ${this.getEightCharNow().getDay()}日 ${this.getEightCharNow().getHour()}时`;
     },
@@ -119,7 +132,7 @@ var Moment = {
     },
 
     getLunarHourNow: function () {
-        return lh = this.getSolarTimeNow().getLunarHour();
+        return this.getSolarTimeNow().getLunarHour();
     },
 
     getSixtyCycleHourNow: function () {
@@ -143,6 +156,10 @@ var E_ThreePillars = document.getElementById('ThreePillars');
 var E_Land = document.getElementById('Land');
 var E_28Star = document.getElementById('28Star');
 var E_Phase = document.getElementById('Phase');
+var E_FetusDay = document.getElementById('FetusDay');
+var E_TwelveStar = document.getElementById('TwelveStar');
+var E_Recommends = document.getElementById('Recommends');
+var E_Taboos = document.getElementById('Taboos');
 var E_Constellation = document.getElementById('Constellation');
 var E_OtherDateInfo = document.getElementById('OtherDateInfo');
 
@@ -157,6 +174,9 @@ function fillClock() {
     E_EightChar.innerHTML = eightChar.getYear() + '年 ' + eightChar.getMonth() + '月 ' + eightChar.getDay() + '日 ' + eightChar.getHour() + '时';
     let lh = Moment.getLunarHourNow();
     E_NineStar.innerText = `${lh.getLunarDay().getLunarMonth().getLunarYear().getNineStar().toString()} ${lh.getLunarDay().getLunarMonth().getNineStar().toString()} ${lh.getLunarDay().getNineStar().toString()} ${lh.getNineStar().toString()}`;
+    E_Duty.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getDuty().toString();
+    E_Recommends.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getRecommends().toLocaleString();
+    E_Taboos.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getAvoids().toLocaleString();
 }
 
 function fillCalendar() {
@@ -169,7 +189,6 @@ function fillCalendar() {
     } else {
         E_TermDay.innerText = Moment.getTermDayToday().toString();
     }
-    E_Duty.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getDuty().toString();
     E_ThreePillars.innerText = Moment.getAllThreePillarsTextToday(true);
     E_Land.innerText = Moment.getSixtyCycleHourNow().getSixtyCycleDay().getJupiterDirection().toString() + Moment.getSixtyCycleHourNow().getSixtyCycleDay().getJupiterDirection().getLand().toString();
     E_28Star.innerText = Moment.get28StarFullNameToday();
@@ -177,6 +196,8 @@ function fillCalendar() {
     E_Constellation.innerText = Moment.getConstellationToday().toString();
     E_Phenology.innerText = Moment.getPhenologyToday().toString();
     E_YearIndex.innerText = '第' + (Moment.getSolarToday().getIndexInYear() + 1) + '日';
+    E_TwelveStar.innerText = Moment.getTwelveStarNow().getEcliptic().toString() + " " + Moment.getTwelveStarNow().toString();
+    E_FetusDay.innerText = Moment.getFetusDayToday().toString();
 }
 
 document.body.onload = () => {
