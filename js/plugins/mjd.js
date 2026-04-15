@@ -35,9 +35,8 @@ function dateStringToMJD(dateStr) {
  * @returns 
  */
 function dateToMJD(_date) {
+    console.log(_date);
     if (typeof _date == 'string') {
-        // let reg = new RegExp("/\d{4}-\d{1,2}-\d{1,2}/gm");
-        // if (reg.test(_date) == true) 
         return dateStringToMJD(_date);
     }
     var y = _date.getFullYear();

@@ -92,7 +92,7 @@ function generateOverview(blog) {
     }
     let p1 = generateEditionDateInfo(blog.date, true, "Published: ");
     overviewArea.appendChild(p1);
-    if (blog.edited != "") {
+    if (blog.hasOwnProperty("edited") && blog.edited != "") {
         var pEdited = generateEditionDateInfo(blog.edited, false, "Last Edited: ");
         overviewArea.appendChild(pEdited);
     }

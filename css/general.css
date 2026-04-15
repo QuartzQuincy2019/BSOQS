@@ -106,8 +106,16 @@
 
 /* LAYOUT DESGINATION */
 
-.inlineblock {
+.inlineblock,
+.InlineBlock,
+.inline-block,
+.Inline-Block {
     display: inline-block;
+}
+
+.float-right,
+.Float-Right {
+    text-align: right;
 }
 
 /* TEXT LAYOUT */
@@ -174,6 +182,10 @@ quote {
     display: inline;
     margin: 0.5em;
     font-style: italic;
+    color: var(--weak-text-color);
+}
+
+quote strong {
     color: var(--weak-text-color);
 }
 
