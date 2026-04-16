@@ -156,7 +156,7 @@ function generatePostBody(blog) {
     return bodyArea;
 }
 
-function generateCardHeadTitle(blog) {
+function generateCardHeadTitle(blog, isFolded = true) {
     let thisId = blog.id;
     var headTitle = document.createElement("h1");
     headTitle.classList.add("CardHeadTitle");
@@ -167,6 +167,11 @@ function generateCardHeadTitle(blog) {
     headTitle.appendChild(titleAnchor);
     if (isLatestBlog(blog.id)) {
         headTitle.classList.add("latest");
+    }
+    if (isFolded) {
+        headTitle.classList.add("folded");
+    } else {
+        headTitle.classList.add("unfolded");
     }
     titleAnchor.textContent = blog.title;
     headTitle.onclick = () => {
