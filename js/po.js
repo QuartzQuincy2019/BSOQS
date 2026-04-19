@@ -160,3 +160,26 @@ function filterBlogWithTopics(_topics) {
     });
     return filtered;
 }
+
+
+// 封包换页函数，供外部调用
+function switchToPage(pageNumber) {
+    currentPage = pageNumber;
+    generatePageInfo(currentPage);
+    renderPage(currentPage);
+    window.scrollTo({
+        top: document.getElementById("MarqueeArea").offsetHeight + 36,
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener("keydown", (e) => {
+    if (e.key == "]") {
+        e.preventDefault();
+        switchToPage(currentPage + 1);
+    }
+    if (e.key == "[") {
+        e.preventDefault();
+        switchToPage(currentPage - 1);
+    }
+})

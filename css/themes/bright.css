@@ -22,6 +22,12 @@
 .cross {
     background-color: #ffffff;
     opacity: 1;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#e7e7e7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #e7e7e7 1px, #ffffff 1px) -0.5px 0;
+    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#d7d7d7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #d7d7d7 1px, #ffffff 1px) -0.5px 0;
     background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+}
+
+.zigzag3d {
+    background-color: #ffffff;
+    opacity: 1;
+    background: linear-gradient(135deg, #eaeaea55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #eaeaea 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #eaeaea55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #eaeaea 25%, #ffffff 25%) 0px 0/ 32px 32px;
 }

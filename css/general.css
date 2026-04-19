@@ -2,7 +2,7 @@
 :root {
     --default-border-radius: 16px;
     --default-body-font-family: 'Tinos', 'Nerd Font', sans-serif, '宋体';
-    --default-code-font-family: '0xProtoNL', 'Agave', 'Nerd Font';
+    --default-code-font-family: 'Agave', 'Nerd Font';
     --default-font-size: 20px;
     --h1-font-size: 32px;
 }
@@ -53,28 +53,6 @@
     font-style: italic;
 }
 
-/* 0xProtoNL */
-@font-face {
-    font-family: '0xProtoNL';
-    src: url("../fonts/0xProtoNL/0xProto-Regular-NL.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '0xProtoNL';
-    src: url("../fonts/0xProtoNL/0xProto-Italic-NL.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: '0xProtoNL';
-    src: url("../fonts/0xProtoNL/0xProto-Bold-NL.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
 /* Agave */
 @font-face {
     font-family: 'Agave';
@@ -116,6 +94,17 @@
 .float-right,
 .Float-Right {
     text-align: right;
+}
+
+.centered-text,
+.Centered-Text {
+    text-align: center;
+}
+
+.text-indent,
+.Text-Indent,
+.TI {
+    text-indent: 2em;
 }
 
 /* TEXT LAYOUT */
@@ -207,6 +196,7 @@ code {
     border-radius: 6px;
     transition-property: all;
     transition-duration: 400ms;
+    text-indent: initial;
 }
 
 code em,
@@ -309,14 +299,11 @@ span.topic:hover::before {
     content: "\e273";
 }
 
-a[href="https://github.com/QuartzQuincy2019"]::before,
-a[href="https://quartzquincy2019.github.io/SPWTT/Home.html"]::before,
-a[href="https://quartzquincy2019.github.io/OTFWC/OTFWC.html"]::before,
-a[href="https://quartzquincy2019.github.io/SVBOD/index.html"]::before,
-a[href="https://quartzquincy2019.github.io/TEBOS/index.html"]::before,
-a[href="https://quartzquincy2019.github.io/AGHGC/IGE.html"]::before,
-a[href="https://quartzquincy2019.github.io/AGHGC/AGHGC.html"]::before {
+a[href^="https://github.com"]::before{
     content: "\f408  ";
+}
+a[href^="https://quartzquincy2019.github.io"]::before {
+    content: "\eb5f  ";
 }
 
 /* TABLE LAYOUT */

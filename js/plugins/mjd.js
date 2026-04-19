@@ -35,7 +35,6 @@ function dateStringToMJD(dateStr) {
  * @returns 
  */
 function dateToMJD(_date) {
-    console.log(_date);
     if (typeof _date == 'string') {
         return dateStringToMJD(_date);
     }

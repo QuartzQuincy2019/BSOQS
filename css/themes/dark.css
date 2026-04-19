@@ -1,6 +1,6 @@
 /* dark.css */
 :root {
-    --background-color: #232323;
+    --background-color: #111111;
     --button-bg-color: #525252;
     --button-bg-color-selected: #006789;
     --emphasis-bg-color-1: #4e4e4e;
@@ -8,20 +8,26 @@
     --emphasis-bg-color-reversed-1: #ffeaf2;
     --selection-bg-color-1: #8dc4ff;
     --selection-bg-color-reversed-1: #7903ee;
-    --text-color: #ffffff;
-    --weak-text-color: #959595;
+    --text-color: #c9c9c9;
+    --weak-text-color: #6e6e6e;
     --text-color-reversed-1: #000000;
     --link-color: #70f4bd;
-    --card-shadow-1: #ffffff;
+    --card-shadow-1: #cccccc;
     --topic-color: #a9ff67;
     --independent-emphasis-color: #00d5ff;
-    --independent-alert-color: #ff7575;
+    --independent-alert-color: #ff5675;
     --border-end-color: #80e8ff;
 }
 
 .cross {
-    background-color: #232323;
+    background-color: #111111;
     opacity: 1;
-    background: radial-gradient(circle, transparent 20%, #232323 20%, #232323 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #232323 20%, #232323 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#4b4b4b 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #4b4b4b 1px, #232323 1px) -0.5px 0;
+    background: radial-gradient(circle, transparent 20%, #111111 20%, #111111 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #111111 20%, #111111 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#4b4b4b 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #4b4b4b 1px, #111111 1px) -0.5px 0;
     background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+}
+
+.zigzag3d {
+    background-color: #111111;
+    opacity: 1;
+    background: linear-gradient(135deg, #28282855 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #282828 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #28282855 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #282828 25%, #111111 25%) 0px 0/ 32px 32px;
 }
