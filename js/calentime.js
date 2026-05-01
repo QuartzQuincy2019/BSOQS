@@ -314,7 +314,7 @@ document.body.onload = () => {
 }
 
 var clockRefresher = window.setInterval(fillClock, 1000);
-var calendarRefresher = window.setInterval(refreshCalendar, 1000);
+var calendarRefresher = window.setInterval(refreshCalendar, 5000);
 
 function stopCalendarRefresher() {
     if (calendarRefresher) {
@@ -326,7 +326,7 @@ function stopCalendarRefresher() {
 function resumeCalendarRefresher() {
     stopCalendarRefresher();
     if (!calendarRefresher) {
-        calendarRefresher = window.setInterval(refreshCalendar, 1000);
+        calendarRefresher = window.setInterval(refreshCalendar, 5000);
     }
 }
 
