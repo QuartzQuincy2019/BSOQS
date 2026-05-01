@@ -182,4 +182,4 @@ window.addEventListener("keydown", (e) => {
         e.preventDefault();
         switchToPage(currentPage - 1);
     }
-})
+});

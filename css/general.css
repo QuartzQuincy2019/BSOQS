@@ -299,9 +299,10 @@ span.topic:hover::before {
     content: "\e273";
 }
 
-a[href^="https://github.com"]::before{
+a[href^="https://github.com"]::before {
     content: "\f408  ";
 }
+
 a[href^="https://quartzquincy2019.github.io"]::before {
     content: "\eb5f  ";
 }

@@ -23,6 +23,25 @@
         <!-- <input id="DateTimeSelector" type="datetime-local" min="0001-01-01T00:00" value="2026-01-01T00:00" />
         <button value="ToNow" onclick="toNowCalendar();">ToNow</button> -->
         <div id="Calendar">
+            <div id="LeafPage">
+                <div id="LPLock">
+                    <button id="LockButton" onclick="toggleLP();">Lock/Unlock</button>
+                </div>
+                <div id="LPPrevious">
+                    <button id="Previous20Year" onclick="touchMoveCalendar('prev20Years');">-20Y</button>
+                    <button id="PreviousYear" onclick="touchMoveCalendar('prevYear');">-Y</button>
+                    <button id="PreviousMonth" onclick="touchMoveCalendar('prevMonth');">-M</button>
+                    <button id="PreviousDay" onclick="touchMoveCalendar('prevDay');">-D</button>
+                    <button id="PreviousHour" onclick="touchMoveCalendar('prevHour');">-2H</button>
+                </div>
+                <div id="LPNext">
+                    <button id="Next20Year" onclick="touchMoveCalendar('next20Years');">+20Y</button>
+                    <button id="NextYear" onclick="touchMoveCalendar('nextYear');">+Y</button>
+                    <button id="NextMonth" onclick="touchMoveCalendar('nextMonth');">+M</button>
+                    <button id="NextDay" onclick="touchMoveCalendar('nextDay');">+D</button>
+                    <button id="NextHour" onclick="touchMoveCalendar('nextHour');">+2H</button>
+                </div>
+            </div>
             <table id="ComprehensiveTimeTable">
                 <tr>
                     <td>公历</td>
@@ -63,20 +82,32 @@
                     <td id="TwelveStar" colspan="2"></td>
                 </tr>
                 <tr>
-                    <td>宜</td>
-                    <td id="Recommends" colspan="7"></td>
+                    <td>纳音</td>
+                    <td id="Sound"></td>
+                    <td>彭祖百忌</td>
+                    <td id="PengZu" colspan="5"></td>
                 </tr>
                 <tr>
-                    <td>忌</td>
-                    <td id="Taboos" colspan="7"></td>
-                </tr>
-                <tr>
+                    <td rowspan="2">时刻</td>
+                    <td id="ExternalTime" rowspan="2"></td>
                     <td>八字</td>
                     <td id="EightChar" colspan="7"></td>
                 </tr>
                 <tr>
                     <td>九星</td>
-                    <td id="NineStar" colspan="7"></td>
+                    <td id="NineStar" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td>MJD</td>
+                    <td id="JulianDay"></td>
+                    <td>时辰宜</td>
+                    <td id="Recommends" colspan="7"></td>
+                </tr>
+                <tr>
+                    <td>日距</td>
+                    <td id="DayDiff"></td>
+                    <td>时辰忌</td>
+                    <td id="Taboos" colspan="5"></td>
                 </tr>
             </table>
         </div>
