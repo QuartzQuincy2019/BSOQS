@@ -97,7 +97,9 @@
 }
 
 .centered-text,
-.Centered-Text {
+.Centered-Text,
+.centered,
+.Centered {
     text-align: center;
 }
 

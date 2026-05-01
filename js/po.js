@@ -176,10 +176,14 @@ function switchToPage(pageNumber) {
 window.addEventListener("keydown", (e) => {
     if (e.key == "]") {
         e.preventDefault();
-        switchToPage(currentPage + 1);
+        if (currentPage < Math.ceil(blogs.length / POSTS_IN_ONE_PAGE)) {
+            switchToPage(currentPage + 1);
+        }
     }
     if (e.key == "[") {
         e.preventDefault();
-        switchToPage(currentPage - 1);
+        if (currentPage > 1) {
+            switchToPage(currentPage - 1);
+        }
     }
 });

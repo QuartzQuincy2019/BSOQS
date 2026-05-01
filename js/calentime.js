@@ -251,6 +251,8 @@ var E_ExternalTime = document.getElementById('ExternalTime');
 var E_JulianDay = document.getElementById('JulianDay');
 var E_DayDiff = document.getElementById('DayDiff');
 var E_Constellation = document.getElementById('Constellation');
+var E_TodayRecommends = document.getElementById('TodayRecommends');
+var E_TodayAvoids = document.getElementById('TodayAvoids');
 var E_OtherDateInfo = document.getElementById('OtherDateInfo');
 
 var E_DateTimeSelector = document.getElementById('DateTimeSelector');
@@ -285,6 +287,8 @@ function fillCalendar() {
     E_Sound.innerText = operator.getSound(moment).toString();
     E_PengZu.innerText = operator.getPengZu(moment).toString();
     E_JulianDay.innerText = Number(operator.getMJD(moment)).toFixed(5);
+    E_TodayRecommends.innerText = operator.getDayRecommends(moment).toSpliced(10).toLocaleString();
+    E_TodayAvoids.innerText = operator.getDayAvoids(moment).toSpliced(10).toLocaleString();
     //daydiff
     let nowMoment = new CalenTime().localize();
     let dayDiff = operator.getSolarDay(moment).subtract(operator.getSolarDay(nowMoment));

@@ -3,7 +3,7 @@
     --background-color: #ffffff;
     --button-bg-color: #e7e7e7;
     --button-bg-color-selected: #ffde79;
-    --emphasis-bg-color-1: #f1f1f1;
+    --emphasis-bg-color-1: #f3f3f3;
     --emphasis-bg-color-2: #dcdcdc;
     --emphasis-bg-color-reversed-1: #db0058;
     --selection-bg-color-1: #007bff;
@@ -29,5 +29,5 @@
 .zigzag3d {
     background-color: #ffffff;
     opacity: 1;
-    background: linear-gradient(135deg, #eaeaea55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #eaeaea 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #eaeaea55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #eaeaea 25%, #ffffff 25%) 0px 0/ 32px 32px;
+    background: linear-gradient(135deg, #f3f3f355 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #f3f3f3 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #f3f3f355 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #f3f3f3 25%, #ffffff 25%) 0px 0/ 32px 32px;
 }
