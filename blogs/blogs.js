@@ -15,6 +15,7 @@ var blogs = [
         type: "blog",
         id: "",
         date: "1970-01-01",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
@@ -32,6 +33,7 @@ var blogs = [
         type: "blog",
         id: "AboutBlogSpaceCalendar",
         date: "2026-05-01",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
         ],
@@ -65,23 +67,24 @@ var blogs = [
         type: "blog",
         id: "GanYing",
         date: "2026-04-19",
+        edited: ["2026-04-16"],
         authors: [
             { user: USERS.VDelta46, role: ROLES.FirstAuthor }
         ],
         title: "《感樱》",
         topics: [],
-        contents: ["D[%{cross text-indent}",
+        contents: ["D[%{cross}",
             "h2[%{centered-text}感樱]h2",
             "h3[%{centered-text}秦湘]h3",
-            "[在山清水秀的胶东半岛腹地，在绵延起伏的青黄色丘陵间，在五龙河哺育的土地上，坐落着一座宁静的小镇。你若趁着春光，在四月中旬从城里南下，翻过最后一道坡，第一眼便能望见村里那抹最耀眼的粉红——那便是樱花了。]",
-            "[穿过古色古香的大门，街道左手边，是土黄色调的新平房、小店铺、车库、贴着福字的卷帘门、体育设施、花坛、新立的公告牌，还有格格不入的现代路标。挑一条巷子钻过去，向东穿过绿叶掩映的村广场，就到了那条“樱花隧道”。]",
-            "[柏油马路两侧种满了樱花。前边，后头，左右两侧，乃至头顶，全是密密匝匝的红。我轻轻拾起路上的一片花瓣，用食指肚细细摩挲，感受那独一无二的纹路——三分妩媚、三分活泼、三分娴静，还有一分淡淡的乡思，仿佛奔赴一场甜蜜的约会，令人怦然心动。千百条枝丫交错着，堆满了我蔚蓝的天空，眼里只余下淡淡的粉，与生机盎然的、斑驳的绿。春光再怎么富有能量，也无法完全穿透这厚厚的一层樱花树冠，只无奈地在地上留下星星点点浅粉色的日斑。]",
-            "[正是这片粉色的天空，引我踱步到了旧宅。小学时代，我曾几次在暑假回到这里除草。自从十六年前搬离之后，旧宅便再无人居住。那时，扶起门闩，推开那扇层层叠叠、贴着一则又一则完全褪了色春联的门，伴随一声刺耳的尖响，跨过高高的门槛，映入眼帘的竟是一片“树林”——不知名的杂草从方砖缝里、裂缝里钻出来，肆无忌惮地向上生长，翠绿的茎干支撑着它们贪婪的愿望，最高的已翻过了房檐，准备上房揭瓦。一下午的劳动过后，再打量这个小院，又寻见儿时记忆里的蜂窝，瞥见用大棚塑料皮缠着的房门，侧屋糊窗的2010年的老报纸，还有矮矮的猪圈、小小的水池、高高的上屋顶的石阶。一切似乎还是离开前的老样子。可就连这般模糊的记忆，也已是十年前的旧事了。如今我再怎么奋力在脑海中搜寻，眼前却空余盛开的樱花。那扇大门——孤独地守护老屋子十六年的大门——紧闭着，沉默着，尘封了我十年前的回忆。除了褪色破碎的春联，它对我还有什么温度呢？从记事起，我便已是城里的孩子了。]",
-            "[几根枝条上挂着红灯笼，上面写着“濯村”两个黑色大字，给樱花隧道添了一番风趣。每到樱花盛开的季节，游人都爱在灯笼下拍照打卡，在手机相册里留下珍贵的回忆。而我的旧宅有时也被囊括其中……可它是多么微不足道，毫不起眼。在别人灿烂的故事里，它连背景都算不上，连个摆设都不如；它只是人们目睹过后即刻遗忘的视野，一堵有些裂痕的、破败的墙，不配拥有任何人的记忆。]",
-            "[一时语塞，我只好逃离这漩涡。沿着樱花隧道向东，直到粉红色天空的尽头，前面便是一片杨树林。曾祖辈的墓碑就设在那里。地平线上下，土层内外，一边是和煦的春光、盛开的樱花、如烟的翠柳，一边是沉寂的归宿、孤独的终末、凝滞的死亡。我曾伫立于此，不觉得可怖，却有一股沉甸甸的重量压在胸口：一个人的生与灭，注定而不可更改。可是一年又一年的樱花，潇洒地绽放，潇洒地凋落，从不停息，从不缺席。生命或许源自一个概率极小的随机事件。混沌之中，冰冷的物质创造了生命电流，接着化成躯体，催生意志。最后，懵懂的新生命，在婴儿的哭泣声中，在家人的注视下，就这样，被无情地抛到了世界上。而这此后的生命，冥冥中自有天意，或遭遇重症顽疾，或惨逢生灵涂炭，或陷入硝烟炮火，或终生伶仃孤苦……这一切，他毫无选择避免的权利。生命无奈如此，即便人间千万世亦无法解。而樱花也畏惧被砍伐、遇大旱、染树病的命运，但它毅然向前，顽强地从大地中汲取养分，写下又一个粉红的春意诗篇。不错的，万幸的是，你还可以决定怎么活着。那就去潇洒地活，顽强地活，痛快地活吧！]",
-            "[情至深时，我默默踱出这片粉红色的花海。记忆中的姜疃镇是舒缓的、荣耀的。大街上（现在叫04县道）人来人往，伛偻提携，还有像骆驼一样悠然缓行的电动三轮。生意兴隆的五金店铺，镇上唯一的“家家悦”超市，镇上逢喜事必去的饭店，还有熟悉却又陌生的“鲁花”公司，一派生机勃勃的景象。如果说生命太过沉重，不妨来看看这里的生活吧。如果说理想太过遥远，那就来濯村看看樱花吧。樱花已经谢了？这里还有风车和原野，四季皆是美景。]",
-            "[然而，凝视那樱花良久，始觉光阴飞度——可惜，此刻我脚下的土地，并不是那片令我眷恋的土壤。眼前的樱花，是栽种在校园里的樱花，它每天沐浴着同学们爽朗而年轻的笑声。或许，曾几何时，也有一个迷茫的学生在这盛开的樱花下久久伫立，默然兴怀……我搁下笔，仿佛从一场旧梦中醒来，起身四顾，一时竟不知该说什么。半晌，轻轻呼出一口气——人生苦短，光阴如梭，与其感物伤怀，不如趁这年轻时的春光，去做点什么。]",
-            "[而这暮春乡樱的美景，已然入画。裱之，藏之。在自强不息的心中，永远地留下一丝柔情。]]D",
+            "[%{TI}在山清水秀的胶东半岛腹地，在绵延起伏的青黄色丘陵间，在五龙河哺育的土地上，坐落着一座宁静的小镇。你若趁着春光，在四月中旬从城里南下，翻过最后一道坡，第一眼便能望见村里那抹最耀眼的粉红——那便是樱花了。]",
+            "[%{TI}穿过古色古香的大门，街道左手边，是土黄色调的新平房、小店铺、车库、贴着福字的卷帘门、体育设施、花坛、新立的公告牌，还有格格不入的现代路标。挑一条巷子钻过去，向东穿过绿叶掩映的村广场，就到了那条“樱花隧道”。]",
+            "[%{TI}柏油马路两侧种满了樱花。前边，后头，左右两侧，乃至头顶，全是密密匝匝的红。我轻轻拾起路上的一片花瓣，用食指肚细细摩挲，感受那独一无二的纹路——三分妩媚、三分活泼、三分娴静，还有一分淡淡的乡思，仿佛奔赴一场甜蜜的约会，令人怦然心动。千百条枝丫交错着，堆满了我蔚蓝的天空，眼里只余下淡淡的粉，与生机盎然的、斑驳的绿。春光再怎么富有能量，也无法完全穿透这厚厚的一层樱花树冠，只无奈地在地上留下星星点点浅粉色的日斑。]",
+            "[%{TI}正是这片粉色的天空，引我踱步到了旧宅。小学时代，我曾几次在暑假回到这里除草。自从十六年前搬离之后，旧宅便再无人居住。那时，扶起门闩，推开那扇层层叠叠、贴着一则又一则完全褪了色春联的门，伴随一声刺耳的尖响，跨过高高的门槛，映入眼帘的竟是一片“树林”——不知名的杂草从方砖缝里、裂缝里钻出来，肆无忌惮地向上生长，翠绿的茎干支撑着它们贪婪的愿望，最高的已翻过了房檐，准备上房揭瓦。一下午的劳动过后，再打量这个小院，又寻见儿时记忆里的蜂窝，瞥见用大棚塑料皮缠着的房门，侧屋糊窗的2010年的老报纸，还有矮矮的猪圈、小小的水池、高高的上屋顶的石阶。一切似乎还是离开前的老样子。可就连这般模糊的记忆，也已是十年前的旧事了。如今我再怎么奋力在脑海中搜寻，眼前却空余盛开的樱花。那扇大门——孤独地守护老屋子十六年的大门——紧闭着，沉默着，尘封了我十年前的回忆。除了褪色破碎的春联，它对我还有什么温度呢？从记事起，我便已是城里的孩子了。]",
+            "[%{TI}几根枝条上挂着红灯笼，上面写着“濯村”两个黑色大字，给樱花隧道添了一番风趣。每到樱花盛开的季节，游人都爱在灯笼下拍照打卡，在手机相册里留下珍贵的回忆。而我的旧宅有时也被囊括其中……可它是多么微不足道，毫不起眼。在别人灿烂的故事里，它连背景都算不上，连个摆设都不如；它只是人们目睹过后即刻遗忘的视野，一堵有些裂痕的、破败的墙，不配拥有任何人的记忆。]",
+            "[%{TI}一时语塞，我只好逃离这漩涡。沿着樱花隧道向东，直到粉红色天空的尽头，前面便是一片杨树林。曾祖辈的墓碑就设在那里。地平线上下，土层内外，一边是和煦的春光、盛开的樱花、如烟的翠柳，一边是沉寂的归宿、孤独的终末、凝滞的死亡。我曾伫立于此，不觉得可怖，却有一股沉甸甸的重量压在胸口：一个人的生与灭，注定而不可更改。可是一年又一年的樱花，潇洒地绽放，潇洒地凋落，从不停息，从不缺席。生命或许源自一个概率极小的随机事件。混沌之中，冰冷的物质创造了生命电流，接着化成躯体，催生意志。最后，懵懂的新生命，在婴儿的哭泣声中，在家人的注视下，就这样，被无情地抛到了世界上。而这此后的生命，冥冥中自有天意，或遭遇重症顽疾，或惨逢生灵涂炭，或陷入硝烟炮火，或终生伶仃孤苦……这一切，他毫无选择避免的权利。生命无奈如此，即便人间千万世亦无法解。而樱花也畏惧被砍伐、遇大旱、染树病的命运，但它毅然向前，顽强地从大地中汲取养分，写下又一个粉红的春意诗篇。不错的，万幸的是，你还可以决定怎么活着。那就去潇洒地活，顽强地活，痛快地活吧！]",
+            "[%{TI}情至深时，我默默踱出这片粉红色的花海。记忆中的姜疃镇是舒缓的、荣耀的。大街上（现在叫04县道）人来人往，伛偻提携，还有像骆驼一样悠然缓行的电动三轮。生意兴隆的五金店铺，镇上唯一的“家家悦”超市，镇上逢喜事必去的饭店，还有熟悉却又陌生的“鲁花”公司，一派生机勃勃的景象。如果说生命太过沉重，不妨来看看这里的生活吧。如果说理想太过遥远，那就来濯村看看樱花吧。樱花已经谢了？这里还有风车和原野，四季皆是美景。]",
+            "[%{TI}然而，凝视那樱花良久，始觉光阴飞度——可惜，此刻我脚下的土地，并不是那片令我眷恋的土壤。眼前的樱花，是栽种在校园里的樱花，它每天沐浴着同学们爽朗而年轻的笑声。或许，曾几何时，也有一个迷茫的学生在这盛开的樱花下久久伫立，默然兴怀……我搁下笔，仿佛从一场旧梦中醒来，起身四顾，一时竟不知该说什么。半晌，轻轻呼出一口气——人生苦短，光阴如梭，与其感物伤怀，不如趁这年轻时的春光，去做点什么。]",
+            "[%{TI}而这暮春乡樱的美景，已然入画。裱之，藏之。在自强不息的心中，永远地留下一丝柔情。]]D",
             "I[{./blogs/resources/e5b0ee.png}ẇ{300}ȧ{濯村樱花节}ƭ{濯村街景}]I"
         ]
     },
@@ -89,7 +92,7 @@ var blogs = [
         type: "blog",
         id: "XinGanZhiFa",
         date: "2026-04-15",
-        edited: "2026-04-16",
+        edited: ["2026-04-16"],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -199,7 +202,7 @@ var blogs = [
         type: "blog",
         id: "BaiGeZhiShi",
         date: "2026-03-20",
-        edited: "2026-03-21",
+        edited: ["2026-03-21"],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -305,7 +308,7 @@ var blogs = [
         type: "blog",
         id: "KaiMiSiQiGuoMingRenMingDan",
         date: "2026-03-06",
-        edited: "2026-03-20",
+        edited: ["2026-03-20"],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -501,7 +504,7 @@ var blogs = [
         type: "blog",
         id: "BlogSpaceEditRules",
         date: "2026-02-23",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -582,7 +585,7 @@ var blogs = [
         type: "blog",
         id: "MJDDateConversionTable",
         date: "2026-02-23",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -601,7 +604,7 @@ var blogs = [
         type: "blog",
         id: "SampleParadigmsOfTrilateralVerbs",
         date: "2026-02-20",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -654,7 +657,7 @@ var blogs = [
         type: "blog",
         id: "MyFirstPost",
         date: "2026-02-18",
-        edited: "2026-04-19",
+        edited: ["2026-04-19"],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -679,7 +682,7 @@ var blogs = [
         type: "blog",
         id: "ZhiShuSheng",
         date: "2026-02-09",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.VDelta46, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.Contributor }
@@ -705,7 +708,7 @@ var blogs = [
         type: "blog",
         id: "ParticipleSystemOfLatin",
         date: "2026-01-31",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoFirstAuthor }
@@ -770,7 +773,7 @@ var blogs = [
         type: "blog",
         id: "AboutColumbinaHyposelenia",
         date: "2026-01-16",
-        edited: "2026-04-16",
+        edited: ["2026-04-16"],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
@@ -831,7 +834,7 @@ var blogs = [
         type: "blog",
         id: "Epilogue",
         date: "2026-01-03",
-        edited: "2026-04-05",
+        edited: ["2026-04-05"],
         authors: [
             { user: USERS.BLOG_OWNER }
         ],
@@ -846,7 +849,7 @@ var blogs = [
         type: "blog",
         id: "TheThemeSongOfNodKrai",
         date: "2025-10-31",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
@@ -911,7 +914,7 @@ var blogs = [
         type: "blog",
         id: "BuZhuDongCi",
         date: "2025-10-16",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -941,7 +944,7 @@ var blogs = [
         type: "blog",
         id: "MouBanHuiLaDingYuJieXi",
         date: "2025-04-12",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -973,7 +976,7 @@ var blogs = [
         type: "blog",
         id: "LaDingYuFaYinYaoLing",
         date: "2025-02-10",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -1003,7 +1006,7 @@ var blogs = [
         type: "blog",
         id: "JiJiaChenBaYueShiSiZiShiTianXiang",
         date: "2024-09-16",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
@@ -1026,7 +1029,7 @@ var blogs = [
         type: "blog",
         id: "GGGGSStopUpdateNotice",
         date: "2024-08-09",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
         ],
@@ -1046,7 +1049,7 @@ var blogs = [
         type: "blog",
         id: "TighnariPronunciation",
         date: "2024-02-17",
-        edited: "2026-03-21",
+        edited: ["2026-03-21"],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor }
@@ -1074,7 +1077,7 @@ var blogs = [
         type: "blog",
         id: "Debug",
         date: "2023-02-25",
-        edited: "",
+        edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },

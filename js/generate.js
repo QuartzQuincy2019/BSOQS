@@ -58,11 +58,12 @@ function generateOverview(blog) {
         let p1 = document.createElement("p");
         p1.classList.add("agave", "EditionDateInfo");
         let mjd = dateToMJD(_date);
-        let bdText = "", ageText = "";
-        if (_date.slice(-5) == '10-03') {
+        let bdText = "",
+            ageText = "";
+        if (_date.slice(-5) == "10-03") {
             bdText = " class='nebucoffee'";
             ageText = " (" + (Number(_date.slice(0, 4)) - 2007) + ")";
-        };
+        }
         p1.innerHTML = startText + bdText + _date + ageText + " | " + mjd;
         let today = dateToMJD(new Date());
         let daydiff = today - mjd;
@@ -84,29 +85,60 @@ function generateOverview(blog) {
         }
 
         if (showDecoratedDiff) {
-            p1.innerHTML += "&nbsp;<span class='DecoratedDiff " + classText + "'>(" + daydiffText + ")</span>";
+            p1.innerHTML +=
+                "&nbsp;<span class='DecoratedDiff " +
+                classText +
+                "'>(" +
+                daydiffText +
+                ")</span>";
         } else {
-            p1.innerHTML += "&nbsp;<span class='DecoratedDiff weak'>(" + daydiffText + ")</span>";
+            p1.innerHTML +=
+                "&nbsp;<span class='DecoratedDiff weak'>(" +
+                daydiffText +
+                ")</span>";
         }
         return p1;
     }
     let p1 = generateEditionDateInfo(blog.date, true, "Published: ");
     overviewArea.appendChild(p1);
     if (blog.hasOwnProperty("edited") && blog.edited != "") {
-        var pEdited = generateEditionDateInfo(blog.edited, false, "Last Edited: ");
+        var pEdited = generateEditionDateInfo(
+            blog.edited[0],
+            false,
+            "Last Edited: ",
+        );
+        var text = "";
+        var index = blog.edited.length; // 记录编辑次数
+        blog.edited.forEach((editionDate) => {
+            let mjd = dateToMJD(editionDate);
+            let today = dateToMJD(new Date());
+            let daydiff = today - mjd;
+            let daydiffText = "";
+            if (daydiff == 0) {
+                daydiffText = "Today";
+            } else if (daydiff == 1) {
+                daydiffText = "Yesterday";
+            } else {
+                daydiffText = daydiff + " days ago";
+            }
+            text +=
+                "[" + index + "] " + editionDate + " (" + daydiffText + ")\n";
+            index--;
+        });
+        pEdited.title = "All editions: \n" + text; // 显示所有编辑日期
         overviewArea.appendChild(pEdited);
     }
     //
     let p2 = document.createElement("div");
     p2.classList.add("OverviewAuthorsArea");
     p2.innerHTML += "By";
-    blog.authors.forEach(authorInfo => {
+    blog.authors.forEach((authorInfo) => {
         let p2i = document.createElement("img");
         p2i.classList.add("overViewAvatar");
         p2i.src = "./data/users/avatars/" + authorInfo.user.codeName + ".png";
         let p2a = document.createElement("span");
         p2a.innerHTML = authorInfo.user.signName;
-        p2.append(p2i, p2a)
+        p2.append(p2i, p2a);
     });
     let p3 = generateTopicArea(blog);
     overviewArea.append(p2, p3);
@@ -139,7 +171,14 @@ function generatePostBody(blog) {
     var headerBlock = document.createElement("div");
     headerBlock.classList.add("header_block");
     for (var j = 0; j < blog.authors.length; j++) {
-        headerBlock.appendChild(generateCardHead(blog.date, blog.authors[j].user, blog.authors[j].user.signName, blog.authors[j].role));
+        headerBlock.appendChild(
+            generateCardHead(
+                blog.date,
+                blog.authors[j].user,
+                blog.authors[j].user.signName,
+                blog.authors[j].role,
+            ),
+        );
     }
     bodyArea.appendChild(headerBlock);
     bodyArea.appendChild(generateTopicArea(blog));
@@ -176,7 +215,7 @@ function generateCardHeadTitle(blog, isFolded = true) {
     titleAnchor.textContent = blog.title;
     headTitle.onclick = () => {
         togglePost(thisId);
-    }
+    };
     return headTitle;
 }
 
