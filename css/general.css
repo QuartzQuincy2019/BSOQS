@@ -300,7 +300,9 @@ span.topic::before {
 span.topic:hover::before {
     content: "\e273";
 }
-
+a[href^="./external/"]::before {
+    content: "\f08e  ";
+}
 a[href^="https://github.com"]::before {
     content: "\f408  ";
 }
@@ -330,7 +332,10 @@ table td {
 @media screen and (max-width: 900px) {
     table th,
     table td {
-        padding: 0.3em;
+        padding: 0.2em;
+    }
+    table {
+        margin: 0;
     }
 }
 

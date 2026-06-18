@@ -1,0 +1,8 @@
+/* external.css */
+.notice {
+    background-color: #fffae6;
+    border: 2px solid #ffe58f;
+    padding: 0.7em;
+    border-radius: var(--default-border-radius);
+    margin: 0.05em 0;
+}

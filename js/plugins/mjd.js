@@ -48,3 +48,9 @@ function dateToMJD(_date) {
 function MJDToDateString(mjd) {
     return new Date((mjd - 40587) * 86400000).toISOString().slice(0, 10);
 }
+
+function stringifyDateString(dateStr) {
+    const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return `${MONTHS[month - 1]} ${day}, ${year}`;
+}
