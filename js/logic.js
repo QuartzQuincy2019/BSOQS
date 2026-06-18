@@ -165,6 +165,7 @@ const flagMap = {
   'ƨ': 'src',
   'ȧ': 'alt',
   'ƹ': 'href',
+  'ǻ': 'target',
   'ź': 'value',
   'ƭ': 'title',
   'ŧ': 'type',

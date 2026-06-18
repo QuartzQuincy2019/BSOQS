@@ -3,15 +3,28 @@ var E_ThemeController = document.getElementById("ThemeController");
 const THEMES = ["bright", "dark"];
 
 function changeTheme() {
-    var currentTheme = E_ThemeController.getAttribute("href").slice(13, -4);
+    let href = E_ThemeController.getAttribute("href");
+    console.log(href);
+    var currentTheme = "";
+    E_ThemeController.classList.contains("ExternalCSSLink")
+        ? (currentTheme = href.slice(14, -4))
+        : (currentTheme = href.slice(13, -4));
     let index = THEMES.lastIndexOf(currentTheme);
     let target = "";
     if (index == THEMES.length - 1) {
-        target = THEMES[0]
+        target = THEMES[0];
     } else {
         target = THEMES[index + 1];
-    };
-    E_ThemeController.setAttribute("href", "./css/themes/" + target + ".css");
+    }
+    E_ThemeController.classList.contains("ExternalCSSLink")
+        ? E_ThemeController.setAttribute(
+              "href",
+              "../css/themes/" + target + ".css",
+          )
+        : E_ThemeController.setAttribute(
+              "href",
+              "./css/themes/" + target + ".css",
+          );
 }
 
 window.addEventListener("keydown", (e) => {
@@ -19,4 +32,4 @@ window.addEventListener("keydown", (e) => {
         e.preventDefault();
         changeTheme();
     }
-})
+});

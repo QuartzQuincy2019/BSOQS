@@ -1,7 +1,7 @@
 /* external.css */
 .notice {
-    background-color: #fffae6;
-    border: 2px solid #ffe58f;
+    background-color: var(--notice-bg-color);
+    border: 2px solid var(--notice-border-color);
     padding: 0.7em;
     border-radius: var(--default-border-radius);
     margin: 0.05em 0;

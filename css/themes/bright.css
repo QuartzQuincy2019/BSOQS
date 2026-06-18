@@ -17,6 +17,8 @@
     --independent-emphasis-color: #004bd7;
     --independent-alert-color: #ff0000;
     --border-end-color: #001997;
+    --notice-bg-color: #fffae6;
+    --notice-border-color: #ffe58f;
 }
 
 .cross {
