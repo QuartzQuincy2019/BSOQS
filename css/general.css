@@ -1,8 +1,8 @@
 /* general.css */
 :root {
     --default-border-radius: 16px;
-    --default-body-font-family: 'Tinos', 'Nerd Font', sans-serif, '宋体';
-    --default-code-font-family: 'Agave', 'Nerd Font';
+    --default-body-font-family: "Tinos", "Nerd Font", sans-serif, "宋体";
+    --default-code-font-family: "Agave", "Nerd Font";
     --default-font-size: 20px;
     --h1-font-size: 32px;
 }
@@ -17,37 +17,36 @@
 /* FONT-FACE */
 /* Nerd Font */
 @font-face {
-    font-family: 'Nerd Font';
+    font-family: "Nerd Font";
     src: url("../fonts/NerdFont/SymbolsNerdFont-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-
 /* Tinos */
 @font-face {
-    font-family: 'Tinos';
+    font-family: "Tinos";
     src: url("../fonts/Tinos/Tinos-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Tinos';
+    font-family: "Tinos";
     src: url("../fonts/Tinos/Tinos-Italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Tinos';
+    font-family: "Tinos";
     src: url("../fonts/Tinos/Tinos-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Tinos';
+    font-family: "Tinos";
     src: url("../fonts/Tinos/Tinos-BoldItalic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
@@ -55,14 +54,14 @@
 
 /* Agave */
 @font-face {
-    font-family: 'Agave';
+    font-family: "Agave";
     src: url("../fonts/Agave/Agave-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agave Nerd Font';
+    font-family: "Agave Nerd Font";
     src: url("../fonts/Agave/Agave-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
@@ -137,6 +136,7 @@ i {
 
 strong {
     font-weight: bold;
+    color: inherit;
 }
 
 p,
@@ -233,7 +233,7 @@ h1.CardHeadTitle {
     transition-duration: 500ms;
 }
 
-h1.CardHeadTitle>a {
+h1.CardHeadTitle > a {
     color: inherit;
     font-size: inherit;
     text-decoration: inherit;
@@ -246,7 +246,7 @@ h1.CardHeadTitle.is-sticky {
     /*padding-top设置为0.3em的时候，抖动最轻*/
     border-bottom: 4px solid var(--text-color);
     box-shadow: 0 2px 5px var(--text-color);
-    font-size: calc(var(--h1-font-size)*0.9);
+    font-size: calc(var(--h1-font-size) * 0.9);
 }
 
 @media screen and (max-width: 900px) {
@@ -254,7 +254,7 @@ h1.CardHeadTitle.is-sticky {
         padding: 0.3em 0 0.3em 0;
         border-bottom: 3px solid var(--text-color);
         box-shadow: 0 1px 3px var(--text-color);
-        font-size: calc(var(--h1-font-size)*0.8);
+        font-size: calc(var(--h1-font-size) * 0.8);
     }
 }
 
@@ -325,6 +325,13 @@ table td {
 table th,
 table td {
     padding: 0.5em;
+}
+
+@media screen and (max-width: 900px) {
+    table th,
+    table td {
+        padding: 0.3em;
+    }
 }
 
 tfoot {
@@ -442,24 +449,22 @@ button {
     color: var(--weak-text-color);
 }
 
-
-
 /* SPECIAL FONT */
 
 .arabic,
 .ara,
 .arabic *,
 .ara * {
-    font-family: sans-serif, 'Segoe UI';
+    font-family: sans-serif, "Segoe UI";
 }
 
 .naskh {
     font-family: Amiri;
-    font-size: calc(var(--default-font-size)*1.2);
+    font-size: calc(var(--default-font-size) * 1.2);
 }
 
 .agave {
-    font-family: 'Agave';
+    font-family: "Agave";
 }
 
 code *,

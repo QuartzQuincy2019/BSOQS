@@ -8,7 +8,6 @@
  * \\^
  */
 
-
 var blogs = [
     /*
     {
@@ -31,15 +30,104 @@ var blogs = [
     */
     {
         type: "blog",
+        id: "",
+        date: "2026-06-18",
+        edited: [""],
+        authors: [{ user: USERS.BLOG_OWNER }],
+        title: "26键五笔打字学习札记",
+        topics: [],
+        contents: [
+            "h1[一、键盘分区]h1",
+            "[一般地，按照字根的第一笔将字根分配到对应键位。]",
+            "t[^^|分区|手|起笔||GFDSA|左手|横(1)||HJKLM|右手|竖(2)||TREWQ|左手|撇(3)||YUIOP|右手|捺(4)||NBVCX|左右手|折(5)]t",
+            "t[^^|键号|键名|基本字根||11|G|一横||12|F|两横||13|D|三横||21|H|一竖||22|J|两竖||23|K|三竖||24|L|四竖||31|T|一撇||32|R|两撇||33|E|三撇(彡)||41|Y|一捺/一点||42|U|两点||43|I|三点||44|O|四点(灬)||51|N|一折||52|B|两折(巜)||53|V|三折(巛)|$]t",
+            "h1[二、字根口诀]h1",
+            "[86版字根口诀如下：]",
+            "bq[[%{centered_text}s[G]s 王旁青头戋（兼）五一 s[F]s 土士二干十寸雨 s[D]s 大犬三（羊）古石厂 s[S]s 木丁西 s[A]s 工戈草头右框七 br[]",
+            "s[H]s 目具上止卜虎皮 s[J]s 日早两竖与虫依 s[K]s 口与川，字根稀 s[L]s 田甲方框四车力 s[M]s 山由贝，下框几br[]",
+            "s[T]s 禾竹一撇双人立，反文条头共三一 s[R]s 白手看头三二斤 s[E]s 月彡（衫）乃用家衣底 s[W]s 人和八，三四里 s[Q]s 金勺缺点无尾鱼，犬旁留乂儿一点夕，氏无七（妻）br[]",
+            "s[Y]s 言文方广在四一，高头一捺谁人去 s[U]s 立辛两点六门疒 s[I]s 水旁兴头小倒立 s[O]s 火业头，四点米 s[P]s 之字军盖道建底，摘礻（示）衤（衣）br[]",
+            "s[N]s 已半巳满不出己，左框折尸心和羽 s[B]s 子耳了也框向上 s[V]s 女刀九臼山朝西 s[C]s 又巴马，丢矢矣 s[X]s 慈母无心弓和匕，幼无力]]bq",
+            "[98版字根口诀如下：]",
+            "bq[[%{centered_text}s[G]s 王旁青头五夫一 s[F]s 土干十寸未甘雨 s[D]s 大犬戊其古石厂 s[S]s 木丁西甫一四里 s[A]s 工戈草头右框七 br[]",
+            "s[H]s 目上卜止虎头具 s[J]s 日早两竖与虫依 s[K]s 口中两川三个竖 s[L]s 田甲方框四车里 s[M]s 山由贝骨下框集br[]",
+            "s[T]s 禾竹反文双人立 s[R]s 白斤气丘叉手提 s[E]s 月用力豸毛衣臼 s[W]s 人八登头单人几 s[Q]s 金夕鸟儿犭边鱼br[]",
+            "s[Y]s 言文方点谁人去 s[U]s 立辛六羊病门里 s[I]s 水族三点鳖头小 s[O]s 火业广鹿四点米 s[P]s 之字宝盖补礻衤br[]",
+            "s[N]s 已类左框心尸羽 s[B]s 子耳了也乃框皮 s[V]s 女刀九艮山西倒 s[C]s 又巴牛厶马失蹄 s[X]s 幺母贯头弓和匕]]bq",
+            "[%{emphasis TI}98版是86版的改良，后文按照s[98版]s五笔的键位、拆字规则、编码进行阐述。]",
+            "h1[三、基本打字规则]h1",
+            "h2[3.1 键面字]h2",
+            "[%{TI}有些字根本身就可以独立成字。比如c[M]c i[s[山由贝]s骨下框集]i，其中s[山、由、贝]s就属于s[键面字]s。键面字包括s[键名字]s和s[成字字根]s。]",
+            "h3[3.1.1 键名字]h3",
+            "[%{TI}每个键的口诀中第一个字就是该键的键名。要打出键名字，需要按4下该键。]",
+            "[%{TI}以c[M]c为例，c[M]c键的键名是c[山]c，则它的五笔编码为c[s[MMMM]s]c。][%{TI}再以c[O]c为例，c[O]c键的键名是c[火]c，则它的五笔编码为c[s[OOOO]s]c。]",
+            "h3[3.1.2 成字字根]h3",
+            "[%{TI}要打出成字字根，第一个键是该字根所在的键位，第二和第三个键是按笔顺写出该字是所对应的笔画键，第四个键是该字的最后一笔对应的笔画对应的键。五种笔画对应的键的键位如下：]",
+            "t[^|横/提|G(11)||竖/竖钩|H(21)||撇|T(31)||捺/点|Y(41)||折|N(51)|$]t",
+            "[%{TI}以c[M]c键的成字字根c[贝]c为例。首先，按“贝”所在的键c[M]c。然后，写这个字。第一笔是“竖”，故按c[H]c。第二笔是“横折”，属于“折”，故按c[N]c。最后一笔是“点”，故按c[Y]c。于是，c[贝]c的五笔编码是c[MHNY]c。][%{TI}再以c[G]c键的成字字根c[五]c为例。首先，按“五”所在的键c[G]c。然后，写这个字。第一笔是“横”，故按c[G]c。第二笔是“竖”，故按c[H]c。最后一笔是“横”，故按c[G]c。于是，c[五]c的五笔编码是c[GGHG]c。]",
+            "h2[3.2 键外字]h2",
+            "[%{TI}顾名思义，它是键面上没有的字。像这样的字，需要用拆字规则对它进行拆解。一般地，拆字遵循“不重叠”“按笔顺”“取大字根”的原则。若这个字只能拆成2个字根，那么必须要加上一步对字结构的限定。]",
+            "[%{TI}简单的情况，以c[配]c为例。c[配]c可以拆成c[西、一、己]c三个字根，分别对应键位c[SGN]c。故敲击c[SGN]c就可以打出这个字。]",
+            "[%{TI}为了说明“结构限定”，以c[昔、草]c为例。这两个字都可以用c[AJ]c打出。但是，它们的最后一笔不同。一个是横，一个是竖。按照最后一笔是哪个笔画，有如下规定进行限定：]",
+            "t[^|?|左右型|上下型|杂合型||横|G|F|D||竖|H|J|K||撇|T|R|E||捺/点|Y|U|I||折|N|B|V|$]t",
+            "[%{TI}对c[昔]c，字根呈现上下的排列且最后一笔为横，则按c[s[F]s]c进行限定；对于c[草]c，字根呈现上下的排列且最后一笔为竖，则按c[s[J]s]c进行限定。因此，c[昔]c的五笔编码为c[AJF]c；c[草]c的五笔编码为c[AJJ]c。]",
+            "[%{TI}实际上，对于恰好能拆成3个字根的字，也可以补上一个结构限定符。以上文所述的c[配]c为例。其最后一笔为折（竖弯钩），字形呈现左右结构，则按c[s[N]s]c进行限定。所以c[配]c的完整编码为c[SGNN]c。]",
+            "h2[3.3 注意事项]h2",
+            "[%{TI}有些汉字不容易看出它的字根，或者模棱两可，叫做s[难拆字]s。比如c[凹(HNHG)]c、c[凸(HGHG)]c、c[及(BYI)]c、c[曲(MAD)]c、c[臣(AHNH)]c、c[来(GUSI)]c、c[天(GDI)]c、c[我(TRNY)]c等。一般地，这些需要见一个记一个。]",
+            "[%{TI}额外需要注意的是，有些字会发生s[重码]s。比如c[己]c和c[巳]c的码位都是c[NNGN]c。]",
+            "[%{TI}对于只有一笔的字，需要在后面补上c[s[LL]s]c。比如c[一=GGLL]c、c[丨=HHLL]c、c[丿=TTLL]c、c[丶=YYLL]c、c[乙=NNLL]c。]",
+            "h1[四、词组输入]h1",
+            "[%{TI}若输入二字词语，则取每个字的前两个编码。比如c[枭雄]c，c[枭=s[QS]sU]c，c[雄=s[DC]sWY]c，取c[QSDC]c便是c[枭雄]c的五笔编码。]",
+            "[%{TI}若输入三字词语，则取前两个字的第一个编码和最后一个字的前两个编码。比如c[推土机]c，c[推=s[R]sWYG]c，c[土=s[F]sFFF]c，c[机=s[SW]sN]c，则c[RFSW]c便是c[推土机]c的五笔编码。]",
+            "[%{TI}若输入大于三字的词语，则取前三个字的第一个编码和最后一个字的第一个编码。比如c[自作主张]c，c[s[T]sHD+s[W]sTHF+s[Y]sGD+s[X]sTAY]c，则c[TWYX]c为c[自作主张]c的五笔编码。]",
+            "[%{TI}可以推测，词语所包含的字数越多，以同样的编码能打出单字或较短的词语的项目（即发生重码的情况）就越多。因此，v[%{alert}千万不要向你的用户词库里导入过多的长词语(>4字)]v，否则会造成灾难性后果！]",
+            "[%{TI}可以推测，某些s[连绵词]s（偏旁需要2个码位才能打出的）不适宜以词组的形式打出，因为它们无法区分。比如c[骐骥=驰骋=CGCG]c、c[踌躇=蹒跚=蹉跎=踉跄=踯躅=蹊跷=KHKH]c，还有一些，比如c[狐狸=狡猾=狩猎=狼狈=猛犸=猕猴=猖獗=猪猡=猿猴=QTQT]c。]",
+            "h1[五、简码]h1",
+            "[%{TI}简码是五笔输入法的一种输入方式。它分为一级简码、二级简码和三级简码，它的规则如下：]",
+            "t[^|一级简码|1|2|3|4|5||1|G 一|F 地|D 在|S 要|A 工||2|H 上|J 是|K 中|L 国|M 同||3|T 和|R 的|E 有|W 人|Q 我||4|Y 主|U 产|I 不|O 为|P 这||5|N 民|B 了|V 发|C 以|X 经|$]t",
+            "[%{TI}输入一级简码对应的字时，直接按一次键就能打出该字。v[{emphasis}注意，在进行词组输入时，需要按照该字的s[全码]s进行输入。]v比如，在输入c[华为]c一词时，c[华=s[WX]sFJ]c，c[为=s[YE]sYI]c，“华为”只能通过输入c[WXYE]c来打出，而不能通过输入c[WXv[{alert}O]v]c来打出。]",
+            "[%{TI}二级简码的理论组合共有c[25*25=625]c个，但有对应汉字的只有c[s[613]s]c个。12个没有对应汉字的二级简码分别是：c[CI]c c[CJ]c c[CL]c c[CO]c c[CP]c c[CR]c c[CU]c c[HB]c c[LI]c c[MV]c c[PC]c c[UP]c。这613个汉字均是字频高的汉字。比如，以c[KB]c为开头的编码对应的汉字，有c[啊=KBSK]c c[吸=KBYY]c c[吼=KBNN]c c[叩=KBH]c c[吔=KBN]c c[戢=KBNY]c c[嗤=KBHJ]c c[嗫=KBCC]c c[咄=KBMH]c等，但其中最常用的是“啊”，故“啊”的二级简码被定为c[KB]c。]",
+            "t[^|叠码二级简码|1|2|3|4|5||1|GG 五|FF 寺|DD 大|SS 林|AA 式||2|HH 步|JJ 昌|KK 吕|LL 田|MM 册||3|TT 秩|RR 折|EE 朋|WW 从|QQ 多||4|YY 方|UU 立|II 水|OO 炎|PP 之||5|NN 已|BB 子|VV 妇|CC 双|XX 比|$]t",
+            "[%{TI}三级简码的理论组合共有c[25*25*25=15625]c个，但有对应汉字的只有c[s[9579]s]c个，占比c[61.3%]c。没有对应汉字的有c[6046]c个：c[AAC]c c[AAE]c c[AAI]c c[AAO]c c[AAP]c c[AAR]c c[AAS]c c[AAX]c c[ABA]c c[ABG]c ... c[YXS]c c[YXV]c c[YXW]c c[YYA]c c[YYD]c c[YYE]c c[YYH]c c[YYO]c c[YYQ]c c[YYS]c。它的原理同二级简码。]",
+            "t[^|叠码三级简码|1|2|3|4|5||1|GGG 王|FFF 圭|DDD 磊|SSS 森|AAA 工||2|HHH 目|JJJ 晶|KKK 品|LLL 田|MMM 山||3|TTT 禾|RRR 白|EEE 月|WWW 众|QQQ 金||4|YYY 言|UUU 立|?|OOO 火|PPP 之||5|NNN 忆|BBB 子|VVV 女|CCC 又|?|$]t",
+            "h1[六、附表]h1",
+            "h2[表 常用汉字最快五笔98输入方法]h2",
+            "[按字频c[001 - 075]c]",
+            "t[^|1|的|R|2|一|G|3|国|L|$^|4|在|D|5|人|W|6|了|B|$^|7|有|E|8|中|K|9|是|J|$^|10|年|TG|11|和|T|12|大|D|$^|13|业|OH|14|不|I|15|为|O|$^|16|发|V|17|会|WFC|18|工|A|$^|19|经|X|20|上|H|21|地|F|$^|22|市|YM|23|要|S|24|个|WH|$^|25|产|U|26|这|P|27|出|BM|$^|28|行|TGS|29|作|WT|30|生|TG|$^|31|家|PG|32|以|C|33|成|DN|$^|34|到|GC|35|日|J|36|民|N|$^|37|来|GU|38|我|Q|39|部|UKB|$^|40|对|CF|41|进|FJP|42|多|QQ|$^|43|全|WG|44|建|VG|45|他|WB|$^|46|公|WC|47|开|GA|48|们|WU|$^|49|场|FN|50|展|NAE|51|时|JF|$^|52|理|GJ|53|新|USR|54|方|YY|$^|55|主|Y|56|企|WHF|57|资|UQW|$^|58|实|PU|59|学|IPB|60|报|RB|$^|61|制|TGM|62|政|GHT|63|济|IY|$^|64|用|ET|65|同|M|66|于|GF|$^|67|法|IF|68|高|YM|69|长|TA|$^|70|现|GM|71|本|SG|72|月|E|$^|73|定|PG|74|化|WX|75|加|EK|$]t",
+            "[按字频c[076 - 150]c]",
+            "t[^|76|动|FCE|77|合|WG|78|品|KKK|$^|79|重|TGJ|80|关|UDU|81|机|SW|$^|82|分|WV|83|力|EN|84|自|THD|$^|85|外|QH|86|者|FTJ|87|区|AR|$^|88|能|CE|89|设|YWC|90|后|RG|$^|91|就|YI|92|等|TF|93|体|WSG|$^|94|下|GH|95|万|GQ|96|元|FQ|$^|97|社|PY|98|过|FP|99|前|UE|$^|100|面|DL|101|农|PE|102|也|BN|$^|103|得|TJ|104|与|GN|105|说|YUK|$^|106|之|P|107|员|KM|108|而|DM|$^|109|务|TE|110|利|TJ|111|电|JN|$^|112|文|YYGY|113|事|GK|114|可|SK|$^|115|种|TK|116|总|UKN|117|改|NT|$^|118|三|DG|119|各|TK|120|好|VB|$^|121|金|Q|122|第|TXH|123|司|NGK|$^|124|其|DW|125|从|WW|126|平|GU|$^|127|代|WA|128|当|IV|129|天|GD|$^|130|水|I|131|市|YM|132|提|RJ|$^|133|商|YUM|134|十|FG|135|管|TP|$^|136|内|MW|137|小|IH|138|技|RFC|$^|139|位|WUG|140|目|H|141|起|FH|$^|142|海|ITX|143|所|RN|144|立|U|$^|145|已|N|146|通|CEP|147|入|TY|$^|148|量|JG|149|子|B|150|问|UK|$]t",
+            "[按字频c[151 - 225]c]",
+            "t[^|151|度|OA|152|北|UX|153|保|WK|$^|154|心|NY|155|还|DH|156|科|TU|$^|157|委|TV|158|都|FT|159|术|SY|$^|160|使|WGK|161|明|JE|162|着|UH|$^|163|次|UQ|164|将|UQF|165|增|FU|$^|166|基|DWF|167|名|QK|168|向|TMK|$^|169|门|UYH|170|应|OI|171|里|JF|$^|172|美|UG|173|由|MH|174|规|GMQ|$^|175|今|WYN|176|题|JGH|177|记|YN|$^|178|点|HK|179|计|YF|180|去|FCU|$^|181|强|XK|182|两|GM|183|些|HX|$^|184|表|GE|185|系|TXI|186|办|EW|$^|187|教|FTBT|188|正|GH|189|条|TS|$^|190|最|JB|191|达|DP|192|特|CF|$^|193|革|AF|194|收|NH|195|二|FGG|$^|196|期|DW|197|并|UA|198|程|TKG|$^|199|厂|DGT|200|如|VK|201|道|UT|$^|202|际|BF|203|及|BY|204|西|SG|$^|205|口|K|206|京|YI|207|华|WX|$^|208|任|WTF|209|调|YMF|210|性|NT|$^|211|导|NF|212|组|XE|213|东|AI|$^|214|路|KHT|215|活|ITD|216|广|OY|$^|217|意|UJN|218|比|XX|219|投|RWC|$^|220|决|UN|221|交|UR|222|统|XYC|$^|223|党|IP|224|南|FM|225|安|PV|$]t",
+            "[按字频c[226 - 300]c]",
+            "t[^|226|此|HX|227|领|WYCM|228|结|XF|$^|229|营|APK|230|项|ADM|231|情|NG|$^|232|解|QE|233|议|YYR|234|义|YR|$^|235|山|M|236|先|TFQ|237|车|LG|$^|238|然|QD|239|价|WWJ|240|放|YT|$^|241|世|AN|242|间|UJ|243|因|LD|$^|244|共|AW|245|院|BP|246|步|HH|$^|247|物|CQ|248|界|LW|249|集|WYS|$^|250|把|RC|251|持|RFF|252|无|FQ|$^|253|但|WJ|254|城|FD|255|相|SH|$^|256|书|NNH|257|村|SFY|258|求|GI|$^|259|治|IC|260|取|BC|261|原|DR|$^|262|处|TH|263|府|OW|264|研|DGA|$^|265|质|RF|266|信|WY|267|四|LH|$^|268|运|FCP|269|县|EGC|270|军|PL|$^|271|件|WTG|272|育|YCE|273|局|NNK|$^|274|干|FG|275|队|BW|276|团|LF|$^|277|又|C|278|造|TFKP|279|形|GAE|$^|280|级|XB|281|标|SFI|282|联|BU|$^|283|专|FNY|284|少|IT|285|费|XJ|$^|286|效|UR|287|据|RND|288|手|RT|$^|289|施|YTB|290|权|SC|291|江|IA|$^|292|近|RP|293|深|IP|294|更|GJ|$^|295|认|YW|296|果|JS|297|格|STK|$^|298|几|W|299|看|RH|300|没|IW|$]t",
+            "[按字频c[301 - 375]c]",
+            "t[^|301|职|BK|302|服|EB|303|台|CK|$^|304|式|AA|305|益|UWL|306|想|SH|$^|307|数|OV|308|单|UJ|309|样|SU|$^|310|只|KW|311|被|PU|312|亿|WN|$^|313|老|FTX|314|受|EPC|315|优|WDN|$^|316|常|IPK|317|销|QIE|318|志|FN|$^|319|战|HKA|320|流|IYC|321|很|TV|$^|322|接|RU|323|乡|XT|324|头|UD|$^|325|给|XW|326|至|GCF|327|难|CW|$^|328|观|CM|329|指|RX|330|创|WBJ|$^|331|证|YG|332|织|XK|333|论|YW|$^|334|别|KE|335|五|GG|336|协|FE|$^|337|变|YO|338|风|WR|339|批|RX|$^|340|见|MQ|341|究|PWV|342|支|FC|$^|343|那|NG|344|查|SJ|345|张|XT|$^|346|精|OG|347|林|SS|348|每|TX|$^|349|转|LFN|350|划|AJ|351|准|UW|$^|352|做|WDT|353|需|FD|354|传|WFN|$^|355|争|QV|356|税|TUK|357|构|SQ|$^|358|具|HW|359|百|DJ|360|或|AK|$^|361|才|FT|362|积|TKW|363|势|RVYE|$^|364|举|IG|365|必|NTE|366|型|GA|$^|367|易|JQ|368|视|PYM|369|快|NNW|$^|370|李|SB|371|参|CD|372|回|LK|$^|373|引|XH|374|镇|QF|375|首|UT|$]t",
+            "[按字频c[376 - 450]c]",
+            "t[^|376|推|RW|377|思|LN|378|完|PFQ|$^|379|消|II|380|值|WFH|381|该|YY|$^|382|走|FHU|383|装|UF|384|众|WWW|$^|385|责|GMU|386|备|TL|387|州|YTY|$^|388|供|WAW|389|包|QN|390|副|GKL|$^|391|极|SB|392|整|SKT|393|确|DQ|$^|394|知|TD|395|贸|QYV|396|己|NN|$^|397|环|GD|398|话|YTD|399|反|RC|$^|400|身|TM|401|选|TFQP|402|亚|GO|$^|403|么|TC|404|带|GKP|405|采|ES|$^|406|王|G|407|策|TS|408|真|FHW|$^|409|女|V|410|谈|YOO|411|严|GO|$^|412|斯|DWR|413|况|UK|414|色|QC|$^|415|打|RS|416|德|TFL|417|告|TFKF|$^|418|仅|WC|419|它|PX|420|气|RTG|$^|421|料|OUF|422|神|PYJ|423|率|YX|$^|424|识|YK|425|劳|APE|426|境|FU|$^|427|源|IDR|428|青|GE|429|护|RYN|$^|430|列|GQJ|431|兴|IGW|432|许|YTF|$^|433|户|YNE|434|马|CG|435|港|IA|$^|436|则|MJ|437|节|AB|438|款|FFI|$^|439|拉|RU|440|直|FH|441|案|PV|$^|442|股|EWC|443|光|IG|444|较|LU|$^|445|河|ISK|446|花|AW|447|根|SV|$^|448|布|DMH|449|线|XG|450|土|F|$]t",
+            "[按字频c[451 - 525]c]",
+            "t[^|451|克|DQ|452|再|GMF|453|群|VT|$^|454|医|ATD|455|清|IGE|456|速|SKP|$^|457|律|TVG|458|她|VB|459|族|YTT|$^|460|历|DE|461|非|HD|462|感|DG|$^|463|占|HK|464|续|XF|465|师|JGM|$^|466|何|WS|467|影|JY|468|功|AE|$^|469|负|QM|470|验|CGW|471|望|YN|$^|472|财|MF|473|类|OD|474|货|WXM|$^|475|约|XQ|476|艺|AN|477|售|WYK|$^|478|连|LP|479|纪|XN|480|按|RPV|$^|481|讯|YNF|482|史|KR|483|示|FI|$^|484|象|QKE|485|养|UGJ|486|获|AQTD|$^|487|石|DGTG|488|食|WYV|489|抓|RRH|$^|490|富|PGK|491|模|SA|492|始|VC|$^|493|住|WY|494|赛|PA|495|客|PT|$^|496|越|FHA|497|闻|UBD|498|央|MD|$^|499|席|OA|500|坚|JC|501|份|WWV|$^|502|士|FGH|503|热|RV|504|限|BV|$^|505|米|OY|506|银|QVY|507|息|THN|$^|508|校|SU|509|均|FQU|510|房|YNY|$^|511|周|MF|512|游|IY|513|千|TFK|$^|514|失|TGI|515|八|WT|516|检|SWG|$^|517|足|KH|518|配|SGN|519|存|DHB|$^|520|九|VT|521|命|WGKB|522|尔|QI|$^|523|即|VBH|524|防|BY|525|钱|QG|$]t",
+            "[按字频c[526 - 600]c]",
+            "t[^|526|评|YGU|527|复|TJT|528|考|FTG|$^|529|依|WYE|530|断|ON|531|范|AIB|$^|532|础|DBM|533|油|IM|534|照|JV|$^|535|段|TH|536|落|AI|537|访|YYT|$^|538|未|FGGY|539|额|PT|540|双|CC|$^|541|让|YH|542|切|AV|543|须|ED|$^|544|儿|QT|545|便|WGJ|546|空|PW|$^|547|往|TYG|548|你|WQ|549|层|NF|$^|550|低|WQ|551|奖|UQD|552|注|IYG|$^|553|黄|AM|554|英|AMD|555|承|BD|$^|556|远|FQP|557|版|THGC|558|维|XW|$^|559|算|THA|560|破|DB|561|铁|QTG|$^|562|乐|TN|563|边|EP|564|初|PUV|$^|565|满|IAG|566|病|UGM|567|响|KT|$^|568|药|AX|569|助|EG|570|致|GC|$^|571|善|UU|572|突|PWD|573|爱|EP|$^|574|容|PWW|575|香|TJF|576|称|TQ|$^|577|购|MQC|578|届|NM|579|余|WGS|$^|580|素|GX|581|请|YG|582|白|R|$^|583|宣|PGJ|584|健|WV|585|牌|THGF|$^|586|促|WKH|587|培|FUK|588|竞|UKQ|$^|589|巴|CNH|590|稳|TQ|591|继|XO|$^|592|紧|JC|593|字|PB|594|困|LS|$^|595|刘|YJ|596|旅|YTE|597|声|FNR|$^|598|超|FHV|599|随|BD|600|例|WGQ|$]t",
+            "[按字频c[601 - 675]c]",
+            "t[^|601|担|RJ|602|友|DC|603|号|KG|$^|604|显|JO|605|却|FCB|606|监|JTYL|$^|607|材|SFT|608|且|EG|609|春|DWJ|$^|610|居|ND|611|适|TDP|612|除|BWG|$^|613|红|XA|614|半|UG|615|买|NUD|$^|616|充|YC|617|陈|BA|618|火|O|$^|619|搞|RY|620|图|LT|621|阳|BJ|$^|622|六|UY|623|察|PW|624|试|YA|$^|625|太|DY|626|什|WF|627|执|RVY|$^|628|片|THG|629|古|DGH|630|七|AG|$^|631|球|GG|632|修|WHT|633|尽|NYU|$^|634|控|RPW|635|讲|YF|636|排|RHD|$^|637|粮|OYV|638|武|GAH|639|预|CN|$^|640|亲|US|641|挥|RPL|642|卖|FNU|$^|643|审|PJ|644|措|RAJ|645|荣|APS|$^|646|洲|IYT|647|卫|BG|648|希|RDM|$^|649|店|OHK|650|良|YV|651|属|NTK|$^|652|险|BW|653|曾|UL|654|围|LF|$^|655|域|FA|656|令|WYC|657|站|UH|$^|658|苏|AE|659|龙|DX|660|念|WYNN|$^|661|罗|LQ|662|吨|KGB|663|器|KKD|$^|664|汇|IAN|665|康|OVI|666|减|UDG|$^|667|习|NU|668|演|IPGW|669|普|UO|$^|670|田|L|671|班|GY|672|待|TFFY|$^|673|星|JTG|674|飞|NU|675|写|PGN|$]t",
+            "[按字频c[676 - 750]c]",
+            "t[^|676|矿|DO|677|轻|LC|678|扩|RO|$^|679|言|Y|680|章|UJJ|681|汽|IR|$^|682|靠|TFKD|683|毛|ET|684|终|XTU|$^|685|仍|WB|686|景|JY|687|置|LFHF|$^|688|底|OQ|689|福|PYG|690|止|HH|$^|691|离|YR|692|泽|ICG|693|波|IB|$^|694|兰|UDF|695|核|SYN|696|降|BT|$^|697|训|YK|698|逐|GEP|699|票|SF|$^|700|菜|AES|701|座|OWW|702|献|FM|$^|703|钢|QMR|704|眼|HV|705|损|RKM|$^|706|宁|PS|707|像|WQK|708|苦|AD|$^|709|印|QG|710|融|GKM|711|独|QTJ|$^|712|湖|ID|713|早|JH|714|予|CN|$^|715|夫|GGGY|716|编|XY|717|换|RQ|$^|718|欧|ARQ|719|努|VCE|720|著|AFT|$^|721|顾|DB|722|征|TGH|723|升|TAK|$^|724|态|DY|725|套|DD|726|介|WJ|$^|727|送|UDP|728|某|FS|729|斗|UF|$^|730|状|UDY|731|画|GL|732|留|QY|$^|733|航|TUY|734|派|IR|735|室|PGC|$^|736|临|JT|737|兵|RW|738|补|PUH|$^|739|宝|PGY|740|略|LT|741|黑|LFO|$^|742|综|XP|743|云|FC|744|差|UAF|$^|745|纳|XM|746|密|PN|747|贫|WVM|$^|748|剧|NDJ|749|犯|QTB|750|阿|BS|$]t",
+            "[按字频c[751 - 825]c]",
+            "t[^|751|击|GB|752|遇|JM|753|岁|MQ|$^|754|阶|BWJ|755|烈|GQJO|756|督|HI|$^|757|吃|KT|758|丰|DHK|759|馆|QNP|$^|760|招|RVK|761|害|PD|762|官|PN|$^|763|树|SC|764|听|KR|765|庭|OT|$^|766|另|KE|767|沙|IIT|768|私|TC|$^|769|针|QF|770|胜|ETG|771|贷|WAYM|$^|772|网|MR|773|愿|DR|774|托|RTA|$^|775|缺|TFB|776|园|LFQ|777|假|WNH|$^|778|酒|IS|779|音|UJF|780|巨|AND|$^|781|既|VA|782|判|UGJH|783|输|LWG|$^|784|讨|YFY|785|测|IMJ|786|读|YFN|$^|787|洋|IU|788|括|RTD|789|筑|TAW|$^|790|欢|CQ|791|刚|MRJ|792|庆|OD|$^|793|久|QY|794|陆|BG|795|找|RA|$^|796|楼|SO|797|激|IRY|798|晚|JQ|$^|799|绝|XQ|800|压|DF|801|故|DT|$^|802|互|GX|803|签|TW|804|汉|IC|$^|805|草|AJ|806|木|S|807|亩|YL|$^|808|短|TDG|809|绍|XV|810|迎|QB|$^|811|吸|KB|812|警|AQK|813|藏|AA|$^|814|疗|UB|815|贵|KH|816|纷|XWV|$^|817|授|REP|818|登|WGKU|819|探|RP|$^|820|索|FP|821|湾|IYO|822|宏|PDC|$^|823|录|VI|824|申|JHK|825|诉|YRY|$]t",
+            "[按字频c[826 - 900]c]",
+            "t[^|826|秀|TB|827|序|OC|828|顺|KD|$^|829|死|GQ|830|卡|HHU|831|歌|SKS|$^|832|午|TFJ|833|孩|BYN|834|桥|ST|$^|835|喜|FKU|836|川|KTHH|837|邓|CB|$^|838|扬|RNR|839|津|IV|840|温|IJ|$^|841|船|TUW|842|库|OL|843|订|YS|$^|844|练|XA|845|候|WH|846|退|VP|$^|847|违|FNHP|848|否|DH|849|彩|ESE|$^|850|棉|SRM|851|帮|DT|852|拿|WGKR|$^|853|罪|LHD|854|币|TMH|855|角|QE|$^|856|召|VK|857|灾|PO|858|妇|VV|$^|859|杨|SN|860|奋|DL|861|绩|XGM|$^|862|虽|KJ|863|煤|OFS|864|免|QKQ|$^|865|笔|TE|866|够|QKQQ|867|永|YNI|$^|868|圳|FKH|869|停|WYP|870|奥|TMO|$^|871|鲜|QGU|872|朝|FJE|873|吴|KG|$^|874|岛|QMK|875|觉|IPM|876|移|TQQ|$^|877|尼|NX|878|急|QV|879|博|FSF|$^|880|贯|XM|881|拥|RE|882|束|SKD|$^|883|左|DA|884|细|XL|885|舞|TGL|$^|886|幅|MHG|887|语|YGK|888|俄|WTR|$^|889|奇|DS|890|般|TUWC|891|简|TUJ|$^|892|拍|RRG|893|脑|EY|894|债|WGM|$^|895|固|LDD|896|威|DGV|897|券|UGV|$^|898|追|TN|899|筹|TDTF|900|刻|YNT|$]t"
+        ],
+    },
+    {
+        type: "blog",
         id: "AboutBlogSpaceCalendar",
         date: "2026-05-01",
         edited: [""],
-        authors: [
-            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }],
         title: "关于BlogSpace日历功能的说明",
         topics: [],
-        contents: ["[%{TI}关于博客页日历功能有以下几点说明：]",
+        contents: [
+            "[%{TI}关于博客页日历功能有以下几点说明：]",
             "h1[即时显示]h1",
             "[%{TI}日历功能包括黄历和时钟。黄历信息每隔c[5]c秒钟更新一次，时钟每隔c[1]c秒更新一次。]",
             "[%{TI}通过按快捷键c[0]c或点击按钮c[Pause]c可以暂停黄历的即时显示；在暂停状态下，按c[0]c或点击按钮c[Now]c可以恢复黄历的即时显示，同时黄历恢复显示当前时间的信息。]",
@@ -60,20 +148,19 @@ var blogs = [
             "[%{TI}格里高利历于1582年10月15日开始实行，在新历法中，1582年10月4日的下一天是10月15日，但是JavaScript的Date对象可以正常处理1582年10月4日和10月15日之间的日期。此外，在格里高利历施行之前，不存在“每400年置闰”的规则，但Date对象无视这一点。因此，为了与实际历法同步，BlogSpace的黄历功能依赖tyme.js库而非JavaScript的Date对象。]",
             "[%{TI}公元237年，魏明帝曹叡推行历法改革，原青龙五年三月变为景初元年四月，则该年农历无三月份，即237年4月12日为四月初一而非三月初一。但tyme.js库并未实现这一点，因此在BlogSpace农历视图中，237年4月12日为三月初一。此后实际历法的农历都比BlogSpace领先一个月。但：bq[[《三国志·魏书·少帝纪第四》][%{TI}十二月，诏曰：“烈祖明皇帝以正月弃背天下，臣子永惟忌日之哀，其复用夏正；虽违先帝通三统之义，斯亦礼制所由变改也。又夏正於数为得天正，其以建寅之月为正始元年正月，以建丑月为后十二月。”]]bq][%{TI}故公元240年恢复，1月12日为十二月初一，之后BlogSpace的农历与实际历法相同。]",
             "h1[算法库局限]h1",
-            "[%{TI}tyme.js所能支持计算的日期范围为s[公元2年3月3日]s（西汉平帝元始二年二月初一，c[JD=1721850]c）至s[公元9999年12月15日]s（己亥猪年十一月十六日，c[JD=5373468]c），因此BlogSpace的黄历功能也仅支持这一范围内的日期。]"
-        ]
+            "[%{TI}tyme.js所能支持计算的日期范围为s[公元2年3月3日]s（西汉平帝元始二年二月初一，c[JD=1721850]c）至s[公元9999年12月15日]s（己亥猪年十一月十六日，c[JD=5373468]c），因此BlogSpace的黄历功能也仅支持这一范围内的日期。]",
+        ],
     },
     {
         type: "blog",
         id: "GanYing",
         date: "2026-04-19",
         edited: ["2026-04-16"],
-        authors: [
-            { user: USERS.VDelta46, role: ROLES.FirstAuthor }
-        ],
+        authors: [{ user: USERS.VDelta46, role: ROLES.FirstAuthor }],
         title: "《感樱》",
         topics: [],
-        contents: ["D[%{cross}",
+        contents: [
+            "D[%{cross}",
             "h2[%{centered-text}感樱]h2",
             "h3[%{centered-text}秦湘]h3",
             "[%{TI}在山清水秀的胶东半岛腹地，在绵延起伏的青黄色丘陵间，在五龙河哺育的土地上，坐落着一座宁静的小镇。你若趁着春光，在四月中旬从城里南下，翻过最后一道坡，第一眼便能望见村里那抹最耀眼的粉红——那便是樱花了。]",
@@ -85,20 +172,19 @@ var blogs = [
             "[%{TI}情至深时，我默默踱出这片粉红色的花海。记忆中的姜疃镇是舒缓的、荣耀的。大街上（现在叫04县道）人来人往，伛偻提携，还有像骆驼一样悠然缓行的电动三轮。生意兴隆的五金店铺，镇上唯一的“家家悦”超市，镇上逢喜事必去的饭店，还有熟悉却又陌生的“鲁花”公司，一派生机勃勃的景象。如果说生命太过沉重，不妨来看看这里的生活吧。如果说理想太过遥远，那就来濯村看看樱花吧。樱花已经谢了？这里还有风车和原野，四季皆是美景。]",
             "[%{TI}然而，凝视那樱花良久，始觉光阴飞度——可惜，此刻我脚下的土地，并不是那片令我眷恋的土壤。眼前的樱花，是栽种在校园里的樱花，它每天沐浴着同学们爽朗而年轻的笑声。或许，曾几何时，也有一个迷茫的学生在这盛开的樱花下久久伫立，默然兴怀……我搁下笔，仿佛从一场旧梦中醒来，起身四顾，一时竟不知该说什么。半晌，轻轻呼出一口气——人生苦短，光阴如梭，与其感物伤怀，不如趁这年轻时的春光，去做点什么。]",
             "[%{TI}而这暮春乡樱的美景，已然入画。裱之，藏之。在自强不息的心中，永远地留下一丝柔情。]]D",
-            "I[{./blogs/resources/e5b0ee.png}ẇ{300}ȧ{濯村樱花节}ƭ{濯村街景}]I"
-        ]
+            "I[{./blogs/resources/e5b0ee.png}ẇ{300}ȧ{濯村樱花节}ƭ{濯村街景}]I",
+        ],
     },
     {
         type: "blog",
         id: "XinGanZhiFa",
         date: "2026-04-15",
         edited: ["2026-04-16"],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "新干支法",
         topics: ["干支历", "八字", "《尔雅》", "干支", "太岁纪年法"],
-        contents: ["h1[零、前言]h1",
+        contents: [
+            "h1[零、前言]h1",
             "[%{TI}干支法是一套个人搜索、归纳并总结的有关干支计算的规则集合。新干支法是干支法的改良，加入了部分干支历信息的求算规则。]",
             "h1[一、干支]h1",
             "[%{TI}十个天干与十二个地支相配，奇天干与奇地支配，偶天干与偶地支相配，共有60个干支。取第一个天干“甲”，第一个地支“子”，合称曰“六十甲子”。][%{TI}在新干支法中，有时为了简化表述，用c[H]c代称“天干”，用c[E]c代称“地支”。]",
@@ -195,8 +281,8 @@ var blogs = [
             "ul[|己丑年有没有辛未月？根据五虎遁，己年以丙寅月为首，二月为丁卯，三月戊辰，四月己巳，五月庚午，六月辛未。故己丑年有辛未月。|壬寅年有没有己卯月？根据五虎遁，壬年以壬寅月为首，二月为癸卯，没有己卯，故壬寅年没有己卯月。|戊申日有没有庚辰时？根据五鼠遁，戊日以壬子时为首，其次癸丑时，再次甲寅，再次乙卯，再次丙辰，没有庚辰，故戊申日没有庚辰时。]ul",
             "h1[五、总结]h1",
             "[%{TI}新干支法在干支法的基础上添加了干支历的规律。可供传统命理学、传统国学、古历法爱好者等入门使用。]",
-            "v[{float-right}[i[[秦湘]]i][i[于 s[丙午]s年s[壬辰]s月s[庚申]s日s[丙子]s时]i]]v"
-        ]
+            "v[{float-right}[i[[秦湘]]i][i[于 s[丙午]s年s[壬辰]s月s[庚申]s日s[丙子]s时]i]]v",
+        ],
     },
     {
         type: "blog",
@@ -205,7 +291,7 @@ var blogs = [
         edited: ["2026-03-21"],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "Columbula's Poem 白鸽之诗",
         topics: ["原神", "挪德卡莱", "拉丁语", "空月之歌", "HoYo-Mix"],
@@ -215,15 +301,15 @@ var blogs = [
             "i[主，我们的明月！降下你的光芒！]i",
             "hr[]",
             "bq[ƈ{zigzag3d}[Columbina:br[]",
-            "\"Quid tristes querimoniae, si non supplicio culpa reciditur?]]bq",
+            '"Quid tristes querimoniae, si non supplicio culpa reciditur?]]bq',
             "[副+形主格+名主格，连+副+名方式夺格+名主格+被动三单]",
             "i[哥伦比娅：br[]“若罪不依法而诛，那么悲怨又有何益？]i",
             "hr[]",
-            "bq[ƈ{zigzag3d}[\"Sonitumne ferrorum audis?]]bq",
+            'bq[ƈ{zigzag3d}["Sonitumne ferrorum audis?]]bq',
             "[名宾格附疑问助词+名属格+主动现在二单]",
             "i[“你可听见兵戈之声？]i",
             "hr[]",
-            "bq[ƈ{zigzag3d}[\"Clamor gentium est ille, haud lamentum ergastuli.\"]]bq",
+            'bq[ƈ{zigzag3d}["Clamor gentium est ille, haud lamentum ergastuli."]]bq',
             "[名主格+名属格+现在三单+指代，副+名主格+名属格]",
             "i[“这是苍生怒啸，绝非罪囚的悲吟！”]i",
             "hr[]",
@@ -301,17 +387,15 @@ var blogs = [
             "hr[]",
             "bq[[In v[{alert}atra]v atris tenebris perpetuo mergantur!]]bq",
             "[介+形夺格（应为复数c[ātrīs]c）+名夺格+副+虚拟被动三复]",
-            "i[令其永堕黑暗！]i"
-        ]
+            "i[令其永堕黑暗！]i",
+        ],
     },
     {
         type: "blog",
         id: "KaiMiSiQiGuoMingRenMingDan",
         date: "2026-03-06",
         edited: ["2026-03-20"],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "凯米斯奇国名人名单",
         topics: ["架空世界"],
         contents: [
@@ -497,17 +581,15 @@ var blogs = [
             "莱辛|Lysine|赖氨酸||",
             "泰洛辛|Tyrosine|酪氨酸||",
             "恩杉|Ornithine|鸟氨酸|$",
-            "]t"
-        ]
+            "]t",
+        ],
     },
     {
         type: "blog",
         id: "BlogSpaceEditRules",
         date: "2026-02-23",
         edited: [""],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "BlogSpace Edit Rules",
         topics: [],
         contents: [
@@ -578,17 +660,15 @@ var blogs = [
             "h1[五、其他规则]h1",
             "[较长篇幅的引用，使用c[bq\\[\\%\\{cross\\}...\\]bq]c；较长篇幅的创作，使用c[D\\[\\%\\{cross\\}...\\]D]c。]",
             "[需要居中显示的单行文本，用c[\\%\\{centered-text\\}]c；需要首行缩进的文本，用c[\\%\\{TI\\}]c。]",
-            "[媒体资源的引用路径是c[./blog/resources/]c]"
-        ]
+            "[媒体资源的引用路径是c[./blog/resources/]c]",
+        ],
     },
     {
         type: "blog",
         id: "MJDDateConversionTable",
         date: "2026-02-23",
         edited: [""],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "MJD日期对照表",
         topics: ["MJD"],
         contents: [
@@ -597,8 +677,8 @@ var blogs = [
             "[50000-69999 整千年代]",
             "t[ƈ{zebtable}^^|MJD|日期|MJD|日期||50000|1995-10-10|60000|2023-02-25||51000|1998-07-06|s[61000]s|s[2025-11-21]s||52000|2001-04-01|62000|2028-08-17||53000|2003-12-27|63000|2031-05-14||54000|2006-09-22|64000|2034-02-07||55000|2009-06-18|65000|2036-11-03||56000|2012-03-14|66000|2039-07-31||57000|2014-12-09|67000|2042-04-26||58000|2017-09-04|68000|2045-01-20||59000|2020-05-31|69000|2047-10-17]t",
             "[其他]",
-            "t[ƈ{zebtable}^^|日期|MJD||1949-10-01|33190||2014-09-01|56901||2019-09-01|58727||2023-09-01|60188||2026-06-07|61198]t"
-        ]
+            "t[ƈ{zebtable}^^|日期|MJD||1949-10-01|33190||2014-09-01|56901||2019-09-01|58727||2023-09-01|60188||2026-06-07|61198]t",
+        ],
     },
     {
         type: "blog",
@@ -607,7 +687,7 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "三母简式动词的6种范式和变位体系",
         topics: ["阿拉伯语"],
@@ -650,17 +730,15 @@ var blogs = [
             "t[%{ara inlineblock}^|现在式变位|阳性|转写|阴性|转写||单数|[تَفْعلُ]|c[tafꜥ?lu]c|[تَفْعلِينَ]|c[tafꜥ?līna]c||双数|{c4}[تَفْعلَانِ] c[tafꜥ?lāni]c||复数|[تَفْعلُونَ]|c[tafꜥ?lūna]c|[تَفْعلْنَ]|c[tafꜥ?lna]c]t",
             "h1[刚与柔]h1",
             "[阿拉伯字母分为s[刚母]s和s[柔母]s。v[%{ara}ا و ي]v三个字母属于柔母，剩余的字母属于刚母。词根不包含任何柔母的动词，叫做s[刚性动词]s，包含的，叫做s[柔性动词]s。刚性动词的变位往往非常规则，而柔性动词的变位略复杂。]",
-            "[上面展示的这一套动词变位规则，适用于所有动词。只是根据动词的种类不同略有变体罢了。]"
-        ]
+            "[上面展示的这一套动词变位规则，适用于所有动词。只是根据动词的种类不同略有变体罢了。]",
+        ],
     },
     {
         type: "blog",
         id: "MyFirstPost",
         date: "2026-02-18",
         edited: ["2026-04-19"],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "My First Post",
         topics: [],
         contents: [
@@ -675,8 +753,8 @@ var blogs = [
             "A[{https://quartzquincy2019.github.io/AGHGC/AGHGC.html}AGHGC]A;br[]",
             "[Press key c[C]c or click the button to change the theme.]",
             "[Press key c[\\[]c to switch to the previous page, or c[\\]]c to switch to the next page.]",
-            "<button value='Change Theme' onclick='changeTheme();'>Change Theme</button>"
-        ]
+            "<button value='Change Theme' onclick='changeTheme();'>Change Theme</button>",
+        ],
     },
     {
         type: "blog",
@@ -685,10 +763,19 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.VDelta46, role: ROLES.FirstAuthor },
-            { user: USERS.VDelta702, role: ROLES.Contributor }
+            { user: USERS.VDelta702, role: ROLES.Contributor },
         ],
         title: "《致书生·独击洪钟》",
-        topics: ["高考", "山东高考", "2026高考", "丙午马年", "春节", "北河", "北河二", "木星"],
+        topics: [
+            "高考",
+            "山东高考",
+            "2026高考",
+            "丙午马年",
+            "春节",
+            "北河",
+            "北河二",
+            "木星",
+        ],
         contents: [
             "D[%{cross}",
             "v[%{centered-text}h1[一]h1",
@@ -701,8 +788,8 @@ var blogs = [
             "[天佑其时，岁越河戍v[{weak}①]v，地保其令，春雪徐融v[{weak}②]v。br[]复击其钟，召我同窗，共着袍泽，齐赴洪荒。br[]梅华既孳，嘉树有芽，翠柳新蘖，迎春将发。br[]午元兴征，净履洁衣，欢吟畅饮，马到成功！]]v",
             "[ƈ{weak}①河戍：中国古代传统星官“北河”的别称。根据山东半岛2026年2月16日晚11时天象，木星位于双子座北河二、北河三附近。]",
             "[ƈ{weak}②2026年春节在立春以后，较平时晚，而山东半岛北部冬季多雪，故曰“春雪”。]",
-            "]D"
-        ]
+            "]D",
+        ],
     },
     {
         type: "blog",
@@ -711,7 +798,7 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoFirstAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoFirstAuthor },
         ],
         title: "拉丁语的分词系统",
         topics: ["拉丁语"],
@@ -767,7 +854,7 @@ var blogs = [
             "h2[3. 形容词夺格表主语状态]h2",
             "bq[[Patre vivō, omnia bona erant.][父亲健在时，一切都是好的。]]bq",
             "[pater（【第三变格法】父亲）取夺格patre。vivus（adj.活着的）取阳性夺格单数vivō。][主句：omnia（所有的东西，一切）取主格omnia，bonus（adj.好的）取中性主格复数bona，sum（是）取陈述语气未完成时第三人称复数主动态。All things were good.",
-        ]
+        ],
     },
     {
         type: "blog",
@@ -777,7 +864,7 @@ var blogs = [
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
-            { user: USERS.VDelta46, role: ROLES.CoAuthor }
+            { user: USERS.VDelta46, role: ROLES.CoAuthor },
         ],
         title: "关于哥伦比娅•希珀塞莱尼娅",
         topics: ["原神", "哥伦比娅", "空月之歌"],
@@ -827,23 +914,21 @@ var blogs = [
             "h1[四、締め括りと後書き]h1",
             "[这一位角色，绝对是设计者投入大量心血的。从衣着到名字到音乐都很有推敲之处，给人多感官方面的审美冲击。][是不是连月卡图案也换掉了？]",
             "h2[关于拉丁语古典发音的r]h2",
-            "[这个r和西班牙语的r、俄语的p是一样的，都是齿龈颤音（俗称大舌音）。说实话我4年前练的大舌音，用力部位和舌位出现了问题，导致今天在拉丁语的词尾的r，比如amor, amabantur, 以及词中的单r，如dormi，cetera发音漏气。我跟其他人发的大舌音比较，我发的始终漏气（夹杂h在里面，总觉得在发t）。纠正舌位之后就不漏气了。]"
-        ]
+            "[这个r和西班牙语的r、俄语的p是一样的，都是齿龈颤音（俗称大舌音）。说实话我4年前练的大舌音，用力部位和舌位出现了问题，导致今天在拉丁语的词尾的r，比如amor, amabantur, 以及词中的单r，如dormi，cetera发音漏气。我跟其他人发的大舌音比较，我发的始终漏气（夹杂h在里面，总觉得在发t）。纠正舌位之后就不漏气了。]",
+        ],
     },
     {
         type: "blog",
         id: "Epilogue",
         date: "2026-01-03",
         edited: ["2026-04-05"],
-        authors: [
-            { user: USERS.BLOG_OWNER }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER }],
         title: "Epilogue",
         topics: [],
         contents: [
             "[ƈ{cross}All of humanity shares a common mind and similar ways of life. Five thousand years ago, just like the ancient Egyptians, we honored heaven and earth, farmed the land, hunted, managed floods, developed skills, studied the stars, celebrated festivals, and fought against invaders.br[]",
-            "Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of \"a community with a shared future for mankind\" and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]",
-        ]
+            'Human civilizations have never been separate islands. They are meant to coexist, to blend, and to grow independently. In our turbulent(动荡的) world today, we must hold firm to the idea of "a community with a shared future for mankind" and do our part from China to support the progress of all civilizations and the stability of societies worldwide.]',
+        ],
     },
     {
         type: "blog",
@@ -853,7 +938,7 @@ var blogs = [
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VLambda24, role: ROLES.CoAuthor },
-            { user: USERS.VDelta46, role: ROLES.CoFirstAuthor }
+            { user: USERS.VDelta46, role: ROLES.CoFirstAuthor },
         ],
         title: "挪德卡莱主题曲",
         topics: ["原神", "挪德卡莱", "拉丁语", "空月之歌", "HoYo-Mix"],
@@ -907,8 +992,8 @@ var blogs = [
             "[Indi.直陈式\tSubj.虚拟式\tInf.不定式\tImpe.命令式\tPres.现在时\tFutu.将来时\tPerf.完成时]",
             "[Act.主动态\tPas.被动态]",
             "h3[分词形式]h3",
-            "[PPP.过去被动分词\tPPA.现在主动分词]"
-        ]
+            "[PPP.过去被动分词\tPPA.现在主动分词]",
+        ],
     },
     {
         type: "blog",
@@ -917,7 +1002,7 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "初学日语补助动词",
         topics: ["日语"],
@@ -937,8 +1022,8 @@ var blogs = [
             "h1[思考：]h1",
             "[日语中的复合动词，我们说这个场儿，一般以「动词A连用形」+「动词B」出现的。比如]",
             "ul[|勝ち取る（赢取）|受け入れる（接受）|飛び込む（飞入）|知り合う（相识）|やり直す（重做）]ul",
-            "[我管他“动动复合”。我认为这是最教条的一类。“动动复合”，它像是两个动词的前后合并作为一个复合动作出现，多少体现了一些动作上时间先后的特征。][另外有一类，我叫他“て动复合”。这便是我们今天讨论的“补助动词”和它的本动词。补助动词的用法是「本动词て形+补助动词」（连用形+て+补助动词）。这种复合，尤其是对于补助动词的部分，我认为是对本动词陈述的语气或动作上的补充，起到一个辅助性作用，不像“动动复合”那样不可或缺。][「て」是接续助词，它负责接续动作，拓展之后有了方式、原因、并列和轻微逆接的用法。"
-        ]
+            "[我管他“动动复合”。我认为这是最教条的一类。“动动复合”，它像是两个动词的前后合并作为一个复合动作出现，多少体现了一些动作上时间先后的特征。][另外有一类，我叫他“て动复合”。这便是我们今天讨论的“补助动词”和它的本动词。补助动词的用法是「本动词て形+补助动词」（连用形+て+补助动词）。这种复合，尤其是对于补助动词的部分，我认为是对本动词陈述的语气或动作上的补充，起到一个辅助性作用，不像“动动复合”那样不可或缺。][「て」是接续助词，它负责接续动作，拓展之后有了方式、原因、并列和轻微逆接的用法。",
+        ],
     },
     {
         type: "blog",
@@ -947,7 +1032,7 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "某班徽拉丁语解析",
         topics: ["拉丁语"],
@@ -969,8 +1054,8 @@ var blogs = [
             "[verba volant（字飞走，words fly away）]",
             "[verba manent（字留下来，words remain）]",
             "[nos currimus（我们跑，we run）]",
-            "[eum pereebat（他消失了，he disappeared）]"
-        ]
+            "[eum pereebat（他消失了，he disappeared）]",
+        ],
     },
     {
         type: "blog",
@@ -979,7 +1064,7 @@ var blogs = [
         edited: [""],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "（古典）拉丁语发音要领",
         topics: ["拉丁语", "发音"],
@@ -999,8 +1084,8 @@ var blogs = [
             "rēgīna：rē s['gī]s nabr[]",
             "Centaurus: Cen s['tau]s rusbr[]",
             "ambulāmus: am bu s['lā]s mus]]bq",
-            "[还有其他规则，比如-ius/-ium单词的属格和呼格单数重读倒数第二个音节，比如Vergili: Ver 'gī li等，不多赘述。]"
-        ]
+            "[还有其他规则，比如-ius/-ium单词的属格和呼格单数重读倒数第二个音节，比如Vergili: Ver 'gī li等，不多赘述。]",
+        ],
     },
     {
         type: "blog",
@@ -1010,7 +1095,7 @@ var blogs = [
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
             { user: USERS.VDelta702, role: ROLES.CoAuthor },
-            { user: USERS.VDelta46, role: ROLES.CoAuthor }
+            { user: USERS.VDelta46, role: ROLES.CoAuthor },
         ],
         title: "记甲辰八月十四子时天象",
         topics: ["观星", "秋季大三角", "木星"],
@@ -1022,17 +1107,15 @@ var blogs = [
             "[地点：山东省烟台市开发区北部、西北部]",
             "[光污染：较严重][天气：晴→少云][方式：裸眼][今夜MVP/最佳看点：满月、s[土星、织女一（织女星）、河鼓二（牛郎星）、天津四]s]",
             "[可见星体（按可见度降序）：]",
-            "ol[|【南天】满月|【南天·满月附近】土星、北落师门|【天顶】夏季大三角（河鼓二、天津四，织女一）（天鹰座、天鹅座、天琴座）|【东北天、东天】五车二（御夫座）、秋季四边形（星宿一、星宿二、壁宿一，壁宿二）（飞马座、仙女座）和飞马座诸星、天船三（英仙座）|【北天】勾陈一（北极星）（小熊座）、仙后座W形（王良四、王良一、策、阁道三、阁道二）、天钩五（仙王座）、北极二（小熊座）、北斗一（大熊座）、北斗五（大熊座）、北斗六（大熊座）|【西北天】天棓四（天龙座）、天棓三（天龙座）|【西天】侯（蛇夫座）]ol"
-        ]
+            "ol[|【南天】满月|【南天·满月附近】土星、北落师门|【天顶】夏季大三角（河鼓二、天津四，织女一）（天鹰座、天鹅座、天琴座）|【东北天、东天】五车二（御夫座）、秋季四边形（星宿一、星宿二、壁宿一，壁宿二）（飞马座、仙女座）和飞马座诸星、天船三（英仙座）|【北天】勾陈一（北极星）（小熊座）、仙后座W形（王良四、王良一、策、阁道三、阁道二）、天钩五（仙王座）、北极二（小熊座）、北斗一（大熊座）、北斗五（大熊座）、北斗六（大熊座）|【西北天】天棓四（天龙座）、天棓三（天龙座）|【西天】侯（蛇夫座）]ol",
+        ],
     },
     {
         type: "blog",
         id: "GGGGSStopUpdateNotice",
         date: "2024-08-09",
         edited: [""],
-        authors: [
-            { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }
-        ],
+        authors: [{ user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor }],
         title: "GGGGS停更通知",
         topics: ["原神"],
         contents: [
@@ -1042,8 +1125,8 @@ var blogs = [
             "[站在GGGGS发布半年的时间节点上，回望GGGGS坎坷的开发历程，的确心酸劳苦，但是乐在其中。我们在开发过程中涨了不少经验，吸取了不少教训，也学到了不少新知。这难忘的经历对我们来说是独一无二的最宝贵的财富。]",
             "[其实，GGGGS从4月5日更新到v5.0以后——仅仅两个月——我们的使命就已经完成了——GGGGS的全部功能已经齐全。后4个月的更新，主要在于游戏数据跟进和小功能优化。到今天，GGGGS的开发目标已经全部达成，走到了计划的重点。]",
             "[GGGGS走到今天，满载着大家的关注与支持，是时候跟大家说一声再见了。GGGGS当前的版本是v5.4.0。从此，我们不再开发新的次级版本。也就是说，v5.4是GGGGS的最后一个版本，以后不会有v5.5、v6.0。以后GGGGS除了小型功能优化更新之外，只是跟进游戏数据。]",
-            "[GGGGS的时代在今天圆满落下帷幕。再次感谢大家的陪伴与支持！]"
-        ]
+            "[GGGGS的时代在今天圆满落下帷幕。再次感谢大家的陪伴与支持！]",
+        ],
     },
     {
         type: "blog",
@@ -1052,7 +1135,7 @@ var blogs = [
         edited: ["2026-03-21"],
         authors: [
             { user: USERS.BLOG_OWNER, role: ROLES.FirstAuthor },
-            { user: USERS.VLambda24, role: ROLES.CoAuthor }
+            { user: USERS.VLambda24, role: ROLES.CoAuthor },
         ],
         title: "关于Tighnari的读音",
         topics: ["阿拉伯语", "原神"],
@@ -1070,8 +1153,8 @@ var blogs = [
             "[s[咽化]s：咽化是辅音或元音的次要调音，调音同时喉或会厌收紧。]",
             "[s[浊软腭擦音/ɣ/]s：是/x/对应的浊音。]",
             "[s[齿龈颤音/r/]s：多称“大舌颤音”，即rrrrrr。见于俄语中的字母“p”，如“乌rrrrr拉”。]",
-            "[s[清软颚擦音/x/]s：即现代标准汉语拼音he的“h”。]"
-        ]
+            "[s[清软颚擦音/x/]s：即现代标准汉语拼音he的“h”。]",
+        ],
     },
     {
         type: "blog",
@@ -1084,7 +1167,7 @@ var blogs = [
             { user: USERS.Qolerde, role: ROLES.Contributor },
             { user: USERS.VDelta16, role: ROLES.CoFirstAuthor },
             { user: USERS.VDelta46, role: ROLES.Instructor },
-            { user: USERS.VLambda24, role: ROLES.CorrespondingAuthor }
+            { user: USERS.VLambda24, role: ROLES.CorrespondingAuthor },
         ],
         title: "测试帖子",
         topics: [],
@@ -1093,7 +1176,7 @@ var blogs = [
             "bq[[“The only true wisdom is in knowing you know nothing.”]<footer>— Socrates</footer>]bq",
             "ol[|embed|c[kk]cg|t\\[ads\\]t|ul[|number|U780|f]ul|vb]ol",
             "[456q[I have a dream.]q456]",
-            "c[Decoding Succeeded!]c"
-        ]
-    }
+            "c[Decoding Succeeded!]c",
+        ],
+    },
 ];
