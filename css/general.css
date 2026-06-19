@@ -313,8 +313,48 @@ a[href^="https://quartzquincy2019.github.io"]::before {
 }
 
 /* TABLE LAYOUT */
+:root {
+    --default-exterior-intensity: 3px;
+    --default-interior-intensity: 2px;
+}
+
+/* 表格外部粗边框 */
+table.exterior,
+table.ex {
+    tr:first-child {
+        td,
+        th {
+            border-top: var(--default-exterior-intensity) solid
+                var(--text-color);
+        }
+    }
+    tr:last-child td {
+        border-bottom: var(--default-exterior-intensity) solid var(--text-color);
+    }
+    td:nth-of-type(1),
+    th:nth-of-type(1) {
+        border-left: var(--default-exterior-intensity) solid var(--text-color);
+    }
+    td:last-child,
+    th:last-child {
+        border-right: var(--default-exterior-intensity) solid var(--text-color);
+    }
+}
+
+/* 第一行、第一列型内部十字边框 */
+table.cross-1-1,
+table.c11,
+table.cross11 {
+    tr:nth-of-type(1) td {
+        border-bottom: var(--default-interior-intensity) solid var(--text-color);
+    }
+    td:nth-of-type(1) {
+        border-right: var(--default-interior-intensity) solid var(--text-color);
+    }
+}
+
 table {
-    margin: 0.5em;
+    margin: 0.6em;
 }
 
 table,
@@ -327,7 +367,7 @@ table td {
 
 table th,
 table td {
-    padding: 0.5em;
+    padding: 0.6em;
 }
 
 @media screen and (max-width: 900px) {
@@ -336,7 +376,7 @@ table td {
         padding: 0.2em;
     }
     table {
-        margin: 0;
+        margin: 0.2em;
     }
 }
 
