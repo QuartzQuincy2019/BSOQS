@@ -269,6 +269,9 @@ function parseMixed(input) {
     { pattern: 'hr[]', len: 4 },
     // 文本关闭标记（长到短）
     { pattern: ']bq', len: 3 },
+    { pattern: ']ru', len: 3 },
+    { pattern: ']rp', len: 3 },
+    { pattern: ']rt', len: 3 },
     { pattern: ']s', len: 2 },
     { pattern: ']i', len: 2 },
     { pattern: ']q', len: 2 },
@@ -287,6 +290,9 @@ function parseMixed(input) {
     { pattern: ']', len: 1 },
     // 文本开启标记（长到短）
     { pattern: 'bq[', len: 3 },
+    { pattern: 'ru[', len: 3 },
+    { pattern: 'rp[', len: 3 },
+    { pattern: 'rt[', len: 3 },
     { pattern: 'q[', len: 2 },
     { pattern: 's[', len: 2 },
     { pattern: 'i[', len: 2 },
@@ -315,6 +321,9 @@ function parseMixed(input) {
   // 定义开启标记对应的标签名和类型（用于属性解析）
   const openTagType = {
     'bq[': 'blockquote',
+    'ru[': 'ruby',
+    'rp[': 'rp',
+    'rt[': 'rt',
     'q[': 'quote',
     's[': 'strong',
     'i[': 'i',
@@ -336,6 +345,9 @@ function parseMixed(input) {
   // 关闭标记对应的标签名
   const closeMap = {
     ']bq': 'blockquote',
+    ']ru': 'ruby',
+    ']rp': 'rp',
+    ']rt': 'rt',
     ']s': 'strong',
     ']i': 'i',
     ']q': 'quote',

@@ -517,3 +517,8 @@ code *,
 code {
     font-family: var(--default-code-font-family) !important;
 }
+
+ruby * {
+    font-size: calc(var(--default-font-size) * 0.7);
+    font-family: var(--default-code-font-family);
+}
