@@ -353,6 +353,12 @@ table.cross11 {
     }
 }
 
+table.EvenColumnCode{
+    td:nth-of-type(2n) {
+        font-family: var(--default-code-font-family);
+    }
+}
+
 table {
     margin: 0.6em;
 }
