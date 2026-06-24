@@ -108,6 +108,10 @@
     text-indent: 2em;
 }
 
+.line-through{
+    text-decoration: line-through;
+}
+
 /* TEXT LAYOUT */
 body {
     background-color: var(--background-color);
