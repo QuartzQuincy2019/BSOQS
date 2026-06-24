@@ -1,7 +1,7 @@
 /* general.css */
 :root {
     --default-border-radius: 16px;
-    --default-body-font-family: "Tinos", "Nerd Font";
+    --default-body-font-family: "Tinos", "Nerd Font", system-ui;
     --default-code-font-family: "Agave", "Nerd Font";
     --default-font-size: 20px;
     --h1-font-size: 32px;
@@ -115,7 +115,7 @@
 /* TEXT LAYOUT */
 body {
     background-color: var(--background-color);
-}
+} 
 
 * {
     transition-property: all;
