@@ -2,6 +2,7 @@
 :root {
     --default-border-radius: 16px;
     --default-body-font-family: "Tinos", "Nerd Font", system-ui;
+    /* i-u14解决：添加"system-ui"能使手机端显示用户自己安装的个性化字体，防止浏览器默认sans-serif。但是，这同时使电脑用户只能显示微软雅黑。 */
     --default-code-font-family: "Agave", "Nerd Font";
     --default-font-size: 20px;
     --h1-font-size: 32px;
@@ -199,7 +200,7 @@ code {
     margin: 0 0.2em;
     padding: 0.1em 0.2em;
     display: inline-block;
-    background-color: var(--emphasis-bg-color-1);
+    background-color: var(--code-bg-color);
     border-radius: 6px;
     transition-property: all;
     transition-duration: 400ms;
@@ -492,12 +493,12 @@ button {
 
 .alert {
     color: var(--independent-alert-color);
-    text-shadow: 1px 1px 2px #9f9f9f;
+    text-shadow: 1px 1px 2px var(--independent-alert-shadow-color);
 }
 
 .emphasis {
     color: var(--independent-emphasis-color);
-    text-shadow: 1px 1px 2px #ffffff;
+    text-shadow: 1px 1px 2px var(--independent-emphasis-shadow-color);
 }
 
 .weak,

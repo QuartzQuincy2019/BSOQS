@@ -1,8 +1,9 @@
 /* bright.css */
 :root {
-    --background-color: #ffffff;
+    --background-color: #fffae9;
     --button-bg-color: #e7e7e7;
     --button-bg-color-selected: #ffde79;
+    --code-bg-color: #ffe9b1;
     --emphasis-bg-color-1: #f3f3f3;
     --emphasis-bg-color-2: #dcdcdc;
     --emphasis-bg-color-reversed-1: #db0058;
@@ -10,26 +11,28 @@
     --selection-bg-color-reversed-1: #ffe251;
     --text-color: #000000;
     --weak-text-color: #8f8f8f;
-    --text-color-reversed-1: #ffffff;
-    --link-color: #0049c6;
+    --text-color-reversed-1: #fffae9;
+    --link-color: #c04300;
     --card-shadow-1: #9f9f9f;
     --topic-color: #ff8000;
     --independent-emphasis-color: #004bd7;
+    --independent-emphasis-shadow-color: #0099d5;
     --independent-alert-color: #ff0000;
+    --independent-alert-shadow-color: #ff5c4a;
     --border-end-color: #001997;
     --notice-bg-color: #fffae6;
     --notice-border-color: #ffe58f;
 }
 
 .cross {
-    background-color: #ffffff;
+    background-color: #fffae9;
     opacity: 1;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#d7d7d7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #d7d7d7 1px, #ffffff 1px) -0.5px 0;
+    background: radial-gradient(circle, transparent 20%, #fffae9 20%, #fffae9 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fffae9 20%, #fffae9 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#d7d7d7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #d7d7d7 1px, #fffae9 1px) -0.5px 0;
     background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
 }
 
 .zigzag3d {
-    background-color: #ffffff;
+    background-color: #fffae9;
     opacity: 1;
-    background: linear-gradient(135deg, #f3f3f355 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #f3f3f3 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #f3f3f355 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #f3f3f3 25%, #ffffff 25%) 0px 0/ 32px 32px;
+    background: linear-gradient(135deg, #f3f3f355 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #f3f3f3 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #f3f3f355 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #f3f3f3 25%, #fffae9 25%) 0px 0/ 32px 32px;
 }
