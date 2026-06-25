@@ -473,6 +473,11 @@ button {
     }
 }
 
+#ClockArea{
+    user-select: none;
+    cursor: pointer;
+}
+
 /* UNIVERSAL */
 
 .body_hr1 {

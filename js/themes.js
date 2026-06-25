@@ -33,3 +33,8 @@ window.addEventListener("keydown", (e) => {
         changeTheme();
     }
 });
+
+document.getElementById("ClockArea").addEventListener("click",(e)=>{
+    e.preventDefault();
+    changeTheme();
+});
