@@ -4,6 +4,7 @@
     --button-bg-color: #e7e7e7;
     --button-bg-color-selected: #ffde79;
     --code-bg-color: #ffe9b1;
+    --code-bg-color-2: #ffd670;
     --emphasis-bg-color-1: #f3f3f3;
     --emphasis-bg-color-2: #dcdcdc;
     --emphasis-bg-color-reversed-1: #db0058;
@@ -15,8 +16,8 @@
     --link-color: #c04300;
     --card-shadow-1: #9f9f9f;
     --topic-color: #ff8000;
-    --independent-emphasis-color: #004bd7;
-    --independent-emphasis-shadow-color: #0099d5;
+    --independent-emphasis-color: #0088d7;
+    --independent-emphasis-shadow-color: #3cdbffd1;
     --independent-alert-color: #ff0000;
     --independent-alert-shadow-color: #ff5c4a;
     --border-end-color: #001997;

@@ -24,6 +24,21 @@
     font-style: normal;
 }
 
+/* Shobhika v1.05 */
+@font-face {
+    font-family: "Shobhika";
+    src: url("../fonts/Shobhika/Shobhika-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Shobhika;
+    src: url("../fonts/Shobhika/Shobhika-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Tinos */
 @font-face {
     font-family: "Tinos";
@@ -109,14 +124,14 @@
     text-indent: 2em;
 }
 
-.line-through{
+.line-through {
     text-decoration: line-through;
 }
 
 /* TEXT LAYOUT */
 body {
     background-color: var(--background-color);
-} 
+}
 
 * {
     transition-property: all;
@@ -220,7 +235,7 @@ code i::selection {
 }
 
 code:hover {
-    background-color: var(--emphasis-bg-color-2);
+    background-color: var(--code-bg-color-2);
 }
 
 a {
@@ -358,7 +373,7 @@ table.cross11 {
     }
 }
 
-table.EvenColumnCode{
+table.EvenColumnCode {
     td:nth-of-type(2n) {
         font-family: var(--default-code-font-family);
     }
@@ -473,7 +488,7 @@ button {
     }
 }
 
-#ClockArea{
+#ClockArea {
     user-select: none;
     cursor: pointer;
 }
@@ -513,10 +528,21 @@ button {
 
 /* SPECIAL FONT */
 
+
+/* 部分参考 ISO 639 */
+.shobhika,
+.sanskrit,
+.sa,
+.san {
+    font-family: Shobhika;
+}
+
 .arabic,
 .ara,
+.ar,
 .arabic *,
-.ara * {
+.ara *,
+.ar *{
     font-family: sans-serif, "Segoe UI";
 }
 
