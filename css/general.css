@@ -128,6 +128,59 @@
     text-decoration: line-through;
 }
 
+/* 单表格居中功能 */
+/* div.TW下面包含一个表格 */
+.table-area,
+.table-wrapper,
+.table-coat,
+.TC,
+.TW {
+    margin: 20px auto;
+    width: 100%;
+    overflow-x: auto;
+    table {
+        width: fit-content;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+}
+
+/* 表格区域 suitcase */
+/* div.suitcase下面必须包裹一个div，然后再加入想要并列显示的表格（多于1个） */
+div.suitcase{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+}
+div.suitcase>div{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+div.suitcase>div>table{
+    flex-shrink: 0;
+}
+
+img{
+    border-radius: 10px;
+    border: 3px solid var(--notice-border-color);
+    box-sizing: border-box;
+}
+img:hover{
+    box-shadow: 0 9px 15px 0 var(--weak-text-color);
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 400px) {
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* TEXT LAYOUT */
 body {
     background-color: var(--background-color);
@@ -528,7 +581,6 @@ button {
 
 /* SPECIAL FONT */
 
-
 /* 部分参考 ISO 639 */
 .shobhika,
 .sanskrit,
@@ -542,7 +594,7 @@ button {
 .ar,
 .arabic *,
 .ara *,
-.ar *{
+.ar * {
     font-family: sans-serif, "Segoe UI";
 }
 
