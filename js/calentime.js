@@ -361,8 +361,27 @@ function fillCalendar() {
         operator.getThreePillars(moment).getDay() +
         "日";
     let loadedFestivals = [];
-    let eventFestivals = Event.fromSolarDay(operator.getSolarDay(moment));
+    let eventFestivals = [];
     // console.log(eventFestivals);
+    let allEvents = Event.all();
+    allEvents.forEach((event) => {
+        let currentSolarDay = operator.getSolarDay(moment);
+        let currentSolarYear = currentSolarDay.year;
+        let currentLunarDay = currentSolarDay.getLunarDay();
+        let currentLunarYear = currentLunarDay.year;
+        let eventDay;
+        if (event.getType() == EventType.SOLAR_DAY || event.getType() == EventType.SOLAR_WEEK) {
+            eventDay = event.getSolarDay(currentSolarYear);
+            if (eventDay.equals(currentSolarDay)) {
+                eventFestivals.push(event);
+            }
+        } else if (event.getType() == EventType.LUNAR_DAY) {
+            eventDay = event.getSolarDayByLunarDay(currentLunarYear);
+            if (eventDay.equals(currentSolarDay)) {
+                eventFestivals.push(event);
+            }
+        }
+    });
     loadedFestivals.push(
         operator.getSolarDay(moment).getFestival(),
         operator.getLunarDay(moment).getFestival(),
@@ -375,7 +394,6 @@ function fillCalendar() {
     loadedFestivals.forEach((festival) => {
         if (festival != null) matchedFestivals.push(festival);
     });
-    // console.log(matchedFestivals);
     for (var i = 0; i < matchedFestivals.length; i++) {
         if (matchedFestivals[i].name) {
             E_Festival.innerHTML += matchedFestivals[i].name;
