@@ -40,7 +40,8 @@ var blogs = [
         title: "《高卢战记·第一卷·第一章》第一段",
         topics: ["拉丁语", "高卢战记","凯撒"],
         contents: [
-            "[详见：A[{./external/j109.html}%{external}ǻ{_blank} 高卢战记I.1]A]"
+            "[备注：进入页面后将加载c[Junicode]c字体。]",
+            "[详见：A[{./external/j109.html}%{external}ǻ{_blank}《高卢战记·第一卷·第一章》第一段]A]"
         ],
     },
     {

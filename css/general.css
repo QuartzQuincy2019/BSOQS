@@ -90,6 +90,25 @@
     font-weight: normal;
 }
 
+/* Junicode */
+@font-face {
+    font-family: Junicode;
+    src: url("../fonts/Junicode/Junicode-SemiExp.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Junicode;
+    src: url("../fonts/Junicode/Junicode-SemiExpBold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Junicode;
+    src: url("../fonts/Junicode/Junicode-SemiExpItalic.ttf") format("truetype");
+    font-style: italic;
+}
+
 /* RTL */
 
 .rtl {
@@ -137,7 +156,7 @@
 
 .BA,
 .BA * {
-    font-family: "Book Antiqua", "Times New Roman", serif, var(--default-body-font-family);
+    font-family: Junicode, serif, var(--default-body-font-family);
 }
 
 /* 单表格居中功能 */

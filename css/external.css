@@ -45,9 +45,9 @@ hr.j109.separator{
 }
 .latin,
 .latin * {
-    font-size: calc(var(--default-font-size) * 1.4);
+    font-size: calc(var(--default-font-size) * 1.6);
     font-family:
-        "Book Antiqua", "Times New Roman", serif,
+        Junicode, serif,
         var(--default-body-font-family);
 }
 .latin{
@@ -58,7 +58,7 @@ hr.j109.separator{
     border-radius: 15px;
 }
 span.dwarf {
-    font-size: 0.45em;
+    font-size: 0.4em;
 }
 .lPred {
     /* 谓语 */
