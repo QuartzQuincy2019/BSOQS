@@ -30,12 +30,27 @@ var blogs = [
     */
     {
         type: "blog",
+        id: "j109",
+        date: "2026-07-22",
+        edited: [""],
+        authors: [
+            { user: USERS.VLambda24, role: ROLES.FirstAuthor },
+            { user: USERS.BLOG_OWNER, role: ROLES.Contributor },
+        ],
+        title: "《高卢战记·第一卷·第一章》第一段",
+        topics: ["拉丁语", "高卢战记","凯撒"],
+        contents: [
+            "[详见：A[{./external/j109.html}%{external}ǻ{_blank} 高卢战记I.1]A]"
+        ],
+    },
+    {
+        type: "blog",
         id: "Dex",
         date: "2026-07-15",
         edited: [""],
         authors: [
             { user: USERS.VLambda24, role: ROLES.FirstAuthor },
-            { user: USERS.BLOG_OWNER, role: ROLES.CoAuthor }
+            { user: USERS.BLOG_OWNER, role: ROLES.CoAuthor },
         ],
         title: "指小词与左右",
         topics: [

@@ -7,6 +7,7 @@
     margin: 0.05em 0;
 }
 
+
 /* g106 Styles */
 
 table.g106 td:nth-of-type(3n),
@@ -36,4 +37,91 @@ table.g106 td:last-of-type {
     table.g106 td:nth-of-type(3n + 2) {
         border-left: 2px solid var(--text-color);
     }
+}
+
+/* j109 styles */
+hr.j109.separator{
+    margin: 3em 0;
+}
+.latin,
+.latin * {
+    font-size: calc(var(--default-font-size) * 1.4);
+    font-family:
+        "Book Antiqua", "Times New Roman", serif,
+        var(--default-body-font-family);
+}
+.latin{
+    display: block;
+    background-color: var(--enhanced-bg-color-1);
+    padding: 0.6em;
+    box-shadow: inset 0 0 0.6em var(--enhanced-bg-color-2);
+    border-radius: 15px;
+}
+span.dwarf {
+    font-size: 0.45em;
+}
+.lPred {
+    /* 谓语 */
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--independent-emphasis-color);
+    text-shadow: 1px 1px 1px var(--independent-emphasis-shadow-color);
+    text-decoration-thickness: 2px;
+}
+
+.Nom {
+    /* 主格 */
+    color: var(--latin-nominative);
+}
+
+.Acc {
+    /* 宾格 */
+    color: var(--latin-accusative);
+}
+
+.Gen {
+    /* 属格 */
+    color: var(--latin-genetive);
+}
+
+.Abl {
+    /* 夺格 */
+    color: var(--latin-ablative);
+}
+
+.Dat {
+    /* 与格 */
+    color: var(--latin-dative);
+}
+
+.lAdj {
+    /* 形容词 */
+    font-style: italic;
+}
+
+.lAdv {
+    /* 实义副词 */
+    font-style: italic;
+    text-decoration: wavy underline;
+    text-decoration-thickness: 1px;
+}
+
+.lPro{
+    /* 代词 */
+    text-decoration: dashed underline;
+    text-decoration-thickness: 2px;
+}
+
+.lRP {
+    /* 关系代词 */
+    text-decoration: dotted underline;
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+}
+
+.lRA {
+    /* 关系副词 */
+    text-decoration: dotted overline;
+    font-weight: bold;
+    text-decoration-thickness: 2px;
 }

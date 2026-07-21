@@ -1,6 +1,8 @@
 /* dark.css */
 :root {
     --background-color: #111111;
+    --enhanced-bg-color-1: #222222;
+    --enhanced-bg-color-2: #4b4b4b;
     --button-bg-color: #525252;
     --button-bg-color-selected: #006789;
     --code-bg-color: #444444;
@@ -23,6 +25,11 @@
     --border-end-color: #80e8ff;
     --notice-bg-color: #003848;
     --notice-border-color: #009bc2;
+    --latin-nominative: #bfff65;
+    --latin-accusative: #ff9270;
+    --latin-genetive: #dc83ff;
+    --latin-ablative: #829bff;
+    --latin-dative: #39ebe8;
 }
 
 .cross {
