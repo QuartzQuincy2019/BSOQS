@@ -14,9 +14,29 @@
         <script>
             const fatherBlogId = "j109";
         </script>
+        <!-- 自动主题选择 -->
+        <script>
+            var E_ThemeController = document.getElementById("ThemeController");
+            function setThemeAs(theme) {
+                E_ThemeController.classList.contains("ExternalCSSLink")
+                    ? E_ThemeController.setAttribute(
+                          "href",
+                          "../css/themes/" + theme + ".css",
+                      )
+                    : E_ThemeController.setAttribute(
+                          "href",
+                          "./css/themes/" + theme + ".css",
+                      );
+            }
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                setThemeAs("dark");
+            } else {
+                setThemeAs("bright");
+            }
+        </script>
     </head>
     <body>
-        <h1 class="notice">This external file belongs to the blog "<span id="BlogTitle"></span>" posted on <span id="DateInfo"></span>.</h1>
+        <h1 class="notice" id="ExternalNotice">This external file belongs to the blog "<span id="BlogTitle"></span>" posted on <span id="DateInfo"></span>.</h1>
         <hr />
         <!-- 
             {lPred}谓语动词 {lRP}关系代词 {lRA}关系副词 {lAdj}形容词 {lAdv}除关系副词以外的副词 {lPro}代词 {Nom}主格/呼格 {Gen}属格 {Dat}与格 {Acc}宾格 {Abl}夺格 {l-f}阴性 {l-m}阳性 {l-n}中性 {l-sing}单数 {l-pl}复数 {l-p1}第一人称 {l-p2}第二人称 {l-p3}第三人称 {l-A}主动语态 {l-P}被动语态 {l-Dep}Deponent动词 {l-Ind}直陈式 {l-Subj}虚拟式 {l-Imp}命令式 {l-Inf}不定式 {l-Pres}现在时 {l-Impf}未完成时 {l-Perf}完成时 {l-Plup}过去完成时 {l—Fut}将来时 {l-Futp}将来完成时 {l-PP}被动分词 {l-PA}现在分词 {l-FA}将来分词 {l-FP}将来被动分词(Gerundive) {l-Geru}Gerund {l-Supi}目的动名词
@@ -152,6 +172,9 @@
         <hr class="j109 separator" />
         <p class="BA centered-text">高卢战记 第一卷 第一章 总览</p>
         <p class="BA TI">Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit. Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt. Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos prohibent aut ipsi in eorum finibus bellum gerunt. Eorum una, pars, quam Gallos obtinere dictum est, initium capit a flumine Rhodano, continetur Garumna flumine, Oceano, finibus Belgarum, attingit etiam ab Sequanis et Helvetiis flumen Rhenum, vergit ad septentriones. Belgae ab extremis Galliae finibus oriuntur, pertinent ad inferiorem partem fluminis Rheni, spectant in septentrionem et orientem solem. Aquitania a Garumna flumine ad Pyrenaeos montes et eam partem Oceani quae est ad Hispaniam pertinet; spectat inter occasum solis et septentriones.</p>
+
+
+        <script src="../js/themes.js"></script>
         <script>
             const fatherBlog = blogs.find(blog => blog.id === fatherBlogId);
             if (fatherBlog) {

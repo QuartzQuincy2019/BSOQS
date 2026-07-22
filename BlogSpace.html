@@ -1,153 +1,224 @@
 <!--BlogSpace.html-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-cn">
+    <head>
+        <meta
+            charset="utf-8"
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link rel="stylesheet" href="./css/general.css" />
+        <link rel="stylesheet" href="./css/calendar.css" />
+        <link rel="stylesheet" href="./css/blocks.css" />
+        <link rel="stylesheet" href="./css/candy.css" />
+        <link rel="icon" href="./data/icon/QS.png" />
+        <!-- DEFAULT THEME -->
+        <link
+            id="ThemeController"
+            rel="stylesheet"
+            href="./css/themes/bright.css"
+        />
+        <title>QK's Blog Space</title>
+        <script type="text/javascript" src="./js/plugins/mjd.js"></script>
 
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/general.css" />
-    <link rel="stylesheet" href="./css/calendar.css" />
-    <link rel="stylesheet" href="./css/blocks.css" />
-    <link rel="stylesheet" href="./css/candy.css" />
-    <link rel="icon" href="./data/icon/QS.png" />
-    <!-- DEFAULT THEME -->
-    <link id="ThemeController" rel="stylesheet" href="./css/themes/bright.css" />
-    <title>QK's Blog Space</title>
-    <script type="text/javascript" src="./js/plugins/mjd.js"></script>
-    </script>
+        <script src="./js/plugins/tyme.min.js"></script>
+        <!-- 自动主题选择 -->
+        <script>
+            var E_ThemeController = document.getElementById("ThemeController");
+            function setThemeAs(theme) {
+                E_ThemeController.classList.contains("ExternalCSSLink")
+                    ? E_ThemeController.setAttribute(
+                          "href",
+                          "../css/themes/" + theme + ".css",
+                      )
+                    : E_ThemeController.setAttribute(
+                          "href",
+                          "./css/themes/" + theme + ".css",
+                      );
+            }
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                setThemeAs("dark");
+            } else {
+                setThemeAs("bright");
+            }
+        </script>
+    </head>
 
-    <script src="./js/plugins/tyme.min.js"></script>
-</head>
-
-<body>
-    <div id="MarqueeArea">
-        <!-- <input id="DateTimeSelector" type="datetime-local" min="0001-01-01T00:00" value="2026-01-01T00:00" />
+    <body>
+        <div id="MarqueeArea">
+            <!-- <input id="DateTimeSelector" type="datetime-local" min="0001-01-01T00:00" value="2026-01-01T00:00" />
         <button value="ToNow" onclick="toNowCalendar();">ToNow</button> -->
-        <div id="Calendar">
-            <div id="LeafPage">
-                <div id="LPLock">
-                    <button id="LockButton" onclick="toggleLP();">Lock/Unlock</button>
+            <div id="Calendar">
+                <div id="LeafPage">
+                    <div id="LPLock">
+                        <button id="LockButton" onclick="toggleLP()">
+                            Lock/Unlock
+                        </button>
+                    </div>
+                    <div id="LPPrevious">
+                        <button
+                            id="Previous20Year"
+                            onclick="touchMoveCalendar('prev20Years')"
+                        >
+                            -20Y
+                        </button>
+                        <button
+                            id="PreviousYear"
+                            onclick="touchMoveCalendar('prevYear')"
+                        >
+                            -Y
+                        </button>
+                        <button
+                            id="PreviousMonth"
+                            onclick="touchMoveCalendar('prevMonth')"
+                        >
+                            -M
+                        </button>
+                        <button
+                            id="PreviousDay"
+                            onclick="touchMoveCalendar('prevDay')"
+                        >
+                            -D
+                        </button>
+                        <button
+                            id="PreviousHour"
+                            onclick="touchMoveCalendar('prevHour')"
+                        >
+                            -2H
+                        </button>
+                    </div>
+                    <div id="LPNext">
+                        <button
+                            id="Next20Year"
+                            onclick="touchMoveCalendar('next20Years')"
+                        >
+                            +20Y
+                        </button>
+                        <button
+                            id="NextYear"
+                            onclick="touchMoveCalendar('nextYear')"
+                        >
+                            +Y
+                        </button>
+                        <button
+                            id="NextMonth"
+                            onclick="touchMoveCalendar('nextMonth')"
+                        >
+                            +M
+                        </button>
+                        <button
+                            id="NextDay"
+                            onclick="touchMoveCalendar('nextDay')"
+                        >
+                            +D
+                        </button>
+                        <button
+                            id="NextHour"
+                            onclick="touchMoveCalendar('nextHour')"
+                        >
+                            +2H
+                        </button>
+                    </div>
                 </div>
-                <div id="LPPrevious">
-                    <button id="Previous20Year" onclick="touchMoveCalendar('prev20Years');">-20Y</button>
-                    <button id="PreviousYear" onclick="touchMoveCalendar('prevYear');">-Y</button>
-                    <button id="PreviousMonth" onclick="touchMoveCalendar('prevMonth');">-M</button>
-                    <button id="PreviousDay" onclick="touchMoveCalendar('prevDay');">-D</button>
-                    <button id="PreviousHour" onclick="touchMoveCalendar('prevHour');">-2H</button>
-                </div>
-                <div id="LPNext">
-                    <button id="Next20Year" onclick="touchMoveCalendar('next20Years');">+20Y</button>
-                    <button id="NextYear" onclick="touchMoveCalendar('nextYear');">+Y</button>
-                    <button id="NextMonth" onclick="touchMoveCalendar('nextMonth');">+M</button>
-                    <button id="NextDay" onclick="touchMoveCalendar('nextDay');">+D</button>
-                    <button id="NextHour" onclick="touchMoveCalendar('nextHour');">+2H</button>
-                </div>
+                <table id="ComprehensiveTimeTable">
+                    <tr>
+                        <td>公历</td>
+                        <td id="Solar"></td>
+                        <td>农历</td>
+                        <td id="Lunar"></td>
+                        <td>星期</td>
+                        <td id="Week"></td>
+                        <td>日序</td>
+                        <td id="YearIndex"></td>
+                    </tr>
+                    <tr>
+                        <td>三柱</td>
+                        <td id="ThreePillars" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td>节日</td>
+                        <td id="Festival" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td>月相</td>
+                        <td id="Phase"></td>
+                        <td>节气</td>
+                        <td id="TermDay"></td>
+                        <td colspan="2">物候</td>
+                        <td id="Phenology" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>星宿</td>
+                        <td id="28Star"></td>
+                        <td>九野</td>
+                        <td id="Land"></td>
+                        <td colspan="2">建除十二值神</td>
+                        <td id="Duty" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>星座</td>
+                        <td id="Constellation"></td>
+                        <td>值日胎神</td>
+                        <td id="FetusDay"></td>
+                        <td colspan="2">黄道黑道神煞</td>
+                        <td id="TwelveStar" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>纳音</td>
+                        <td id="Sound"></td>
+                        <td>彭祖百忌</td>
+                        <td id="PengZu" colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <td>今宜</td>
+                        <td id="TodayRecommends" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td>今忌</td>
+                        <td id="TodayAvoids" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">时刻</td>
+                        <td id="ExternalTime" rowspan="2"></td>
+                        <td>八字</td>
+                        <td id="EightChar" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td>九星</td>
+                        <td id="NineStar" colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <td>MJD</td>
+                        <td id="JulianDay"></td>
+                        <td>时辰宜</td>
+                        <td id="Recommends" colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <td>日距</td>
+                        <td id="DayDiff"></td>
+                        <td>时辰忌</td>
+                        <td id="Taboos" colspan="5"></td>
+                    </tr>
+                </table>
             </div>
-            <table id="ComprehensiveTimeTable">
-                <tr>
-                    <td>公历</td>
-                    <td id="Solar"></td>
-                    <td>农历</td>
-                    <td id="Lunar"></td>
-                    <td>星期</td>
-                    <td id="Week"></td>
-                    <td>日序</td>
-                    <td id="YearIndex"></td>
-                </tr>
-                <tr>
-                    <td>三柱</td>
-                    <td id="ThreePillars" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td>节日</td>
-                    <td id="Festival" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td>月相</td>
-                    <td id="Phase"></td>
-                    <td>节气</td>
-                    <td id="TermDay"></td>
-                    <td colspan="2">物候</td>
-                    <td id="Phenology" colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>星宿</td>
-                    <td id="28Star"></td>
-                    <td>九野</td>
-                    <td id="Land"></td>
-                    <td colspan="2">建除十二值神</td>
-                    <td id="Duty" colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>星座</td>
-                    <td id="Constellation"></td>
-                    <td>值日胎神</td>
-                    <td id="FetusDay"></td>
-                    <td colspan="2">黄道黑道神煞</td>
-                    <td id="TwelveStar" colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>纳音</td>
-                    <td id="Sound"></td>
-                    <td>彭祖百忌</td>
-                    <td id="PengZu" colspan="5"></td>
-                </tr>
-                <tr>
-                    <td>今宜</td>
-                    <td id="TodayRecommends" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td>今忌</td>
-                    <td id="TodayAvoids" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td rowspan="2">时刻</td>
-                    <td id="ExternalTime" rowspan="2"></td>
-                    <td>八字</td>
-                    <td id="EightChar" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td>九星</td>
-                    <td id="NineStar" colspan="5"></td>
-                </tr>
-                <tr>
-                    <td>MJD</td>
-                    <td id="JulianDay"></td>
-                    <td>时辰宜</td>
-                    <td id="Recommends" colspan="7"></td>
-                </tr>
-                <tr>
-                    <td>日距</td>
-                    <td id="DayDiff"></td>
-                    <td>时辰忌</td>
-                    <td id="Taboos" colspan="5"></td>
-                </tr>
-            </table>
+            <p id="ClockArea" title="Click to change theme...">
+                <span id="Julian"></span> <span id="Clock"></span>
+            </p>
         </div>
-        <p id="ClockArea" title="Click to change theme..."><span id="Julian"></span> <span id="Clock"></span></p>
-    </div>
-    <hr class="body_hr2" />
-    <hr class="body_hr1" />
-    <div id="BlogSpace"></div>
-    <div id="pageButtonArea"></div>
-    <div id="PageInfo"></div>
-    <!-- --------------------------------------------- -->
-    <script type="text/javascript" src="./js/database.js">
-    </script>
-    <script type="text/javascript" src="./blogs/blogs.js">
-    </script>
-    <script type="text/javascript" src="./js/bop.js">
-    </script>
-    <script type="text/javascript" src="./js/logic.js">
-    </script>
-    <script type="text/javascript" src="./js/generate.js">
-    </script>
-    <script type="text/javascript" src="./js/po.js">
-    </script>
-    <script type="text/javascript" src="./js/calentime.js">
-    </script>
-    <script type="text/javascript" src="./js/themes.js">
-    </script>
-    <!-- blogs -->
-</body>
-
+        <hr class="body_hr2" />
+        <hr class="body_hr1" />
+        <div id="BlogSpace"></div>
+        <div id="pageButtonArea"></div>
+        <div id="PageInfo"></div>
+        <!-- --------------------------------------------- -->
+        <script type="text/javascript" src="./js/database.js"></script>
+        <script type="text/javascript" src="./blogs/blogs.js"></script>
+        <script type="text/javascript" src="./js/bop.js"></script>
+        <script type="text/javascript" src="./js/logic.js"></script>
+        <script type="text/javascript" src="./js/generate.js"></script>
+        <script type="text/javascript" src="./js/po.js"></script>
+        <script type="text/javascript" src="./js/calentime.js"></script>
+        <script type="text/javascript" src="./js/themes.js"></script>
+        <!-- blogs -->
+    </body>
 </html>
