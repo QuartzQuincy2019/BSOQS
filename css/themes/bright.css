@@ -25,11 +25,11 @@
     --border-end-color: #001997;
     --notice-bg-color: #f0ffe6;
     --notice-border-color: #a4ff8f;
-    --latin-nominative: #61a700;
+    --latin-nominative: #3da500;
     --latin-accusative: #f13800;
     --latin-genetive: #bf1cff;
-    --latin-ablative: #2c56ff;
-    --latin-dative: #00a4a2;
+    --latin-ablative: #0c3dff;
+    --latin-dative: #00b1ae;
 }
 
 .cross {

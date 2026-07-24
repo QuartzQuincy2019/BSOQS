@@ -30,6 +30,23 @@ var blogs = [
     */
     {
         type: "blog",
+        id: "j110",
+        date: "2026-07-25",
+        edited: [""],
+        authors: [
+            { user: USERS.VLambda24, role: ROLES.FirstAuthor },
+            { user: USERS.BLOG_OWNER, role: ROLES.Contributor },
+        ],
+        title: "《高卢战记·第一卷·第二章》试讲",
+        topics: ["拉丁语", "高卢战记", "凯撒", "古典文学"],
+        contents: [
+            "s[完整内容：A[{./external/j110.html}%{external}ǻ{_blank}《高卢战记·第一卷·第二章》试讲]A]s",
+            "[备注：进入页面后将新加载c[Junicode]c字体，总大小约c[3.0 MB]c，这将花费一些时间。]",
+            "[原文来源：A[{https://www.thelatinlibrary.com/caesar/gallic/gall1.shtml}%{}ǻ{_blank}C. IVLI CAESARIS COMMENTARIORVM DE BELLO GALLICO LIBER PRIMVS]A]",
+        ],
+    },
+    {
+        type: "blog",
         id: "j109",
         date: "2026-07-21",
         edited: [""],
